@@ -10,7 +10,9 @@
     height: 6vw;
     width: 100vw;
     background-color: green;
-    display: block;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
 }
 .event{
     background-color: brown;
