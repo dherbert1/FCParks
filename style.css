@@ -6,7 +6,9 @@
 }
 .navi_events{
     font-size: 52px;
-    color: brown;
+    color: black;
+    height: 6vw;
+    width: 100vw;
 }
 .event{
     background-color: brown;
