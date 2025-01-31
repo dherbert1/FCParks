@@ -1,0 +1,10 @@
+.events_title{
+    height: 6vw;
+    width: 100vw;
+    background-color: green;
+    text-align: center;
+}
+.navi_events{
+    font-size: large;
+    color: brown;
+}
