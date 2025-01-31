@@ -10,6 +10,7 @@
     height: 6vw;
     width: 100vw;
     background-color: green;
+    display: block;
 }
 .event{
     background-color: brown;
