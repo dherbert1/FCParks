@@ -11,8 +11,7 @@
     width: 100vw;
     background-color: green;
     display: inline-block;
-    overflow: hidden;
-    position: relative;
+
 }
 .event{
     background-color: brown;
