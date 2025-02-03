@@ -1,8 +1,8 @@
 .events_title{
     height: 6vw;
     width: 100vw;
-    background-image: url("images/Logos.png");
-    background-color: chartreuse;
+background-image: url(https://streamline.imgix.net/e4ad289e-3f14-4a0b-bf75-dd4a268086a2/6f21ef4d-4139-4a04-a9ce-f7b7c178de55/matt-artz-nTRDnDdDYk8-unsplash.jpg?ixlib=rb-1.1.0&w=2000&h=2000&fit=max&or=0&s=5a966d992fff83f63de4884bef212471); 
+   background-color: chartreuse;
     
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
