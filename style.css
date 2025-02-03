@@ -2,6 +2,7 @@
     height: 6vw;
     width: 100vw;
     background-image: url("Logos.png");
+    background-color: aqua;
     text-align: center;
 }
 .navi_events{
