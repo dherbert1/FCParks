@@ -1,3 +1,4 @@
+/* Root Variables */
 :root {
   /* MaxWidth Of Page, Container-Fluid, Container, Gap, Border */
   --max-width-container: 2560px;
@@ -13,6 +14,10 @@
   --black-cl: #000;
 }
 
+/* Index/Home Page CSS */
+
+
+/* Events Page CSS */
 .events_title{
     height: 6vw;
     width: 100vw;
