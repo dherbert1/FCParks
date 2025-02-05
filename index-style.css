@@ -102,6 +102,7 @@
 .homepage {
   overflow-x: hidden;
   min-width: 320px;
+  background: var(--black-cl);
 }
 
 .header {
@@ -144,7 +145,7 @@
   height: 1px;
   display: block;
   margin-top: 0px;
-  background: var(--white-cl);
+  background: var(--black-cl);
   transform: scale(0);
   transform-origin: right;
   transition: var(--duration) transform;
