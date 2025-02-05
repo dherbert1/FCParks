@@ -53,7 +53,7 @@
 }
 .container_events{
   width:100vw;
-  display:flexbox
+  display:flexbox;
   grid-template-columns: auto auto auto;
   background-color: dodgerblue;
   padding: 10px;
