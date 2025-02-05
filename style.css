@@ -26,7 +26,10 @@
 }
 
 /* Index/Home Page CSS */
-
+.homepage {
+  overflow-x: hidden;
+  min-width: 320px;
+}
 
 /* Events Page CSS */
 .events_title{
