@@ -54,7 +54,7 @@
 .event{
     background-color: whitesmoke;
 }
-.container {
+.container_events {
   width:100vw;
   display: inline-block;
   grid-template-columns: auto auto auto;
