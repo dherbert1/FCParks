@@ -102,7 +102,6 @@
 .homepage {
   overflow-x: hidden;
   min-width: 320px;
-  background: var(--black-cl);
 }
 
 .header {
@@ -116,7 +115,7 @@
   width: 100%;
   background: transparent;
   z-index: 4;
-  color: var(--white-cl);
+  color: var(--dark-brown-cl);
 }
 .header .container {
   font-size: var(--fs-txtmenu);
