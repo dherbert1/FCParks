@@ -1,3 +1,14 @@
+/* Core variables and mixins*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
 /* Root Variables */
 :root {
   /* MaxWidth Of Page, Container-Fluid, Container, Gap, Border */
