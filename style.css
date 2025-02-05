@@ -40,7 +40,7 @@
 }
 .container {
   width:100vw;
-  display: inline-table;
+  display: inline-block;
   grid-template-columns: auto auto auto;
   background-color: dodgerblue;
   padding: 10px;
