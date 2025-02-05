@@ -1,0 +1,33 @@
+/* Core variables and mixins*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+  }
+  
+/* Root Variables */
+:root {
+/* MaxWidth Of Page, Container-Fluid, Container, Gap, Border */
+--max-width-container: 2560px;
+--max-width-container-fluid: 1920px;
+--max-width-container: 1198px;
+--gap: 26px;
+--border: 40px;
+/* Color Variables */
+--main-cl: #f5f5dc;
+/* --green-cl: ; */
+--dark-brown-cl: #412202;
+--white-cl: #fff;
+--black-cl: #000;
+}
+
+/* Index/Home Page CSS */
+.homepage {
+    overflow-x: hidden;
+    min-width: 320px;
+}
+

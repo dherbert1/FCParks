@@ -25,12 +25,6 @@
   --black-cl: #000;
 }
 
-/* Index/Home Page CSS */
-.homepage {
-  overflow-x: hidden;
-  min-width: 320px;
-}
-
 /* Events Page CSS */
 .events_title{
     height: 6vw;
