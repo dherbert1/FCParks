@@ -54,14 +54,14 @@
 .event{
     background-color: whitesmoke;
 }
-.container_events {
+.container_events{
   width:100vw;
   display: inline-block;
   grid-template-columns: auto auto auto;
   background-color: dodgerblue;
   padding: 10px;
 }
-.container > div {
+.container_events > div {
   background-color: #f1f1f1;
   border: 1px solid black;
   padding: 10px;
