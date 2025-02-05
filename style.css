@@ -54,6 +54,8 @@
 }
 .month{
   width: 33vw;
+  display: flex;
+  align-items: center;
 }
 .title_events{
   height:90px;
