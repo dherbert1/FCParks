@@ -23,14 +23,14 @@
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
     text-align: center;
-    color: white;
+    color: var(--white-cl);
 }
 .navi_events{
     font-size: 30px;
     color: black;
     height: 6vw;
     width: 100vw;
-    background-color: green;
+    background-color: var(--main-cl);
     display: inline-block;
     text-align: center;
 
@@ -58,4 +58,5 @@
 .title_events{
   height:50px;
   text-align: center;
+  object-fit: contain;
 }
