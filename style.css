@@ -39,7 +39,7 @@
     background-color: whitesmoke;
 }
 .container {
-  display: inline-block;
+  display: inline-table;
   grid-template-columns: auto auto auto;
   background-color: dodgerblue;
   padding: 10px;
