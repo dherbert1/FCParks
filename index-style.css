@@ -102,6 +102,11 @@ html {
   font-size: 62.5%;
 }
 
+a {
+  text-decoration: none;
+  outline: 0;
+}
+
 /* Index/Home Page CSS */
 .homepage {
   overflow-x: hidden;
