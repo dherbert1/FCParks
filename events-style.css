@@ -21,7 +21,7 @@
   --border: 40px;
   /* Color Variables */
   --main-cl: #f5f5dc;
-  /* --green-cl: ; */
+  --green-cl: chartreuse; 
   --dark-brown-cl: #412202;
   --white-cl: #fff;
   --black-cl: #000;
@@ -32,7 +32,7 @@
     height: 6vw;
     width: 100vw;
     background-image: url(https://streamline.imgix.net/e4ad289e-3f14-4a0b-bf75-dd4a268086a2/6f21ef4d-4139-4a04-a9ce-f7b7c178de55/matt-artz-nTRDnDdDYk8-unsplash.jpg?ixlib=rb-1.1.0&w=2000&h=2000&fit=max&or=0&s=5a966d992fff83f63de4884bef212471); 
-    background-color: chartreuse;
+    background-color: var(--green-cl);
     
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
@@ -55,14 +55,14 @@
 }
 .container_events{
   width:100vw;
-  display:flexbox;
+  display:flex;
   column-count: 3;
   grid-template-columns: auto auto auto;
   background-color: dodgerblue;
   padding: 10px;
   overflow: inherit;
 }
-.container_events > div {
+.container_events > .month {
   background-color: #f1f1f1;
   border: 1px solid black;
   padding: 10px;
