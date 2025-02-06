@@ -84,10 +84,9 @@
   text-transform: uppercase;
   display: flex;
   justify-content: center;
-  font-size: var(--fs-lb);
   line-height: var(--lh-lb);
   letter-spacing: var(--ls-lb);
 }
 .name {
-  font-size: xx-large;
+  font-size: 58px;
 }
