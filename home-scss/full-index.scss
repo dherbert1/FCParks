@@ -1,13 +1,13 @@
 /* Core variables and mixins*/
-@import "Core/reset";
-@import "Core/mixins";
-@import "Core/variables";
-@import "Core/components";
+@use "core/reset";
+@use "core/mixins";
+@use "core/variables";
+@use "core/components";
 
 /* Navigation, header, footer*/
-@import "Core/header";
-@import "Core/nav";
-@import "Core/footer";
+@use "core/header";
+@use "core/nav";
+@use "core/footer";
 
 /* Pages*/
-@import "Pages/home";
+@use "pages/home";
