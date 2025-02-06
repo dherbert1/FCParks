@@ -55,9 +55,9 @@
 }
 .container_events{
   width:100vw;
-  display:flex;
+  display:flexbox;
   column-count: 3;
-  grid-template-columns: center center center;
+  grid-template-columns: auto auto auto;
   background-color: dodgerblue;
   padding: 10px;
   overflow: inherit;
