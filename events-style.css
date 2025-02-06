@@ -51,7 +51,7 @@
 }
 .event_calendar {
   width: 100vw;
-  background-color: dodgerblue;
+  background-color: var(--dark-brown-cl);
   padding: 10px;
 }
 .event_calendar .title_events {
