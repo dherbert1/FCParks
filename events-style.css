@@ -55,7 +55,7 @@
 }
 .container_events{
   width:100vw;
-  display:table-column;
+  display:table;
   column-count: 3;
   grid-template-columns: center center center;
   background-color: dodgerblue;
