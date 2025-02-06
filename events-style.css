@@ -73,6 +73,7 @@
   width: 33vw;
   display: flex;
   align-items: center;
+  column-count: 3;
 }
 .title_events{
   height:90px;
