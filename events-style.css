@@ -57,7 +57,7 @@
   width:100vw;
   display:table-column;
   column-count: 3;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: center center center;
   background-color: dodgerblue;
   padding: 10px;
   overflow: inherit;
