@@ -38,6 +38,7 @@
   background-size: cover; /* Resize the background image to cover the entire container */
   text-align: center;
   color: var(--white-cl);
+  font-size: x-large;
 }
 .navi_events {
   font-size: 30px;
