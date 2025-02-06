@@ -73,10 +73,13 @@
 }
 .calendar .calendar-item {
   border-radius: 40px;
-  padding: 58px 32px;
+  padding: 20px 30px 32px 30px;
+  background: var(--white-cl);
 }
 .calendar .calendar-item .name {
   text-transform: uppercase;
+  display: flex;
+  justify-content: center;
   font-size: var(--fs-lb);
   line-height: var(--lh-lb);
   letter-spacing: var(--ls-lb);
