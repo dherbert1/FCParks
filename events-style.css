@@ -8,7 +8,6 @@
   font: inherit;
   vertical-align: baseline;
   box-sizing: border-box;
-
 }
 
 /* Root Variables */
@@ -21,36 +20,35 @@
   --border: 40px;
   /* Color Variables */
   --main-cl: #f5f5dc;
-  --green-cl: chartreuse; 
+  --green-cl: chartreuse;
   --dark-brown-cl: #412202;
   --white-cl: #fff;
   --black-cl: #000;
 }
 
 /* Events Page CSS */
-.events_title{
-    height: 6vw;
-    width: 100vw;
-    background-image: url(https://streamline.imgix.net/e4ad289e-3f14-4a0b-bf75-dd4a268086a2/6f21ef4d-4139-4a04-a9ce-f7b7c178de55/matt-artz-nTRDnDdDYk8-unsplash.jpg?ixlib=rb-1.1.0&w=2000&h=2000&fit=max&or=0&s=5a966d992fff83f63de4884bef212471); 
-    background-color: var(--green-cl);
-    
+.events_title {
+  height: 6vw;
+  width: 100vw;
+  background-image: url(https://streamline.imgix.net/e4ad289e-3f14-4a0b-bf75-dd4a268086a2/6f21ef4d-4139-4a04-a9ce-f7b7c178de55/matt-artz-nTRDnDdDYk8-unsplash.jpg?ixlib=rb-1.1.0&w=2000&h=2000&fit=max&or=0&s=5a966d992fff83f63de4884bef212471);
+  background-color: var(--green-cl);
+
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
-    text-align: center;
-    color: var(--white-cl);
+  text-align: center;
+  color: var(--white-cl);
 }
-.navi_events{
-    font-size: 30px;
-    color: black;
-    height: 6vw;
-    width: 100vw;
-    background-color: var(--dark-brown-cl);
-    display: inline-block;
-    text-align: center;
-
+.navi_events {
+  font-size: 30px;
+  color: black;
+  height: 6vw;
+  width: 100vw;
+  background-color: var(--dark-brown-cl);
+  display: inline-block;
+  text-align: center;
 }
-.event_calendar{
+.event_calendar {
   width: 100vw;
   background-color: dodgerblue;
   padding: 10px;
@@ -60,7 +58,7 @@
   width: 100vw;
   text-align: center;
   padding-bottom: 20px;
-  display: block;  
+  display: block;
   background-color: var(--white-cl);
   border: 1px solid black;
   padding: 10px;
