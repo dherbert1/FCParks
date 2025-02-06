@@ -55,14 +55,14 @@
 }
 .container_events{
   width:100vw;
-  display:flex;
+  display:flexbox;
   column-count: 3;
   grid-template-columns: auto auto auto;
   background-color: dodgerblue;
   padding: 10px;
   overflow: inherit;
 }
-.container_events > .month {
+.container_events > div {
   background-color: #f1f1f1;
   border: 1px solid black;
   padding: 10px;
