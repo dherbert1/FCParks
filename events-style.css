@@ -70,11 +70,9 @@
   text-align: center;
 }
 .month{
-  max-width: 100vw;
   width: 33vw;
   display: flex;
   align-items: center;
-  column-count: 3;
 }
 .title_events{
   height:90px;
