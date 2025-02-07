@@ -125,6 +125,43 @@
       width: 150px;
     }
   }
+  @media (max-width: 991.98px) {
+    .header .container .header__menu li:not(:first-child) {
+      display: none;
+    }
+    .header .container .header__cta-hamburger {
+      display: flex;
+    }
+  }
+  .nav ul li {
+    text-align: center;
+  }
+  .nav ul li a {
+    font-size: var(--fs-navmenu);
+    letter-spacing: var(--ls-navmenu);
+    line-height: var(--lh-navmenu);
+    color: var(--white-cl);
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    padding: 20px 0;
+    transition: var(--duration);
+  }
+  .nav ul li a.active {
+    color: var(--main-cl);
+  }
+  .nav ul .btnmain {
+    margin-top: 20px;
+    padding: 0 77px;
+  }
+  .nav.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+
+
+  /* pictures */
 * {box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}
 .mySlides {display: none}
