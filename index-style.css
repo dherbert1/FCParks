@@ -407,6 +407,14 @@ figcaption {
   border-radius: 80px;
 }
 
+.btnpackage {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 28px;
+  position: relative;
+  z-index: 2;
+}
 @media (max-width: 767.98px) {
   .btnpackage {
     justify-content: center;
