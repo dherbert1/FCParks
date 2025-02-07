@@ -205,12 +205,12 @@ img {vertical-align: middle;}
   .prev, .next,.text {font-size: 11px}
 }
 @media screen and (max-width: 992px) {
-  .event_calendar {
+  .calendar {
     column-count: 2;
   }
 }
 @media screen and (max-width: 300px) {
-  .event_calendar {
+  .calendar {
     column-count: 1;
   }
 }
