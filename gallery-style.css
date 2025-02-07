@@ -144,7 +144,7 @@
     gap: var(--gap);
   }
   .header .container .header__menu li:not(:first-child) a {
-    color: var(--dark-brown-cl);
+    color: var(--white-cl);
     transition: var(--duration);
   }
   .header .container .header__menu li:not(:first-child) a:after {
