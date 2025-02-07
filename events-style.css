@@ -204,13 +204,13 @@ img {vertical-align: middle;}
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
-@media screen and (max-width: 992px) {
+@media only screen and (max-width: 992px) {
   .calendar {
-    column-count: 2;
+    display:block;
   }
 }
-@media screen and (max-width: 300px) {
+@media only screen and (max-width: 300px) {
   .calendar {
-    column-count: 1;
+    display:block;
   }
 }
