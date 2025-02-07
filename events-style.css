@@ -209,7 +209,7 @@ img {vertical-align: middle;}
     column-count: 2;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 300px) {
   .event_calendar {
     column-count: 1;
   }
