@@ -121,9 +121,11 @@ img {vertical-align: middle;}
   max-width: 1000px;
   position: relative;
   margin: auto;
+  
+}
+.slideshow_background{
   background-color: var(--dark-brown-cl);
 }
-
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
