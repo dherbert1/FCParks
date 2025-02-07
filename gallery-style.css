@@ -1,4 +1,16 @@
-::root {
+/* Core variables and mixins*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+  }
+    
+  /* Root Variables */
+  :root {
     /* MaxWidth Of Page, Container-Fluid, Container, Gap, Border */
     --max-width-container: 2560px;
     --max-width-container-fluid: 1920px;
@@ -85,6 +97,52 @@
   
     --duration: 0.4s;
   }
+  
+  html {
+    font-size: 62.5%;
+  }
+  
+  a {
+    text-decoration: none;
+    outline: 0;
+  }
+  
+  /* Index/Home Page CSS */
+  .homepage {
+    overflow-x: hidden;
+    min-width: 320px;
+  }
+  
+  .header {
+    min-width: 320px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: var(--height-header);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    z-index: 4;
+    color: var(--main-cl);
+  }
+  .header .container {
+    font-size: var(--fs-txtmenu);
+    line-height: var(--lh-txtmenu);
+    letter-spacing: var(--ls-txtmenu);
+    text-transform: uppercase;
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header .container .header__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gap);
+  }
   .header .container .header__menu li:not(:first-child) a {
     color: var(--dark-brown-cl);
     transition: var(--duration);
@@ -125,6 +183,59 @@
       width: 150px;
     }
   }
+  .header .container .header__cta-hamburger {
+    display: none;
+    position: relative;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    background-color: var(--main-cl);
+  }
+  .header .container .header__cta-hamburger .bars {
+    width: 24px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+  }
+  .header .container .header__cta-hamburger .bars span, .header .container .header__cta-hamburger .bars:after, .header .container .header__cta-hamburger .bars:before {
+    content: "";
+    height: 2.4px;
+    width: 100%;
+    background: var(--white-cl);
+    display: block;
+    position: absolute;
+    transition: var(--duration);
+  }
+  .header .container .header__cta-hamburger .bars span {
+    top: 50%;
+    transform: translateY(-50%);
+    transition: var(--duration);
+  }
+  .header .container .header__cta-hamburger .bars:before {
+    transform: rotate(0deg) translate(0px, 0px);
+  }
+  .header .container .header__cta-hamburger .bars:after {
+    bottom: 0;
+    transform: rotate(0deg) translate(0px, 0px);
+  }
+  .header .container .header__cta-hamburger .bars.active span {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    opacity: 0;
+  }
+  .header .container .header__cta-hamburger .bars.active:before {
+    transform: rotate(45deg) translate(7px, 6px);
+    transition: var(--duration);
+  }
+  .header .container .header__cta-hamburger .bars.active:after {
+    transition: var(--duration);
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
   @media (max-width: 991.98px) {
     .header .container .header__menu li:not(:first-child) {
       display: none;
@@ -132,6 +243,47 @@
     .header .container .header__cta-hamburger {
       display: flex;
     }
+  }
+  .header.scroll {
+    background: var(--main-cl);
+  }
+  .header.active {
+    background: var(--main-cl);
+  }
+  @media (max-width: 991.98px) {
+    .header {
+      background: var(--main-cl);
+    }
+  }
+  
+  .nav {
+    z-index: 300;
+    top: var(--height-header);
+    width: 100%;
+    height: calc(100vh - var(--height-header));
+    position: fixed;
+    left: 0;
+    background: var(--main-cl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+  }
+  .nav__blurbg {
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at 50%, var(--dark-brown-cl) 0%, var(--black-cl) 60%);
+    opacity: 0.6;
+  }
+  .nav ul {
+    position: absolute;
+    z-index: 350;
   }
   .nav ul li {
     text-align: center;
