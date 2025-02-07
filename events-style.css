@@ -211,6 +211,6 @@ img {vertical-align: middle;}
 }
 @media screen and (max-width: 600px) {
   .event_calendar {
-    column-count: 2;
+    column-count: 1;
   }
 }
