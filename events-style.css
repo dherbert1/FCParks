@@ -206,11 +206,11 @@ img {vertical-align: middle;}
 }
 @media screen and (max-width: 992px) {
   .calendar {
-    column-count: 2;
+    grid-template-columns: 1fr 1fr;
   }
 }
 @media screen and (max-width: 300px) {
   .calendar {
-    column-count: 1;
+    grid-template-columns: 1fr;
   }
 }
