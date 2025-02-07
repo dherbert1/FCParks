@@ -121,6 +121,7 @@ img {vertical-align: middle;}
   max-width: 1000px;
   position: relative;
   margin: auto;
+  background-color: var(--dark-brown-cl);
 }
 
 /* Next & previous buttons */
