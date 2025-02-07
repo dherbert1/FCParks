@@ -324,7 +324,7 @@ img {vertical-align: middle;}
   max-width: 1000px;
   position: relative;
   margin: auto;
-  
+  padding-top: 50px;
 }
 .slideshow_background{
   background-color: var(--dark-brown-cl);
