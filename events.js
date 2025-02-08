@@ -23,6 +23,7 @@ let slideIndex = 1;
         }
         slides[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
+<<<<<<< HEAD
       }
 
 
@@ -397,3 +398,6 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+=======
+      }
+>>>>>>> parent of 4679f23 (js)
