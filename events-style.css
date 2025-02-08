@@ -1251,13 +1251,13 @@ p {
   width: 14px;
   height: 14px;
   border-radius: 100%;
-  background-color: var(--white-cl);
+  background-color: var(--dar);
   opacity: 0.4;
   padding: 0;
   margin: 5px;
 }
 .photos__slider .flickity-page-dots .dot.is-selected {
-  background-color: var(--white-cl);
+  background-color: var(--dark-brown-cl);
   opacity: 1;
 }
 .photos__slider-item {
