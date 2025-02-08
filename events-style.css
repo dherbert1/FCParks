@@ -679,7 +679,8 @@ img {vertical-align: middle;}
   background: var(--main-cl);
 }
 .header.active {
-  background: var(--main-cl);
+  background: var(--black-cl);
+
 }
 @media (max-width: 991.98px) {
   .header {
