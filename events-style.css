@@ -685,7 +685,7 @@ p {
   width: 45px;
   height: 45px;
   border-radius: 100%;
-  background-color: var(--main-cl);
+  background-color: var(--black-cl);
 }
 .header .container .header__cta-hamburger .bars {
   width: 24px;
