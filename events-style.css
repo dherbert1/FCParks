@@ -11,18 +11,143 @@
 
 /* Root Variables */
 :root {
-  /* MaxWidth Of Page, Container-Fluid, Container, Gap, Border */
-  --max-width-container: 2560px;
+  /* MaxWidth Of Page, Container-Fluid, Container, Gutter*/
+  --max-width-page: 2560px;
   --max-width-container-fluid: 1920px;
   --max-width-container: 1198px;
   --gap: 26px;
   --border: 40px;
-  /* Color Variables */
+
+  /* Color Variables*/
   --main-cl: #f5f5dc;
-  --green-cl: chartreuse;
-  --dark-brown-cl: #412202;
+  --middle-cl: #a8a6a0;
+  --dark-cl: #412202;
+  --accent: #037030;
   --white-cl: #fff;
-  --black-cl: #000;
+  --black-cl: #141414;
+  --grey-dark-cl: rgba(255, 255, 255, 0.1);
+  --grey-light-cl: rgba(255, 255, 255, 0.2);
+  --grey-social-cl: rgba(255, 255, 255, 0.5);
+  --grey-footer: rgba(255, 255, 255, 0.3);
+
+  /* Sizes */
+  --fs-h1: 6.6rem;
+  --lh-h1: 8rem;
+  --ls-h1: -1px;
+
+  --fs-h2: 4.2rem;
+  --lh-h2: 5.5rem;
+  --ls-h2: 0px;
+
+  --fs-lb: 1.8rem;
+  --lh-lb: 2.6rem;
+  --ls-lb: 0.9px;
+
+  --fs-txtbtn: 1.6rem;
+  --lh-txtbtn: 1.6rem;
+  --ls-txtbtn: 1.6px;
+
+  --fs-body1: 1.8rem;
+  --lh-body1: 3.2rem;
+  --ls-body1: 0px;
+
+  --fs-body2: 1.6rem;
+  --lh-body2: 2.6rem;
+  --ls-body2: 0px;
+
+  --fs-txtmenu: 1.4rem;
+  --lh-txtmenu: 1.6rem;
+  --ls-txtmenu: 1.4px;
+
+  --fs-h3: 2.2rem;
+  --lf-h3: 3.1rem;
+
+  --fs-txttag: 1.4rem;
+  --lh-txttag: 1.8rem;
+  --ls-txttag: 0.7px;
+
+  --fs-spec: 2rem;
+  --ls-spec: 1px;
+  --lh-spec: 2.6rem;
+
+  --fs-yr: 2.8rem;
+  --lh-yr: 3rem;
+  --ls-yr: 0.28px;
+
+  --fs-faq: 2.8rem;
+  --lh-faq: 3rem;
+  --ls-faq: 0.28px;
+
+  --fs-navmenu: 3rem;
+  --ls-navmenu: 3rem;
+  --ls-navmenu: 1.4px;
+
+  --height-header: 100px;
+
+  --height-button: 70px;
+  --height-button-header: 56px;
+
+  --pd-section: 120px;
+
+  --duration: 0.4s;
+  }
+@media (max-width: 1199.98px) {
+  :root {
+    --max-width-container: 1140px;
+  }
+}
+@media (max-width: 991.98px) {
+  :root {
+    --max-width-container: 960px;
+  }
+}
+@media (max-width: 767.98px) {
+  :root {
+    --max-width-container: 100%;
+
+    --gap: 16px;
+
+    --fs-h1: 3.6rem;
+    --lh-h1: 4.6rem;
+    --ls-h1: -1px;
+
+    --fs-h2: 2.8rem;
+    --lh-h2: 3.6rem;
+    --ls-h2: 0px;
+
+    --fs-txtbtn: 1.6rem;
+    --lh-txtbtn: 1.6rem;
+    --ls-txtbtn: 1.6px;
+
+    --fs-body1: 1.6rem;
+    --lh-body1: 2.6rem;
+    --ls-body1: 0px;
+
+    --fs-body2: 1.6rem;
+    --lh-body2: 2.6rem;
+    --ls-body2: 0px;
+
+    --fs-txtmenu: 3.2rem;
+    --lh-txtmenu: 100%;
+    --ls-txtmenu: 1.4px;
+
+    --fs-txtmenu-sm: 1.4rem;
+    --lh-txtmenu-sm: 1.6rem;
+    --ls-txtmenu-sm: 0.24px;
+
+    --fs-yr: 2.8rem;
+    --lh-yr: 3rem;
+    --ls-yr: 0.25px;
+
+    --fs-faq: 1.8rem;
+    --lh-faq: 2.6rem;
+    --ls-faq: 0.28px;
+  }
+}
+@media (max-width: 575.98px) {
+  :root {
+    --max-width-container: 100%;
+  }
 }
 
 /* Events Page CSS */
