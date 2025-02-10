@@ -210,9 +210,11 @@
   border-radius: 40px;
   padding: 20px 30px 32px 30px;
   background: var(--white-cl);
-padding:90px;
-}
 
+}
+.calendar{
+  padding:90px;
+}
 .calendar .calendar-item .name {
   text-transform: uppercase;
   display: flex;
