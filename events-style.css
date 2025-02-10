@@ -19,6 +19,7 @@
   --border: 40px;
 
   /* Color Variables*/
+  --event-calendar-cl: #243220;
   --main-cl: #f5f5dc;
   --middle-cl: #a8a6a0;
   --dark-cl: #412202;
@@ -202,6 +203,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   display: grid;
   gap: var(--gap);
+  background-color: var(--event-calendar-cl);
 }
 
 .calendar .calendar-item {
