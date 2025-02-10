@@ -210,10 +210,6 @@
   background: var(--white-cl);
 }
 
-.calendar-item:nth-last-of-type(2) {
-  /* Something will eventually be here I think */
-}
-
 .calendar .calendar-item .name {
   text-transform: uppercase;
   display: flex;
