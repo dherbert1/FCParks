@@ -1444,3 +1444,8 @@ p {
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
+.break{
+  height:9px;
+  width:100vw;
+  background-color: var(--main-cl);
+}
