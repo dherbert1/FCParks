@@ -720,7 +720,7 @@ p {
   }
 }
 .header.scroll {
-  background: var(--main-cl);
+  background: var(--white-cl);
 }
 .header.active {
   background: var(--main-cl);
