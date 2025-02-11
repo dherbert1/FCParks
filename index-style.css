@@ -218,7 +218,7 @@ html {
 }
 
 body {
-  background: var(--main-cl);
+  background: var(--accent);
   width: 100%;
   max-width: var(--max-width-page);
   margin: auto;
@@ -333,7 +333,7 @@ figcaption {
   cursor: pointer;
   width: max-content;
   background: var(--main-cl);
-  color: var(--white-cl);
+  color: var(--black-cl);
   border-radius: 80px;
   white-space: nowrap;
 }
@@ -348,8 +348,8 @@ figcaption {
   color: var(--main-cl);
 }
 .btnmain.__grey {
-  background: var(--grey-dark-cl);
-  color: var(--white-cl);
+  background: var(--white-cl);
+  color: var(--black-cl);
 }
 .btnmain.__grey:hover {
   background: var(--main-cl);
