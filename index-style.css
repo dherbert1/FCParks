@@ -345,7 +345,7 @@ figcaption {
 }
 .btnmain:hover {
   background: var(--white-cl);
-  color: var(--main-cl);
+  color: var(--dark-cl);
 }
 .btnmain.__grey {
   background: var(--white-cl);
@@ -353,7 +353,7 @@ figcaption {
 }
 .btnmain.__grey:hover {
   background: var(--main-cl);
-  color: var(--white-cl);
+  color: var(--dark-cl);
 }
 .btnmain.__white {
   background: var(--white-cl);
