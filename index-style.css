@@ -723,7 +723,7 @@ p {
   background: var(--white-cl);
 }
 .header.active {
-  background: var(--main-cl);
+  background: var(--white-cl);
 }
 @media (max-width: 991.98px) {
   .header {
