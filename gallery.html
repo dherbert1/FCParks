@@ -1,59 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Text & View Setup -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!-- Title & Google/Icon Setup -->
-    <title>FC Parks & Campgrounds - Gallery</title>
-    <link rel="canonical" href="https://google.com">
-    <!-- <link rel="icon" href=""> -->
+<head>
+  <!-- Text & View Setup -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!-- Link CSS -->
-    <link rel="stylesheet" href="gallery-style.css">
-  </head> 
-  <body>
-    <header class="header">
-        <div class="container">
-          <ul class="header__menu">
-            <li class="header__menu-logo">
-              <a href="./index.html">
-                <!-- <img src="" alt="logo-crypto" class="header__logo-img" > -->
-              </a>
-            </li>
-            <li><a href="./index.html">home</a></li>
-            <li><a href="./events.html">events</a></li>
-            <li><a href="./parkmap.html">park map</a></li>
-            <li><a href="./gallery.html">gallery</a></li>
-            <li><a href="./attractions.html">area attractions</a></li>
-            <li><a href="./reviews.html">reviews</a></li>
-            <li><a href="./contact.html">contact</a></li>
-          </ul>
-          <div class="header__cta">
-            <div class="header__cta-hamburger">
-              <div class="bars">
-                <span></span>
-              </div>
-            </div>
+  <!-- Title & Google/Icon Setup -->
+  <title>FC Parks & Campgrounds - Gallery</title>
+  <link rel="canonical" href="https://google.com">
+  <!-- <link rel="icon" href=""> -->
+
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="gallery-style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <ul class="header__menu">
+        <li class="header__menu-logo">
+          <a href="./index.html">
+            <!-- <img src="" alt="logo-crypto" class="header__logo-img" > -->
+          </a>
+        </li>
+        <li><a href="./index.html">home</a></li>
+        <li><a href="./events.html">events</a></li>
+        <li><a href="./parkmap.html">park map</a></li>
+        <li><a href="./gallery.html">gallery</a></li>
+        <li><a href="./attractions.html">area attractions</a></li>
+        <li><a href="./reviews.html">reviews</a></li>
+        <li><a href="./contact.html">contact</a></li>
+      </ul>
+      <div class="header__cta">
+        <div class="header__cta-hamburger">
+          <div class="bars">
+            <span></span>
           </div>
         </div>
-      </header>
-      <nav class="nav">
-        <div class="nav__blurbg"></div>
-        <ul class="header__menu">
-          <li><a href="./index.html">home</a></li>
-          <li><a href="./events.html">events</a></li>
-          <li><a href="./parkmap.html">park map</a></li>
-          <li><a href="./gallery.html">gallery</a></li>
-          <li><a href="./attractions.html">area attractions</a></li>
-          <li><a href="./reviews.html">reviews</a></li>
-          <li><a href="./contact.html">contact</a></li>
-        </ul>
-      </nav>
-<!-- Slideshow container -->
-<div class="slideshow_background">
+      </div>
+    </div>
+  </header>
+  <nav class="nav">
+    <div class="nav__blurbg"></div>
+    <ul class="header__menu">
+      <li><a href="./index.html">home</a></li>
+      <li><a href="./events.html">events</a></li>
+      <li><a href="./parkmap.html">park map</a></li>
+      <li><a href="./gallery.html">gallery</a></li>
+      <li><a href="./attractions.html">area attractions</a></li>
+      <li><a href="./reviews.html">reviews</a></li>
+      <li><a href="./contact.html">contact</a></li>
+    </ul>
+  </nav>
+  <!-- Slideshow container -->
+  <div class="slideshow_background">
     <div class="slideshow-container">
 
       <div class="mySlides fade">
@@ -93,34 +95,10 @@
       <span class="dot" onclick="currentSlide(4)"></span>
     </div>
 
-    <script>
-      let slideIndex = 1;
-      showSlides(slideIndex);
 
-      function plusSlides(n) {
-        showSlides(slideIndex += n);
-      }
+    <script src="gallery.js"></script>
 
-      function currentSlide(n) {
-        showSlides(slideIndex = n);
-      }
+  </div>
+</body>
 
-      function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) { slideIndex = 1 }
-        if (n < 1) { slideIndex = slides.length }
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-      }
-    </script>
-    </div>
-  </body>
-  </html>
+</html>

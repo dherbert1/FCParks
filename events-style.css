@@ -202,7 +202,7 @@
   color: black;
   height: 6vw;
   width: 100vw;
-  background-color: var(--dark-brown-cl);
+  background-color: var(--accent);
   display: inline-block;
   text-align: center;
 }
@@ -243,6 +243,7 @@
 
 .calendar {
   padding: 90px;
+  width: 100vw;
 }
 
 .calendar .calendar-item .name {
