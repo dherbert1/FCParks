@@ -82,11 +82,11 @@ a {
   --border: 40px;
 
   /* Color Variables*/
-  --main-cl: #f5f5dc;
-  --middle-cl: #a8a6a0;
+  --main-cl: #234A07;
+  --middle-cl: #6F875A;
   --dark-cl: #412202;
-  --accent: #037030;
-  --white-cl: #fff;
+  --accent: #B1B3A8;
+  --white-cl: #f5f5f5;
   --black-cl: #141414;
   --grey-dark-cl: rgba(255, 255, 255, 0.1);
   --grey-light-cl: rgba(255, 255, 255, 0.2);
