@@ -231,7 +231,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   display: grid;
   gap: var(--gap);
-  background-color: var(--event-calendar-cl);
+  background-color: var(--accent);
 }
 
 .calendar .calendar-item {
