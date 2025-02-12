@@ -92,6 +92,21 @@
 
   --duration: 0.4s;
 }
+.heading.__label {
+  text-transform: uppercase;
+  font-size: var(--fs-lb);
+  line-height: var(--lh-lb);
+  letter-spacing: var(--ls-lb);
+}
+.heading {
+  color: var(--main-cl);
+}
+.textbody.__bd2 {
+  font-size: var(--fs-body2);
+  line-height: var(--lh-body2);
+  letter-spacing: var(--ls-body2);
+  color: var(--white-cl);
+}
 
 @media (max-width: 1199.98px) {
   :root {
