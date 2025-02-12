@@ -180,11 +180,12 @@
 }
 .calendar-name{
   text-align: center;
-  font-size: var(--fs-h1);
+  font-size: 20px;
   color:var(--black-cl);
   background-color:var(--accent);
   height: 15px;
   width: 100vw;
+  border-color: transparent;
 
 }
 /* Events Page CSS */
