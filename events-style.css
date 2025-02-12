@@ -260,7 +260,12 @@
     display:block;
   }
 }
-
+@media (max-width: 850px){
+  .event_calendar .calendar{
+    display:block;
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
 
 
