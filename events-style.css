@@ -197,14 +197,59 @@
   font-size: x-large;
 }
 
-.navi_events {
-  font-size: 30px;
-  color: black;
-  height: 6vw;
-  width: 100vw;
-  background-color: var(--accent);
-  display: inline-block;
+.nav {
+  z-index: 300;
+  top: var(--height-header);
+  width: 100%;
+  height: calc(100vh - var(--height-header));
+  position: fixed;
+  left: 0;
+  background: var(--main-cl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+.nav__blurbg {
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 50%, var(--dark-brown-cl) 0%, var(--black-cl) 60%);
+  opacity: 0.6;
+}
+.nav ul {
+  position: absolute;
+  z-index: 350;
+}
+.nav ul li {
   text-align: center;
+}
+.nav ul li a {
+  font-size: var(--fs-navmenu);
+  letter-spacing: var(--ls-navmenu);
+  line-height: var(--lh-navmenu);
+  color: var(--white-cl);
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+  padding: 20px 0;
+  transition: var(--duration);
+}
+.nav ul li a.active {
+  color: var(--main-cl);
+}
+.nav ul .btnmain {
+  margin-top: 20px;
+  padding: 0 77px;
+}
+.nav.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .event_calendar {
