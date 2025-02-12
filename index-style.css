@@ -86,7 +86,7 @@ a {
   --middle-cl: #6F875A;
   --dark-cl: #412202;
   --accent: #B1B3A8;
-  --white-cl: #f5f5f5;
+  --white-cl: #f5f5dc;
   --black-cl: #141414;
   --grey-dark-cl: rgba(255, 255, 255, 0.1);
   --grey-light-cl: rgba(255, 255, 255, 0.2);
@@ -218,7 +218,7 @@ html {
 }
 
 body {
-  background: var(--accent);
+  background: var(--main-cl);
   width: 100%;
   max-width: var(--max-width-page);
   margin: auto;
@@ -638,7 +638,7 @@ p {
   height: 1px;
   display: block;
   margin-top: 0px;
-  background: var(--white-cl);
+  background: var(--black-cl);
   transform: scale(0);
   transform-origin: right;
   transition: var(--duration) transform;
@@ -665,7 +665,7 @@ p {
   width: 45px;
   height: 45px;
   border-radius: 100%;
-  background-color: var(--main-cl);
+  background-color: var(--black-cl);
 }
 .header .container .header__cta-hamburger .bars {
   width: 24px;
@@ -679,7 +679,7 @@ p {
   content: "";
   height: 2.4px;
   width: 100%;
-  background: var(--white-cl);
+  background: var(--black-cl);
   display: block;
   position: absolute;
   transition: var(--duration);
