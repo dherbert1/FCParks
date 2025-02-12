@@ -181,8 +181,9 @@
 .calendar__.name{
   text-align: center;
   font-size: var(--fs-h1);
-  color:var(--black-cl)
-  
+  color:var(--black-cl);
+  background-color:var(--accent);
+
 }
 /* Events Page CSS */
 .events_title {
