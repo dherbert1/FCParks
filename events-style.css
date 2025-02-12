@@ -255,7 +255,11 @@
 }
 
 
-
+@media (max-width: 596px){
+  .event_calendar .calendar{
+    display:block;
+  }
+}
 
 
 
@@ -384,6 +388,7 @@ img {
 @media only screen and (max-width: 992px) {
   .calendar {
     display: block;
+    column-count
   }
 }
 
