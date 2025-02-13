@@ -357,7 +357,7 @@ figcaption {
   grid-template-columns: 1fr 1fr 1fr;
   display: grid;
   gap: var(--gap);
-  background-color: var(--accent);
+  background-color: var(--main-cl);
 }
 
 .calendar .calendar-item {
@@ -437,7 +437,7 @@ img {
 }
 
 .slideshow_background {
-  background-color: var(--accent);
+  background-color: var(--main-cl);
 }
 
 /* Next & previous buttons */
@@ -694,7 +694,7 @@ h3 {
 }
 
 p {
-  color: var(--white-cl);
+  color: var(--black-cl);
   font-size: var(--fs-body1);
   line-height: var(--lh-body1);
   letter-spacing: var(--ls-body1);
