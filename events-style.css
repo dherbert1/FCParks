@@ -398,7 +398,6 @@ figcaption {
 
 
 * body {
-  font-family: Verdana, sans-serif;
   margin: 0
 }
 
@@ -513,6 +512,18 @@ img {
     font-size: 11px
   }
 }
+
+
+
+
+
+/* start of bens code */
+
+
+
+
+
+
 
 .btnmain {
   font-size: var(--fs-txtbtn);
