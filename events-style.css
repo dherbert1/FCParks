@@ -315,24 +315,6 @@ figcaption {
   background-color: var(--main-cl);
 }
 
-/* Events Page CSS */
-.events_title {
-  height: 6vw;
-  width: 100vw;
-  background-image: url(https://streamline.imgix.net/e4ad289e-3f14-4a0b-bf75-dd4a268086a2/6f21ef4d-4139-4a04-a9ce-f7b7c178de55/matt-artz-nTRDnDdDYk8-unsplash.jpg?ixlib=rb-1.1.0&w=2000&h=2000&fit=max&or=0&s=5a966d992fff83f63de4884bef212471);
-  background-color: var(--green-cl);
-
-  background-position: center;
-  /* Center the image */
-  background-repeat: no-repeat;
-  /* Do not repeat the image */
-  background-size: cover;
-  /* Resize the background image to cover the entire container */
-  text-align: center;
-  color: var(--white-cl);
-  font-size: x-large;
-}
-
 .event_calendar {
   width: 100vw;
   background-color: var(--dark-brown-cl);
@@ -687,7 +669,7 @@ h2 {
 }
 
 h3 {
-  color: var(--white-cl);
+  color: var(--black-cl);
   font-size: var(--fs-h3);
   line-height: var(--lh-h3);
   letter-spacing: normal;
