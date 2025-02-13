@@ -178,16 +178,7 @@
   width: 100vw;
   background-color: var(--main-cl);
 }
-.calendar-name{
-  text-align: center;
-  font-size: 20px;
-  color:var(--black-cl);
-  background-color:var(--accent);
-  height: 15px;
-  width: 100vw;
-  border-color: transparent;
 
-}
 /* Events Page CSS */
 .events_title {
   height: 6vw;
