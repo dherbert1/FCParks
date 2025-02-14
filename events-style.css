@@ -1135,7 +1135,7 @@ p {
   height: 1px;
   display: block;
   margin-top: 31px;
-  background: var(--white-cl);
+  background: var(--black-cl);
   position: absolute;
 }
 
