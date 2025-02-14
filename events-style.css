@@ -527,7 +527,10 @@ img {
   }
 }
 
-
+.eventspage {
+  overflow-x: hidden;
+  min-width:320px;
+}
 
 
 
