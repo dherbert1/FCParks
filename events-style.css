@@ -1215,7 +1215,6 @@ p {
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
-  position: absolute;
 }
 
 @media (max-width: 991.98px) {
