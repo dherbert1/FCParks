@@ -39,33 +39,9 @@ function scrollToTop() {
   });
   
   // Reviews
-  function handleReviews() {
-    let flkty = new Flickity(".reviews__slider", {
-      groupCells: 2,
-      wrapAround: true,
-      pageDots: true,
-      prevNextButtons: true,
-      responsive: [
-        {
-          breakpoint: 991.98,
-          settings: {
-            groupCells: 1,
-          },
-        },
-      ],
-      on: [ 
-        {
-          ready: function () {
-            heightCard();
-          },
-        }
-      ],
-    });
-  };
-  
-  function handleServices() {
-    let flkty = new Flickity(".services__slider", {
-      groupCells: 2,
+  function handlePhotos() {
+    let flkty = new Flickity(".photos__slider", {
+      groupCells: 1,
       wrapAround: true,
       pageDots: true,
       prevNextButtons: true,
@@ -88,7 +64,7 @@ function scrollToTop() {
   };
   
   function heightCard() {
-    let slides = document.querySelectorAll(".reviews__slider-item .textbody.--bd1");
+    let slides = document.querySelectorAll(".phtotos__slider-item .textbody.--bd1");
     let maxHeight = 0;
     slides.forEach(function (slide) {
       let height = slide.offsetHeight;
