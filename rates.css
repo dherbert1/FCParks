@@ -1,20 +1,13 @@
-:root{
-    --height-header: 100px;
-    --main-cl: #234A07;
+.nav_rates{
+    background-color: #6F875A;
+  overflow: hidden;
 }
 
-.nav_rates {
-    z-index: 300;
-  top: var(--height-header);
-  width: 100%;
-  height: calc(100vh - var(--height-header));
-  position: fixed;
-  left: 0;
-  background: var(--main-cl);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: 0.3s;
+.nav_rates a{
+    float: left;
+  color: #33261d;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
-
