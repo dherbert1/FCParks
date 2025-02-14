@@ -329,7 +329,7 @@ figcaption {
   height: 9px;
   width: 100vw;
   background-color: var(--white-cl);
-  margin: 45px;
+  margin: 45px 0px;
 }
 
 .event_calendar {
@@ -345,18 +345,17 @@ figcaption {
   padding-bottom: 20px;
   display: block;
   color: var(--white-cl);
-  font-size: 30px;
+  font-size: 50px;
   text-align: center;
   margin-top: 150px;
 }
 
 .event_calendar .calendar {
-  margin-top: 29px;
   grid-template-columns: 1fr 1fr 1fr;
   display: grid;
   gap: var(--gap);
   background-color: var(--main-cl);
-  padding: 45px 90px 45px 90px;
+  padding: 45px 90px;
 }
 
 .calendar .calendar-item {
