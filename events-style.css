@@ -1194,7 +1194,7 @@ p {
   display: block;
   clear: both;
   top: 0;
-  background: var(--grey-footer);
+  background: var(--black-cl);
   position: absolute;
 }
 
