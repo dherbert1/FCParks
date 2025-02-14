@@ -382,6 +382,7 @@ figcaption {
 @media (max-width: 596px) {
   .event_calendar .calendar {
     display: block;
+    padding: 15px;
   }
 }
 
@@ -389,6 +390,7 @@ figcaption {
   .event_calendar .calendar {
     display: block;
     grid-template-columns: 1fr 1fr;
+    
   }
 }
 
