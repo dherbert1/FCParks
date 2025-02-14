@@ -302,7 +302,7 @@ a {
 
 figcaption {
   text-align: center;
-  color: var(--white-cl);
+  color: var(--black-cl);
   font-style: italic;
   font-size: var(--fs-body2);
   line-height: var(--lh-body2);
@@ -310,7 +310,7 @@ figcaption {
 }
 
 .textbody {
-  color: var(--white-cl);
+  color: var(--black-cl;
 }
 
 .textbody.__bd1 {
@@ -659,7 +659,7 @@ img {
 }
 
 .heading {
-  color: var(--white-cl);
+  color: var(--black-cl);
 }
 
 .heading.__h1 {
@@ -1092,12 +1092,12 @@ p {
 }
 
 .footer__top-social a {
-  background: var(--grey-social-cl);
   position: relative;
   width: 36px;
   height: 36px;
   border-radius: 100%;
   overflow: hidden;
+  background-color: var(--black-cl);
 }
 
 .footer__top-social a img {
@@ -1154,7 +1154,7 @@ p {
 
 .footer__middle-menu .menu__list-left a,
 .footer__middle-menu .menu__list-right a {
-  color: var(--white-cl);
+  color: var(--black-cl);
   text-transform: uppercase;
   padding: 9px 0;
   font-size: var(--fs-txtmenu);
