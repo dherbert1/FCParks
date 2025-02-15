@@ -390,7 +390,7 @@ figcaption {
   .event_calendar .calendar {
     display: block;
     grid-template-columns: 1fr 1fr;
-    
+    padding: 15px;
   }
 }
 
