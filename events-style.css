@@ -726,7 +726,7 @@ h3 {
   letter-spacing: normal;
 }
 
-.p {
+p {
   color: var(--black-cl);
   font-size: var(--fs-body1);
   line-height: var(--lh-body1);
