@@ -332,10 +332,10 @@ figcaption {
   transition: var(--duration);
   cursor: pointer;
   width: max-content;
-  background: var(--main-cl);
   color: var(--black-cl);
   border-radius: 80px;
   white-space: nowrap;
+  background-color: var(--white-cl);
 }
 @media (max-width: 375.98px) {
   .btnmain {
@@ -344,7 +344,7 @@ figcaption {
   }
 }
 .btnmain:hover {
-  background: var(--white-cl);
+  background: var(--grey-dark-cl);
   color: var(--dark-cl);
 }
 .btnmain.__grey {
@@ -352,7 +352,7 @@ figcaption {
   color: var(--black-cl);
 }
 .btnmain.__grey:hover {
-  background: var(--main-cl);
+  background: var(--grey-dark-cl);
   color: var(--dark-cl);
 }
 .btnmain.__white {

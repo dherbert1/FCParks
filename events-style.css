@@ -396,12 +396,14 @@ figcaption {
 @media (max-width: 596px) {
   .calendar-item {
     margin: 15px;
+    overflow-x: hidden;
   }
 }
 
 @media (max-width: 900px) {
   .calendar-item {
     margin: 15px;
+    overflow-x: hidden;
   }
 }
 
@@ -724,7 +726,7 @@ h3 {
   letter-spacing: normal;
 }
 
-p {
+.p {
   color: var(--black-cl);
   font-size: var(--fs-body1);
   line-height: var(--lh-body1);
