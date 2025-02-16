@@ -329,7 +329,7 @@ img {vertical-align: middle;}
   padding-top: 100px;
 }
 .slideshow_background{
-  background-color: var(--accent);
+  background-color: var(--main-cl);
 }
 /* Next & previous buttons */
 .prev, .next {
