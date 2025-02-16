@@ -311,8 +311,15 @@
     opacity: 1;
     visibility: visible;
   }
-
-
+img{
+  max-width: 100%;
+  height: auto;
+  user-select: none;
+  display: block;
+  outline: 0;
+  object-fit: contain;
+  z-index: 1;
+}
 
   /* pictures */
 * {box-sizing: border-box}
