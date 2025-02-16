@@ -11,19 +11,20 @@
     
   /* Root Variables */
   :root {
-    /* MaxWidth Of Page, Container-Fluid, Container, Gap, Border */
-    --max-width-container: 2560px;
+    /* MaxWidth Of Page, Container-Fluid, Container, Gutter*/
+    --max-width-page: 2560px;
     --max-width-container-fluid: 1920px;
     --max-width-container: 1198px;
     --gap: 26px;
     --border: 40px;
   
-    /* Color Variables */
-    --main-cl: #f5f5dc;
-    /* --green-cl: ; */
-    --dark-brown-cl: #412202;
-    --white-cl: #fff;
-    --black-cl: #000;
+    /* Color Variables*/
+    --main-cl: #234A07;
+    --middle-cl: #6F875A;
+    --dark-cl: #412202;
+    --accent: #B1B3A8;
+    --white-cl: #f5f5dc;
+    --black-cl: #141414;
     --grey-dark-cl: rgba(255, 255, 255, 0.1);
     --grey-light-cl: rgba(255, 255, 255, 0.2);
     --grey-social-cl: rgba(255, 255, 255, 0.5);
@@ -69,17 +70,9 @@
     --ls-spec: 1px;
     --lh-spec: 2.6rem;
   
-    --fs-author: 1.6rem;
-    --ls-author: 0.8px;
-    --lh-author: 1.8rem;
-  
     --fs-yr: 2.8rem;
     --lh-yr: 3rem;
     --ls-yr: 0.28px;
-  
-    --fs-blog: 2.8rem;
-    --lh-blog: 4rem;
-    --ls-blog: 0.28px;
   
     --fs-faq: 2.8rem;
     --lh-faq: 3rem;
@@ -90,6 +83,7 @@
     --ls-navmenu: 1.4px;
   
     --height-header: 100px;
+  
     --height-button: 70px;
     --height-button-header: 56px;
   
@@ -335,7 +329,7 @@ img {vertical-align: middle;}
   padding-top: 100px;
 }
 .slideshow_background{
-  background-color: var(--dark-brown-cl);
+  background-color: var(--accent);
 }
 /* Next & previous buttons */
 .prev, .next {
