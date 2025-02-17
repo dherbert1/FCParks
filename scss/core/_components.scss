@@ -123,9 +123,7 @@ a {
   justify-content: flex-start;
   align-items: center;
   gap: 28px;
-  position: relative;
-  z-index: 2;
-
+  
   @include mixins.xs {
     justify-content: center;
     flex-direction: column;
