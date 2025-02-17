@@ -56,7 +56,7 @@ function scrollToTop() {
   };
   
   function heightCard() {
-    let slides = document.querySelectorAll(".photos__slider-item .textbody.--bd1");
+    let slides = document.querySelectorAll(".photos__slider-item");
     let maxHeight = 0;
     slides.forEach(function (slide) {
       let height = slide.offsetHeight;
@@ -69,12 +69,10 @@ function scrollToTop() {
     });
   }
   window.addEventListener("load", function () {
-    handleReviews();
-    handleServices();
+    handlePhotos();
   });
   window.addEventListener("resize", function () {
-    handleReviews();
-    handleServices();
+    handlePhotos();
   });
   
   // Click Hamburger, Show Menu
@@ -153,169 +151,128 @@ function scrollToTop() {
     percentNumber.innerHTML = `${percent}%`;
   }
   
-  // Blog
-  function handleTabnews(id) {
-    let tabs = document.querySelectorAll(".tabs__item"),
-      news = document.querySelectorAll(".blognews__list");
   
-    // See Clicked Tab Value
-    let clickedTab = null;
-    tabs.forEach(function (tab) {
-      if (tab.dataset.tab === id) {
-        clickedTab = tab;
-      }
-    });
-    // Remove active all tabs
-    tabs.forEach(function (tab) {
-      tab.classList.remove("--active");
-    });
+  // // Validate Form
+  // function validateForm() {
+  //   let form = document.querySelector(".getintouch__content-form"),
+  //     fullname = document.querySelector("#fullname"),
+  //     email = document.querySelector("#email"),
+  //     company = document.querySelector("#company"),
+  //     subject = document.querySelector("#subject"),
+  //     message = document.querySelector("#message");
   
-    // Hide All News List
-    news.forEach(function (newslist) {
-      newslist.classList.remove("--active");
-    });
+  //   if (!form) {
+  //     console.log("Form not found");
+  //     return;
+  //   }
   
-    // Add Active to Current Click
-    clickedTab.classList.add("--active");
+  //   function getParentInput(e, selector = "") {
+  //     // Condition has to be met to run
+  //     while (e.parentElement) {
+  //       if (e.parentElement.matches(selector)) {
+  //         return e.parentElement;
+  //       }
+  //       // let e = its parent and run again
+  //       e = e.parentElement;
+  //     }
+  //   }
   
-    // Addclass Active to Blog List
-    let items = document.querySelectorAll(".blognews__list-" + id);
+  //   // Show error
+  //   function showError(input, texterror = "") {
+  //     const parentInput = getParentInput(input, ".form-group");
+  //     let error = parentInput.querySelector(".error");
+  //     if (texterror != "") {
+  //       error.innerText = texterror;
+  //       input.classList.add("--error");
+  //     } else {
+  //       error.innerText = texterror;
+  //       input.classList.remove("--error");
+  //     }
+  //   }
   
-    items.forEach(function (item) {
-      item.classList.add("--active");
-    });
-  }
+  //   // Validate full name
+  //   function isValidFullname(fullname) {
+  //     let regName = /^[a-zA-Z]+(?: [a-zA-Z]+)+$/;
+  //     let adjustedFullname = fullname.trim().replace(/\s+/g, " ");
+  //     return regName.test(adjustedFullname);
+  //   }
   
-  // Event listeners for tabs
-  document.querySelectorAll(".tabs__item").forEach(function (tab) {
-    if (tab) {
-      tab.addEventListener("click", function () {
-        handleTabnews(this.dataset.tab);
-      });
-    }
-  });
+  //   // Validate email
+  //   function isValidEmail(email) {
+  //     let emailReg = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  //     return emailReg.test(email);
+  //   }
   
-  // Validate Form
-  function validateForm() {
-    let form = document.querySelector(".getintouch__content-form"),
-      fullname = document.querySelector("#fullname"),
-      email = document.querySelector("#email"),
-      company = document.querySelector("#company"),
-      subject = document.querySelector("#subject"),
-      message = document.querySelector("#message");
+  //   // Check input
+  //   function checkInputs() {
+  //     let dataCustomers = [];
+  //     let isError = false;
   
-    if (!form) {
-      console.log("Form not found");
-      return;
-    }
+  //     // Validate Full Name
+  //     const valueFullName = fullname.value.trim();
+  //     if (valueFullName === "") {
+  //       showError(fullname, "Please input your full name");
+  //       isError = true;
+  //     } else if (!isValidFullname(valueFullName)) {
+  //       showError(fullname, "Please input first & last name with space");
+  //       isError = true;
+  //     } else {
+  //       showError(fullname);
+  //       dataCustomers.push(valueFullName);
+  //     }
   
-    function getParentInput(e, selector = "") {
-      // Condition has to be met to run
-      while (e.parentElement) {
-        if (e.parentElement.matches(selector)) {
-          return e.parentElement;
-        }
-        // let e = its parent and run again
-        e = e.parentElement;
-      }
-    }
+  //     // Validate Email
+  //     const valueEmail = email.value.trim();
+  //     if (valueEmail === "") {
+  //       showError(email, "Please input your email");
+  //       isError = true;
+  //     } else if (!isValidEmail(valueEmail)) {
+  //       showError(email, "Please input a valid email");
+  //       isError = true;
+  //     } else {
+  //       showError(email);
+  //       dataCustomers.push(valueEmail);
+  //     }
   
-    // Show error
-    function showError(input, texterror = "") {
-      const parentInput = getParentInput(input, ".form-group");
-      let error = parentInput.querySelector(".error");
-      if (texterror != "") {
-        error.innerText = texterror;
-        input.classList.add("--error");
-      } else {
-        error.innerText = texterror;
-        input.classList.remove("--error");
-      }
-    }
+  //     // Validate Subject
+  //     const valueSubject = subject.value.trim();
+  //     if (valueSubject === "") {
+  //       showError(subject, "Please input your subject");
+  //       isError = true;
+  //     } else {
+  //       showError(subject);
+  //       dataCustomers.push(valueSubject);
+  //     }
   
-    // Validate full name
-    function isValidFullname(fullname) {
-      let regName = /^[a-zA-Z]+(?: [a-zA-Z]+)+$/;
-      let adjustedFullname = fullname.trim().replace(/\s+/g, " ");
-      return regName.test(adjustedFullname);
-    }
+  //     // Push company if any
+  //     const valueCompany = company.value.trim();
+  //     if (valueCompany !== "") {
+  //       dataCustomers.push(valueCompany);
+  //     }
   
-    // Validate email
-    function isValidEmail(email) {
-      let emailReg = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-      return emailReg.test(email);
-    }
+  //     // Validate Message
+  //     const valueMessage = message.value.trim();
+  //     if (valueMessage === "") {
+  //       showError(message, "Please input your message");
+  //       isError = true;
+  //     } else {
+  //       showError(message);
+  //       dataCustomers.push(valueMessage);
+  //     }
   
-    // Check input
-    function checkInputs() {
-      let dataCustomers = [];
-      let isError = false;
+  //     return isError ? false : dataCustomers;
+  //   }
   
-      // Validate Full Name
-      const valueFullName = fullname.value.trim();
-      if (valueFullName === "") {
-        showError(fullname, "Please input your full name");
-        isError = true;
-      } else if (!isValidFullname(valueFullName)) {
-        showError(fullname, "Please input first & last name with space");
-        isError = true;
-      } else {
-        showError(fullname);
-        dataCustomers.push(valueFullName);
-      }
-  
-      // Validate Email
-      const valueEmail = email.value.trim();
-      if (valueEmail === "") {
-        showError(email, "Please input your email");
-        isError = true;
-      } else if (!isValidEmail(valueEmail)) {
-        showError(email, "Please input a valid email");
-        isError = true;
-      } else {
-        showError(email);
-        dataCustomers.push(valueEmail);
-      }
-  
-      // Validate Subject
-      const valueSubject = subject.value.trim();
-      if (valueSubject === "") {
-        showError(subject, "Please input your subject");
-        isError = true;
-      } else {
-        showError(subject);
-        dataCustomers.push(valueSubject);
-      }
-  
-      // Push company if any
-      const valueCompany = company.value.trim();
-      if (valueCompany !== "") {
-        dataCustomers.push(valueCompany);
-      }
-  
-      // Validate Message
-      const valueMessage = message.value.trim();
-      if (valueMessage === "") {
-        showError(message, "Please input your message");
-        isError = true;
-      } else {
-        showError(message);
-        dataCustomers.push(valueMessage);
-      }
-  
-      return isError ? false : dataCustomers;
-    }
-  
-    // Submit Form and Check All Input
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      const isChecked = checkInputs();
-      if (!isChecked) {
-        console.log("resubmit");
-      }
-    });
-  }
-  validateForm();
+  //   // Submit Form and Check All Input
+  //   form.addEventListener("submit", function (e) {
+  //     e.preventDefault();
+  //     const isChecked = checkInputs();
+  //     if (!isChecked) {
+  //       console.log("resubmit");
+  //     }
+  //   });
+  // }
+  // validateForm();
   
   // FAQ
   let acc = document.getElementsByClassName("accordion");
