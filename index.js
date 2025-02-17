@@ -37,44 +37,7 @@ function scrollToTop() {
     // Add scroll event listener
     window.addEventListener("scroll", showScrollToTop);
   });
-  
-  // Reviews
-  function handlePhotos() {
-    let flkty = new Flickity(".photos__slider", {
-      groupCells: 1,
-      wrapAround: true,
-      pageDots: true,
-      prevNextButtons: true,
-      on: [ 
-        {
-          ready: function () {
-            heightCard();
-          },
-        }
-      ],
-    });
-  };
-  
-  function heightCard() {
-    let slides = document.querySelectorAll(".photos__slider-item");
-    let maxHeight = 0;
-    slides.forEach(function (slide) {
-      let height = slide.offsetHeight;
-      if (height > maxHeight) {
-        maxHeight = height;
-      }
-    });
-    slides.forEach(function (slide) {
-      slide.style.height = `${maxHeight}px`;
-    });
-  }
-  window.addEventListener("load", function () {
-    handlePhotos();
-  });
-  window.addEventListener("resize", function () {
-    handlePhotos();
-  });
-  
+   
   // Click Hamburger, Show Menu
   const btnMenu = document.querySelector(".header__cta-hamburger .bars"),
     nav = document.querySelector(".nav");
