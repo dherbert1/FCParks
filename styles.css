@@ -255,6 +255,9 @@ a {
   line-height: var(--lh-txtbtn);
   height: var(--height-button);
   padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-transform: uppercase;
   transition: var(--duration);
   cursor: pointer;

@@ -41,10 +41,14 @@ a {
   font-size: var(--fs-txtbtn);
   letter-spacing: var(--ls-txtbtn);
   line-height: var(--lh-txtbtn);
+
   height: var(--height-button);
   padding: 0 32px;
+
+  @include mixins.mid(true);
+
   text-transform: uppercase;
-  transition: var(--duration);
+  @include mixins.transition(var(--duration));
   cursor: pointer;
   width: max-content;
   background: var(--main-cl);
