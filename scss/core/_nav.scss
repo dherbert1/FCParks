@@ -12,6 +12,7 @@
   opacity: 0;
   visibility: hidden;
   transition: 0.3s;
+
   &__blurbg {
     z-index: 0;
     height: 100%;
@@ -22,11 +23,14 @@
     background: radial-gradient(circle at 50%, var(--accent) 0%, var(--main-cl) 60%);
     opacity: 0.6;
   }
+
   ul {
     position: absolute;
     z-index: 350;
+
     li {
       text-align: center;
+
       a {
         font-size: var(--fs-navmenu);
         letter-spacing: var(--ls-navmenu);
@@ -37,11 +41,13 @@
         display: block;
         padding: 20px 0;
         @include mixins.transition(var(--duration));
+
         &.active {
           color: var(--main-cl);
         }
       }
     }
+
     .btnmain {
       margin-top: 20px;
       padding: 0 77px;

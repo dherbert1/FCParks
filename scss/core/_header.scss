@@ -12,6 +12,7 @@
   background: transparent;
   z-index: 4;
   color: var(--white-cl);
+
   .container {
     font-size: var(--fs-txtmenu);
     line-height: var(--lh-txtmenu);
@@ -29,10 +30,12 @@
       align-items: center;
       justify-content: space-between;
       gap: 27px;
+
       li:not(:first-child) {
         a {
           color: var(--black-cl);
           transition: var(--duration);
+
           &:hover,
           &.active {
             &:after {
@@ -42,16 +45,19 @@
           }
         }
       }
+
       &-logo {
         width: 150px;
         height: auto;
         margin-right: 37px;
         position: relative;
+
         @include mixins.sm {
           width: 150px;
         }
       }
     }
+
     .header__cta {
       &-hamburger {
         display: none;
@@ -60,6 +66,7 @@
         width: 45px;
         height: 45px;
         background-color: var(--white-cl);
+
         .bars {
           width: 24px;
           height: 20px;
@@ -67,6 +74,7 @@
           left: 50%;
           transform: translate(-50%, -50%);
           position: absolute;
+
           span,
           &:after,
           &:before {
@@ -78,28 +86,34 @@
             position: absolute;
             transition: var(--duration);
           }
+
           span {
             top: 50%;
             transform: translateY(-50%);
             transition: var(--duration);
           }
+
           &:before {
             transform: rotate(0deg) translate(0px, 0px);
           }
+
           &:after {
             bottom: 0;
             transform: rotate(0deg) translate(0px, 0px);
           }
+
           &.active {
             span {
               @include mixins.mid(false);
 
               opacity: 0;
             }
+
             &:before {
               transform: rotate(45deg) translate(7px, 6px);
               @include mixins.transition(var(--duration));
             }
+
             &:after {
               @include mixins.transition(var(--duration));
               transform: rotate(-45deg) translate(6px, -6px);
@@ -108,12 +122,14 @@
         }
       }
     }
+
     @include mixins.sm {
       .header__menu {
         li:not(:first-child) {
           display: none;
         }
       }
+
       .header__cta {
         &-hamburger {
           display: flex;
@@ -121,12 +137,15 @@
       }
     }
   }
+
   &.scroll {
     background: var(--white-cl);
   }
+
   &.active {
     background: var(--white-cl);
   }
+
   @include mixins.sm {
     background: var(--white-cl);
   }

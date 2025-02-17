@@ -3,6 +3,7 @@
 html {
   font-size: 62.5%; // 1rem = 10px
 }
+
 body {
   background: var(--main-cl);
   width: 100%;
@@ -12,10 +13,12 @@ body {
   font-family: 'dsr';
   font-size: var(--fs-body);
   line-height: var(--lh-body);
+
   &.__disable-scroll {
     height: 100vh;
     overflow: hidden;
   }
+
   .container-fluid {
     width: 100%;
     max-width: var(--max-width-container-fluid);
@@ -25,6 +28,7 @@ body {
     margin-left: auto;
     position: relative;
   }
+
   .container {
     width: 100%;
     max-width: var(--max-width-container);
@@ -34,13 +38,16 @@ body {
     margin-left: auto;
     position: relative;
   }
+
   @include mixins.xs {
+
     .container-fluid,
     .container {
       padding-right: calc(var(--gap) + 6px);
       padding-left: calc(var(--gap) + 6px);
     }
   }
+
   .main {
     position: relative;
     padding-top: calc(40px + var(--height-header));

@@ -9,6 +9,7 @@ img {
   outline: 0;
   object-fit: contain;
   z-index: 1;
+
   &.__center {
     margin: 0 auto;
     display: block;
@@ -60,32 +61,40 @@ a {
     background: var(--white-cl);
     color: var(--dark-cl);
   }
+
   &.__grey {
     background: var(--grey-dark-cl);
     color: var(--white-cl);
   }
+
   &.__grey:hover {
     background: var(--white-cl);
     color: var(--dark-cl);
   }
+
   &.__white {
     background: var(--white-cl);
     color: var(--main-cl);
+
     @include mixins.sm {
       width: 80%;
       margin-top: 16px;
+
       @include mixins.xs {
         width: 100%;
       }
     }
   }
+
   &.__white:hover {
     background: var(--middle-cl);
     color: var(--white-cl);
   }
+
   &.__btnheader {
     height: var(--height-button-header);
   }
+
   &.__center {
     margin: auto;
   }
@@ -112,9 +121,11 @@ a {
   gap: 28px;
   position: relative;
   z-index: 2;
+
   @include mixins.xs {
     justify-content: center;
     flex-direction: column;
+
     .btnmain {
       width: 100%;
     }
@@ -130,6 +141,7 @@ a {
     line-height: var(--lh-h1);
     letter-spacing: var(--ls-h1);
   }
+
   &.__h2 {
     font-size: var(--fs-h2);
     line-height: var(--lh-h2);
@@ -141,23 +153,27 @@ a {
     line-height: var(--lh-h3);
     letter-spacing: normal;
   }
+
   &.__label {
     text-transform: uppercase;
     font-size: var(--fs-lb);
     line-height: var(--lh-lb);
     letter-spacing: var(--ls-lb);
   }
+
   &.__spec {
     font-size: var(--fs-spec);
     line-height: var(--lh-spec);
     letter-spacing: var(--ls-spec);
     text-transform: uppercase;
   }
+
   &.__h4 {
     font-size: var(--fs-name);
     letter-spacing: var(--ls-name);
     line-height: var(--lh-name);
   }
+
   &.__yr {
     font-size: var(--fs-yr);
     line-height: var(--lh-yr);
@@ -193,40 +209,51 @@ p {
   &.__align-left {
     p {
       margin-top: 19px;
+
       @include mixins.xxs {
         margin-top: 16px;
       }
     }
   }
+
   &.__textcenter {
     text-align: center;
     max-width: 55%;
     margin: auto;
+
     p {
       margin-top: 15px;
     }
+
     @include mixins.xs {
       max-width: 100%;
+
       &.__title {
         text-align: left;
       }
     }
   }
+
   &.__align-center {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     @include mixins.sm {
       display: initial;
+
       .heading.__h2 {
         white-space: initial;
       }
     }
+
     .heading.__h2 {
       white-space: nowrap;
     }
+
     p {
       max-width: 40%;
+
       @include mixins.sm {
         max-width: 100%;
         margin-top: 16px;
@@ -243,12 +270,14 @@ p {
   position: relative;
   border-radius: 20px;
   flex-shrink: 0;
+
   img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     position: absolute;
   }
+
   &.__small {
     width: 46px;
     height: 46px;
@@ -265,6 +294,7 @@ p {
   align-items: center;
   position: relative;
   gap: 16px;
+
   li {
     a {
       display: flex;
@@ -275,8 +305,10 @@ p {
       line-height: var(--lh-body1);
       letter-spacing: var(--ls-body1);
     }
+
     .number {
       padding: 0 8px;
+
       &:hover,
       &.__active {
         color: var(--main-cl);
@@ -291,9 +323,11 @@ p {
   justify-self: flex-start;
   gap: 17px;
   margin-top: 39px;
+
   @include mixins.xxs {
     margin-top: 16px;
   }
+
   &__item {
     display: flex;
     align-items: center;
