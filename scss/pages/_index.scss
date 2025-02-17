@@ -1,0 +1,110 @@
+@use "../core/mixins";
+
+.homepage {
+  overflow-x: hidden;
+  min-width: 320px;
+
+  .open {
+    @include minW(992px) {
+      height: 100vh;
+      position: relative;
+      max-height: 980px;
+      min-height: 650px;
+
+      .open__content {
+        z-index: 2;
+        position: relative;
+        top: 50%;
+        @include transform(translateY(-50%));
+
+        .container {
+          h1 {
+            max-width: 55%;
+            position: relative;
+            z-index: 2;
+          }
+
+          p {
+            max-width: 50%;
+            margin: 10px 0 42px 0;
+            position: relative;
+            z-index: 2;
+          }
+        }
+      }
+    }
+
+    @include sm {
+      padding-top: var(--height-header);
+      position: relative;
+      overflow: hidden;
+
+      &__content {
+        margin-top: 45px;
+
+        h1,
+        p {
+          max-width: 100%;
+        }
+
+        p {
+          margin: 16px 0 33px 0;
+        }
+      }
+    }
+  }
+
+  .photos {
+    position: relative;
+
+    &__slider {
+      margin-top: 33px;
+      width: 100%;
+      overflow: hidden;
+
+      .flickity-page-dots {
+        margin-top: 40px;
+
+        .dot {
+          @include mixin.size(14px, 14px, true);
+          background-color: var(--white-cl);
+          opacity: 0.4;
+          padding: 0;
+          margin: 5px;
+
+          &.is-selected {
+            background-color: var(--white-cl);
+            opacity: 1;
+          }
+        }
+      }
+
+      &-item {
+        background: var(--black-cl);
+        padding: 65px 50px;
+        width: calc(var(--max-width-container) / 2 - (var(--gap) / 2) - var(--gap));
+        min-width: 335px;
+        margin: 0 calc(var(--gap) / 2);
+        border-radius: 40px;
+        opacity: 0.3;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        transition: opacity 1s ease-in-out;
+
+        &.is-selected {
+          opacity: 1;
+        }
+
+        @include sm {
+          width: calc(100vw - var(--gap) * 2 - 23px);
+          margin: 0 calc(var(--gap) / 2);
+
+          p {
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}
