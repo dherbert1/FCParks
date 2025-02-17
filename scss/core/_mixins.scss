@@ -1,0 +1,196 @@
+@mixin lg {
+	@media (max-width: 1440px) {
+		@content;
+	}
+}
+
+@mixin md {
+	@media (max-width: 1199.98px) {
+		@content;
+	}
+}
+
+@mixin sm {
+	@media (max-width: 991.98px) {
+		@content;
+	}
+}
+
+@mixin xs {
+	@media (max-width: 767.98px) {
+		@content;
+	}
+}
+
+@mixin xxs {
+	@media (max-width: 575.98px) {
+		@content;
+	}
+}
+
+@mixin xxxs {
+	@media (max-width: 375.98px) {
+		@content;
+	}
+}
+
+@mixin landscape {
+	@media (orientation: landscape) {
+		@content;
+	}
+}
+
+@mixin maxW($args) {
+	@media (max-width: $args) {
+		@content;
+	}
+}
+
+@mixin minW($args) {
+	@media (min-width: $args) {
+		@content;
+	}
+}
+
+@mixin minH($args) {
+	@media (min-height: $args) {
+		@content;
+	}
+}
+
+@mixin maxH($args) {
+	@media (max-height: $args) {
+		@content;
+	}
+}
+
+// CSS Animation - Transition
+@mixin keyframes($animation-name) {
+	@keyframes #{$animation-name} {
+		@content;
+	}
+}
+
+@mixin animation($str) {
+	animation: #{$str};
+}
+
+@mixin animation-delay($str) {
+	animation-delay: #{$str};
+}
+
+@mixin transform($args) {
+	transform: $args;
+}
+
+@mixin transform-origin($args) {
+	transform-origin: $args;
+}
+
+@mixin transition-delay($args) {
+	transition-delay: $args;
+}
+
+@mixin transition($args) {
+	transition: $args;
+}
+
+// CSS Text
+@mixin text($font-family, $font-size, $line-height, $color, $text-transform: none) {
+	font-family: $font-family;
+	font-size: $font-size;
+	line-height: $line-height;
+	color: $color;
+	text-transform: $text-transform;
+}
+
+// Middle Object
+@mixin mid($flex: false) {
+	@if $flex ==false {
+		top: 50%;
+		left: 50%;
+		@include transform(translate(-50%, -50%));
+		position: absolute;
+	}
+
+	@else {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+// Frame Img
+@mixin frameimg($w, $h: $w) {
+	aspect-ratio: calc($w/$h);
+	position: relative;
+	overflow: hidden;
+}
+
+// Middle Img
+@mixin midimg {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+// FullScreen
+@mixin fullscreen($fixed: false) {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+
+	@if $fixed {
+		position: fixed;
+	}
+
+	@else {
+		position: absolute;
+	}
+}
+
+// Visible
+@mixin visible($param: 1) {
+	@if $param ==1 {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	@else {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+// Size Div
+@mixin size($w, $h: $w, $circle: false) {
+	width: $w;
+	height: $h;
+
+	@if $circle {
+		border-radius: 100%;
+	}
+}
+
+// Overflow Text Dots
+@mixin overtext($lines) {
+	display: inline-flex;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+// Customize Scroll Bar
+@mixin customscroll($width: 5px, $bgTrack: #ddd, $bgThumb: #121212) {
+	&::-webkit-scrollbar {
+		width: $width;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: transparent;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: $bgThumb;
+	}
+}
