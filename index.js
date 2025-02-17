@@ -45,14 +45,6 @@ function scrollToTop() {
       wrapAround: true,
       pageDots: true,
       prevNextButtons: true,
-      responsive: [
-        {
-          breakpoint: 991.98,
-          settings: {
-            groupCells: 1,
-          },
-        },
-      ],
       on: [ 
         {
           ready: function () {
@@ -64,7 +56,7 @@ function scrollToTop() {
   };
   
   function heightCard() {
-    let slides = document.querySelectorAll(".phtotos__slider-item .textbody.--bd1");
+    let slides = document.querySelectorAll(".photos__slider-item .textbody.--bd1");
     let maxHeight = 0;
     slides.forEach(function (slide) {
       let height = slide.offsetHeight;
