@@ -5,7 +5,7 @@
   min-width: 320px;
 
   .open {
-    @include minW(992px) {
+    @include mixins.minW(992px) {
       height: 100vh;
       position: relative;
       max-height: 980px;
@@ -15,7 +15,7 @@
         z-index: 2;
         position: relative;
         top: 50%;
-        @include transform(translateY(-50%));
+        @include mixins.transform(translateY(-50%));
 
         .container {
           h1 {
@@ -34,7 +34,7 @@
       }
     }
 
-    @include sm {
+    @include mixins.sm {
       padding-top: var(--height-header);
       position: relative;
       overflow: hidden;
@@ -66,7 +66,7 @@
         margin-top: 40px;
 
         .dot {
-          @include mixin.size(14px, 14px, true);
+          @include mixins.size(14px, 14px, true);
           background-color: var(--white-cl);
           opacity: 0.4;
           padding: 0;
@@ -96,7 +96,7 @@
           opacity: 1;
         }
 
-        @include sm {
+        @include mixins.sm {
           width: calc(100vw - var(--gap) * 2 - 23px);
           margin: 0 calc(var(--gap) / 2);
 
