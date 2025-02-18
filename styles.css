@@ -961,24 +961,24 @@ p {
     grid-template-columns: 1fr 1fr;
   }
 }
-.eventspage .event_calendar .calendar .calendar_item {
+.eventspage .event_calendar .calendar .calendar-item {
   border-radius: 40px;
   padding: 20px 30px 32px 30px;
   background: var(--white-cl);
 }
 @media (max-width: 575.98px) {
-  .eventspage .event_calendar .calendar .calendar_item {
+  .eventspage .event_calendar .calendar .calendar-item {
     margin: 15px;
     overflow-x: hidden;
   }
 }
 @media (max-width: 991.98px) {
-  .eventspage .event_calendar .calendar .calendar_item {
+  .eventspage .event_calendar .calendar .calendar-item {
     margin: 15px;
     overflow-x: hidden;
   }
 }
-.eventspage .event_calendar .calendar .calendar_item .name {
+.eventspage .event_calendar .calendar .calendar-item .name {
   text-transform: uppercase;
   display: flex;
   justify-content: center;
