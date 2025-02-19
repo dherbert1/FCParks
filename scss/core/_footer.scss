@@ -53,7 +53,7 @@
           height: 1px;
           display: block;
           margin-top: 31px;
-          background: var(--white-cl);
+          background: var(--black-cl);
           position: absolute;
         }
       }
@@ -70,7 +70,7 @@
           flex-direction: column;
 
           a {
-            color: var(--white-cl);
+            color: var(--black-cl);
             text-transform: uppercase;
             padding: 9px 0;
             font-size: var(--fs-txtmenu);
@@ -155,7 +155,7 @@
           justify-content: center;
 
           a {
-            background: var(--grey-social-cl);
+            background: var(--social-cl);
             position: relative;
             @include mixins.size(36px, 36px, true);
             overflow: hidden;

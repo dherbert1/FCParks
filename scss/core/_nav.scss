@@ -8,7 +8,9 @@
   position: fixed;
   left: 0;
   background: var(--main-cl);
+
   @include mixins.mid(true);
+
   opacity: 0;
   visibility: hidden;
   transition: 0.3s;
@@ -40,6 +42,7 @@
         text-decoration: none;
         display: block;
         padding: 20px 0;
+        
         @include mixins.transition(var(--duration));
 
         &.active {
