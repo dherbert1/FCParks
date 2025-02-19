@@ -93,6 +93,9 @@ a {
   --fs-body2: 1.6rem;
   --lh-body2: 2.6rem;
   --ls-body2: 0px;
+  --fs-li: 1.8rem;
+  --lh-li: 3.2rem;
+  --ls-li: 0px;
   --fs-txtmenu: 1.4rem;
   --lh-txtmenu: 1.6rem;
   --ls-txtmenu: 1.4px;
@@ -949,36 +952,39 @@ p {
   background-color: var(--main-cl);
   padding: 45px 90px;
 }
-@media (max-width: 575.98px) {
-  .eventspage .event_calendar .calendar {
-    display: block;
-    padding: 15px;
-  }
-}
 @media (max-width: 991.98px) {
   .eventspage .event_calendar .calendar {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 }
-.eventspage .event_calendar .calendar .calendar-item {
+@media (max-width: 767.98px) {
+  .eventspage .event_calendar .calendar {
+    padding: 15px;
+  }
+}
+@media (max-width: 575.98px) {
+  .eventspage .event_calendar .calendar {
+    display: block;
+    padding: 15px;
+  }
+}
+@media (max-width: 375.98px) {
+  .eventspage .event_calendar .calendar {
+    grid-template-columns: 1fr;
+  }
+}
+.eventspage .event_calendar .calendar-item {
   border-radius: 40px;
   padding: 20px 30px 32px 30px;
   background: var(--white-cl);
 }
-@media (max-width: 575.98px) {
-  .eventspage .event_calendar .calendar .calendar-item {
-    margin: 15px;
-    overflow-x: hidden;
-  }
+.eventspage .event_calendar .calendar-item > li {
+  font-size: var(--fs-li);
+  line-height: var(--lh-li);
+  letter-spacing: var(--ls-li);
 }
-@media (max-width: 991.98px) {
-  .eventspage .event_calendar .calendar .calendar-item {
-    margin: 15px;
-    overflow-x: hidden;
-  }
-}
-.eventspage .event_calendar .calendar .calendar-item .name {
+.eventspage .event_calendar .calendar-item .name {
   text-transform: uppercase;
   display: flex;
   justify-content: center;
