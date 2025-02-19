@@ -238,7 +238,7 @@ a {
 }
 
 .textbody {
-  color: var(--white-cl);
+  color: var(--black-cl);
 }
 .textbody.__bd1 {
   font-size: var(--fs-body1);
@@ -720,7 +720,7 @@ p {
   gap: 10px;
 }
 .footer__top-social a {
-  background: var(--grey-social-cl);
+  background: var(--social-cl);
   position: relative;
   width: 36px;
   height: 36px;
@@ -750,6 +750,7 @@ p {
 .footer__middle-menu .menutitle {
   display: block;
   position: relative;
+  color: var(--black-cl);
 }
 .footer__middle-menu .menutitle::after {
   content: "";
