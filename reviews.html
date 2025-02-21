@@ -14,6 +14,12 @@
 
   <!-- Link CSS -->
   <link rel="stylesheet" href="./styles.css">
+  <style>
+        body { font-family: Arial, sans-serif; max-width: 400px; margin: auto; padding: 20px; }
+        input, textarea, button { display: block; width: 100%; margin: 10px 0; padding: 8px; }
+        ul { list-style: none; padding: 0; }
+        li { margin: 10px 0; padding: 10px; border: 1px solid #ddd; }
+    </style>
 </head>
 
 <body class="reviewspage">
@@ -57,6 +63,26 @@
     </ul>
   </nav>
   <main class="main">
+     <h2>Customer Reviews</h2>
+    <form id="reviewForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <textarea id="comment" placeholder="Your Review" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+    <ul id="reviewsList"></ul>
+    <script>
+        document.getElementById("reviewForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let name = document.getElementById("name").value;
+            let comment = document.getElementById("comment").value;
+            if (name && comment) {
+                let reviewItem = document.createElement("li");
+                reviewItem.innerHTML = `<strong>${name}:</strong> ${comment}`;
+                document.getElementById("reviewsList").prepend(reviewItem);
+                document.getElementById("reviewForm").reset();
+            }
+        });
+    </script>
   </main>
   <div class="break"></div>
   <footer class="footer">
