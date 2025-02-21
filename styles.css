@@ -976,7 +976,6 @@ p {
 }
 @media (max-width: 575.98px) {
   .eventspage .event_calendar .calendar {
-    display: block;
     padding: 15px;
   }
 }
