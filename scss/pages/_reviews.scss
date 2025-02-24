@@ -1,28 +1,28 @@
 .reviewspage {
-    body {
-        font-family: Arial, sans-serif;
-        max-width: 400px;
-        margin: auto;
-        padding: 20px;
-    }
+  body {
+    font-family: Arial, sans-serif;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+  }
 
-    input,
-    textarea,
-    button {
-        display: block;
-        width: 100%;
-        margin: 10px 0;
-        padding: 8px;
-    }
+  input,
+  textarea,
+  button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+  }
 
-    ul {
-        list-style: none;
-        padding: 0;
-    }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
 
-    li {
-        margin: 10px 0;
-        padding: 10px;
-        border: 1px solid #ddd;
-    }
+  li {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
 }
