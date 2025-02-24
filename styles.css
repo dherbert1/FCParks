@@ -399,7 +399,7 @@ h3 {
 }
 
 p {
-  color: var(--black-cl);
+  color: var(--white-cl);
   font-size: var(--fs-body1);
   line-height: var(--lh-body1);
   letter-spacing: var(--ls-body1);
