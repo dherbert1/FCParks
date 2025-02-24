@@ -1096,28 +1096,4 @@ p {
   }
 }
 
-.reviewspage body {
-  font-family: Arial, sans-serif;
-  max-width: 400px;
-  margin: auto;
-  padding: 20px;
-}
-.reviewspage input,
-.reviewspage textarea,
-.reviewspage button {
-  display: block;
-  width: 100%;
-  margin: 10px 0;
-  padding: 8px;
-}
-.reviewspage ul {
-  list-style: none;
-  padding: 0;
-}
-.reviewspage li {
-  margin: 10px 0;
-  padding: 10px;
-  border: 1px solid #ddd;
-}
-
 /*# sourceMappingURL=styles.css.map */
