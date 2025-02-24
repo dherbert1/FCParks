@@ -183,7 +183,12 @@ a {
   }
 }
 
-//CSS by h2,h3
+h1 {
+  color: var(--white-cl);
+  font-size: var(--fs-h1);
+  line-height: var(--lh-h1);
+  letter-spacing: var(--ls-h1);
+}
 
 h2 {
   color: var(--white-cl);
@@ -200,7 +205,7 @@ h3 {
 }
 
 p {
-  color: var(--white-cl);
+  color: var(--black-cl);
   font-size: var(--fs-body1);
   line-height: var(--lh-body1);
   letter-spacing: var(--ls-body1);
@@ -209,7 +214,7 @@ p {
 // Textbox
 .textbox {
   &.__align-left {
-    p {
+    p { 
       margin-top: 19px;
 
       @include mixins.xxs {

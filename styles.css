@@ -384,6 +384,13 @@ a {
   letter-spacing: var(--ls-yr);
 }
 
+h1 {
+  color: var(--white-cl);
+  font-size: var(--fs-h1);
+  line-height: var(--lh-h1);
+  letter-spacing: var(--ls-h1);
+}
+
 h2 {
   color: var(--white-cl);
   font-size: var(--fs-h2);
@@ -399,7 +406,7 @@ h3 {
 }
 
 p {
-  color: var(--white-cl);
+  color: var(--black-cl);
   font-size: var(--fs-body1);
   line-height: var(--lh-body1);
   letter-spacing: var(--ls-body1);
