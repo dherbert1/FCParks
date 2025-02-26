@@ -39,7 +39,7 @@ window.addEventListener("load", function () {
 });
 
 // Reviews
-function handleReviews() {
+function handlePhotos() {
   let flkty = new Flickity(".photos__slider", {
     groupCells: 2,
     wrapAround: true,
