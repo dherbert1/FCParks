@@ -533,7 +533,9 @@ p {
   background-color: var(--white-cl);
   margin: 45px 0p;
 }
-
+.photos{
+  z-index: 6;
+}
 .photos__slider {
   margin-top: 33px;
   width: 100%;
