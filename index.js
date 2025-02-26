@@ -38,6 +38,52 @@ window.addEventListener("load", function () {
   window.addEventListener("scroll", showScrollToTop);
 });
 
+// Reviews
+function handleReviews() {
+  let flkty = new Flickity(".photos__slider", {
+    groupCells: 2,
+    wrapAround: true,
+    pageDots: true,
+    prevNextButtons: true,
+    responsive: [
+      {
+        breakpoint: 991.98,
+        settings: {
+          groupCells: 1,
+        },
+      },
+    ],
+    on: [ 
+      {
+        ready: function () {
+          heightCard();
+        },
+      }
+    ],
+  });
+};
+
+function heightCard() {
+  let slides = document.querySelectorAll(".photos__slider-item");
+  let maxHeight = 0;
+  slides.forEach(function (slide) {
+    let height = slide.offsetHeight;
+    if (height > maxHeight) {
+      maxHeight = height;
+    }
+  });
+  slides.forEach(function (slide) {
+    slide.style.height = `${maxHeight}px`;
+  });
+}
+window.addEventListener("load", function () {
+  handlePhotos();
+});
+window.addEventListener("resize", function () {
+  handlePhotos();
+});
+
+
 // Click Hamburger, Show Menu
 const btnMenu = document.querySelector(".header__cta-hamburger .bars"),
   nav = document.querySelector(".nav");
