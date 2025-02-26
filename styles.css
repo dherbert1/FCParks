@@ -534,6 +534,53 @@ p {
   margin: 45px 0p;
 }
 
+.reviews__slider {
+  margin-top: 33px;
+  width: 100%;
+  overflow: hidden;
+}
+.reviews__slider .flickity-page-dots {
+  margin-top: 40px;
+}
+.reviews__slider .flickity-page-dots .dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  background-color: var(--white-cl);
+  opacity: 0.4;
+  padding: 0;
+  margin: 5px;
+}
+.reviews__slider .flickity-page-dots .dot.is-selected {
+  background-color: var(--white-cl);
+  opacity: 1;
+}
+.reviews__slider-item {
+  background: var(--dark-blue);
+  padding: 65px 50px;
+  width: calc(var(--max-width-container) / 2 - var(--gap) / 2 - var(--gap));
+  min-width: 335px;
+  margin: 0 calc(var(--gap) / 2);
+  border-radius: 40px;
+  opacity: 0.3;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  transition: opacity 1s ease-in-out;
+}
+.reviews__slider-item.is-selected {
+  opacity: 1;
+}
+@media (max-width: 991.98px) {
+  .reviews__slider-item {
+    width: calc(100vw - var(--gap) * 2 - 23px);
+    margin: 0 calc(var(--gap) / 2);
+  }
+  .reviews__slider-item p {
+    height: auto;
+  }
+}
+
 .header {
   min-width: 320px;
   overflow-x: hidden;
