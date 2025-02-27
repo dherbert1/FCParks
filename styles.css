@@ -339,7 +339,7 @@ a {
     flex-direction: column;
   }
   .btnpackage .btnmain {
-    width: 100%;
+    width: 75%;
   }
 }
 
@@ -1013,6 +1013,7 @@ p {
   .homepage .open__content h1,
   .homepage .open__content p {
     max-width: 100%;
+    text-align: center;
   }
   .homepage .open__content p {
     margin: 16px 0 33px 0;
