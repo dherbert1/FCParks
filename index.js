@@ -38,21 +38,22 @@ window.addEventListener("load", function () {
   window.addEventListener("scroll", showScrollToTop);
 });
 
-// Reviews
+// Photos
+let elem = document.querySelector('.photos__slider');
 function handlePhotos() {
-  let flkty = new Flickity(".photos__slider", {
-    groupCells: 2,
+  let flkty = new Flickity(elem, {
     wrapAround: true,
-    pageDots: true,
+    autoplay: 5,
+    fullscreen: true,
+    pageDots: false,
     prevNextButtons: true,
-    responsive: [
-      {
-        breakpoint: 991.98,
-        settings: {
-          groupCells: 1,
-        },
-      },
-    ],
+    // responsive: [
+    //   {
+    //     breakpoint: 991.98,
+    //     settings: {
+    //     },
+    //   },
+    // ],
     on: [ 
       {
         ready: function () {
