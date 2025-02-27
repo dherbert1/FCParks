@@ -1014,6 +1014,8 @@ p {
   .homepage .open__content p {
     max-width: 100%;
     text-align: center;
+    font-size: 60px;
+    line-height: 70px;
   }
   .homepage .open__content p {
     margin: 16px 0 33px 0;
