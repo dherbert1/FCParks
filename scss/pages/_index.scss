@@ -62,6 +62,8 @@
         p {
           max-width: 100%;
           text-align: center;
+          font-size: 60px;
+          line-height: 70px;
         }
 
         p {
@@ -78,6 +80,15 @@
         .photos {
           @include mixins.midimg;
         }
+      }
+    }
+
+    @include mixins.xs {
+
+      h1,
+      p {
+        max-width: 100%;
+        text-align: center;
       }
     }
   }
