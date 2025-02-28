@@ -123,6 +123,12 @@ a {
   justify-content: flex-start;
   align-items: center;
   gap: 28px;
+
+  @include mixins.sm {
+    justify-content: center;
+    flex-direction: column;
+  }
+
   
   @include mixins.xs {
     justify-content: center;
