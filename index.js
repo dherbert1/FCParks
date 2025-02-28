@@ -47,13 +47,6 @@ function handlePhotos() {
     fullscreen: true,
     pageDots: false,
     prevNextButtons: true,
-    // responsive: [
-    //   {
-    //     breakpoint: 991.98,
-    //     settings: {
-    //     },
-    //   },
-    // ],
     on: [ 
       {
         ready: function () {
