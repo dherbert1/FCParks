@@ -996,7 +996,7 @@ p {
     transform: translateY(-50%);
   }
   .homepage .open .open__content .container h1 {
-    max-width: 55%;
+    max-width: 45%;
     position: relative;
     z-index: 1;
   }
