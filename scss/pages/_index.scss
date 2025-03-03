@@ -1,0 +1,97 @@
+@use "../core/mixins";
+
+.homepage {
+  overflow-x: hidden;
+  min-width: 320px;
+
+  .open {
+    @include mixins.minW(992px) {
+      height: 100vh;
+      position: relative;
+      max-height: 980px;
+      min-height: 650px;
+
+      .open__photos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: 10%;
+        left: 25%;
+        z-index: 2;
+        @include mixins.transform(translateY(-50%));
+
+        .photos {
+          position: absolute;
+          width: 50vw;
+        }
+      }
+
+      .open__content {
+        z-index: 1;
+        position: relative;
+        top: 50%;
+        @include mixins.transform(translateY(-50%));
+
+        .container {
+          h1 {
+            max-width: 45%;
+            position: relative;
+            z-index: 1;
+          }
+
+          p {
+            max-width: 50%;
+            margin: 10px 0 42px 0;
+            position: relative;
+            z-index: 1;
+          }
+        }
+      }
+    }
+
+    @include mixins.sm {
+      padding-top: var(--height-header);
+      position: relative;
+      overflow: hidden;
+
+      &__content {
+        margin-top: 45px;
+
+        h1,
+        p {
+          max-width: 100%;
+          text-align: center;
+          font-size: 60px;
+          line-height: 70px;
+        }
+
+        p {
+          margin: 16px 0 33px 0;
+        }
+      }
+
+      &__photos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 32px;
+
+        .photos {
+          @include mixins.midimg;
+        }
+      }
+    }
+
+    @include mixins.xs {
+
+      h1,
+      p {
+        max-width: 100%;
+        text-align: center;
+        font-size: 40px;
+        line-height: normal;
+      }
+    }
+  }
+}

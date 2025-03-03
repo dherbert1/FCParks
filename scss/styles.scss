@@ -1,0 +1,18 @@
+// Core Variables and Mixins
+@use "core/reset";
+@use "core/mixins";
+@use "core/variables";
+@use "core/layouts";
+@use "core/components";
+@use "core/carousel";
+
+// Navigation, Header, Footer
+@use "core/header";
+@use "core/nav";
+@use "core/footer";
+
+// Pages
+@use "pages/index";
+@use "pages/events";
+@use "pages/gallery";
+// @use "pages/reviews";

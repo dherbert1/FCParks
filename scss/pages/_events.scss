@@ -1,0 +1,72 @@
+@use "../core/mixins";
+
+.eventspage {
+  overflow-x: hidden;
+  min-width: 320px;
+
+  .event_calendar {
+    width: 100vw;
+    background-color: var(--dark-brown-cl);
+    padding: 10px;
+
+    .title_events {
+      height: 7vh;
+      width: 100vw;
+      text-align: center;
+      padding-bottom: 20px;
+      display: block;
+      color: var(--white-cl);
+      font-size: 50px;
+      text-align: center;
+      margin-top: 150px;
+    }
+
+    .calendar {
+      grid-template-columns: 1fr 1fr 1fr;
+      display: grid;
+      gap: var(--gap);
+      background-color: var(--main-cl);
+      padding: 45px 90px;
+
+      @include mixins.sm {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @include mixins.xs {
+        padding: 15px;
+      }
+
+      @include mixins.xxs {
+        padding: 15px;
+      }
+
+      @include mixins.xxxs {
+        grid-template-columns: 1fr;
+      }
+
+      &-item {
+        border-radius: 40px;
+        padding: 20px 30px 32px 30px;
+        background: var(--white-cl);
+
+        >li {
+          font-size: var(--fs-li);
+          line-height: var(--lh-li);
+          letter-spacing: var(--ls-li);
+        }
+
+        .name {
+          text-transform: uppercase;
+          display: flex;
+          justify-content: center;
+          line-height: var(--lh-h2);
+          letter-spacing: var(--ls-h2);
+          font-size: var(--fs-h2)
+        }
+      }
+    }
+  }
+}
+
+// Slideshow
