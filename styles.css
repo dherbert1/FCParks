@@ -1108,7 +1108,6 @@ p {
 }
 .eventspage .event_calendar .calendar-item .name {
   text-transform: uppercase;
-  /* LINE 1111 DO NOT CHANGE */
   display: flex;
   justify-content: center;
   line-height: var(--lh-h2);
