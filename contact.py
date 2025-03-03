@@ -77,3 +77,38 @@ try:
     print("Email sent successfully!")
 except Exception as e:
     print(f"Failed to send email: {e}")
+    import mailtrap as mt
+
+# Create the email with HTML and plain text content
+mail = mt.Mail(
+    sender=mt.Address(email="mailtrap@example.com", name="Mailtrap Test"),
+    to=[mt.Address(email="your@email.com", name="Your name")],
+    cc=[mt.Address(email="cc@email.com", name="Copy to")],
+    bcc=[mt.Address(email="bcc@email.com", name="Hidden Recipient")],
+    subject="You are awesome!",
+    text="Congrats for sending test email with Mailtrap!",
+    html="""
+    <!doctype html>
+    <html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      </head>
+      <body style="font-family: sans-serif;">
+        <div style="display: block; margin: auto; max-width: 600px;" class="main">
+          <h1 style="font-size: 18px; font-weight: bold; margin-top: 20px">
+            Congrats for sending test email with Mailtrap!
+          </h1>
+          <p>Inspect it using the tabs you see above and learn how this email can be improved.</p>
+          <p>Now send your email using our fake SMTP server and integration of your choice!</p>
+          <p>Good luck! Hope it works.</p>
+        </div>
+      </body>
+    </html>
+    """,
+    headers={"X-MT-Header": "Custom header"},
+    custom_variables={"year": 2023},
+)
+
+# Set up and send the email using Mailtrap's API
+client = mt.MailtrapClient(token="your-api-key")
+client.send(mail)
