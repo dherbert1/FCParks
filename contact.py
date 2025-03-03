@@ -42,3 +42,38 @@ def submit():
 
 if __name__ == '__main__':
     app.run(debug=True)
+    
+    
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+
+# Mailtrap credentials and server configuration
+smtp_server = 'live.smtp.mailtrap.io'
+smtp_port = 587
+smtp_username = 'api'
+smtp_password = 'your_mailtrap_password'
+
+# Email content setup
+sender_email = "from@example.com"
+receiver_email = "weavertyler1022@gmail.com"
+subject = "Python Contact Form Test"
+body = "This is a test email from the Python contact form."
+
+# Create a multipart message and set headers
+message = MIMEMultipart()
+message["From"] = sender_email
+message["To"] = receiver_email
+message["Subject"] = subject
+
+# Add body to email
+message.attach(MIMEText(body, "plain"))
+
+# Connect to Mailtrap server and send email
+try:
+    with smtplib.SMTP(smtp_server, smtp_port) as server:
+        server.login(smtp_username, smtp_password)
+        server.sendmail(sender_email, receiver_email, message.as_string())
+    print("Email sent successfully!")
+except Exception as e:
+    print(f"Failed to send email: {e}")
