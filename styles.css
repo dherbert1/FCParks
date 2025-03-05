@@ -1208,4 +1208,10 @@ p {
   }
 }
 
+.reviewspage {
+  overflow-x: hidden;
+  min-width: 320px;
+  padding-top: 145px;
+}
+
 /*# sourceMappingURL=styles.css.map */
