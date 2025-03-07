@@ -1223,6 +1223,7 @@ p {
   padding-top: 100px;
   padding-right: auto;
   padding-left: auto;
+  padding-top: 200px;
 }
 
 .rates {
@@ -1235,10 +1236,6 @@ p {
 
 .p {
   text-align: left;
-}
-
-.rates_main {
-  padding-top: 200px;
 }
 
 /*# sourceMappingURL=styles.css.map */
