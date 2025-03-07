@@ -1115,6 +1115,10 @@ p {
   font-size: var(--fs-h2);
 }
 
+.photos__slider-item {
+  height: fit-content;
+}
+
 .gallerypage {
   /* Slideshow container */
   /* Next & previous buttons */
