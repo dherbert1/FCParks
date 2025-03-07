@@ -1218,4 +1218,27 @@ p {
   padding-top: 145px;
 }
 
+.rates_main {
+  margin: 100px auto 0px auto;
+  padding-top: 100px;
+  padding-right: auto;
+  padding-left: auto;
+}
+
+.rates {
+  margin-top: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.p {
+  text-align: left;
+}
+
+.rates_main {
+  padding-top: 200px;
+}
+
 /*# sourceMappingURL=styles.css.map */
