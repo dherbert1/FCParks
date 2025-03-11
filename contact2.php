@@ -7,7 +7,7 @@
         $rating = htmlspecialchars($_POST["rating"]);
         $comments = htmlspecialchars($_POST["comments"]);
     
-        $to = "tweaver27@fccsc.net"; // Replace with your email
+        $to = "benbryant20070@gmail.com"; // Replace with your email
         $subject = "New Review Submission";
         $headers = "From: $email\r\nReply-To: $email\r\nContent-Type: text/plain; charset=UTF-8";
     
