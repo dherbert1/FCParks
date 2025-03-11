@@ -3,7 +3,7 @@ document.getElementById("reviewForm").addEventListener("submit", function (event
 
     var formData = new FormData(this);
 
-    fetch("send_review.php", {
+    fetch("contact2.php", {
         method: "POST",
         body: formData
     })
