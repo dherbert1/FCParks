@@ -4,13 +4,13 @@ from flask_mail import Mail, Message
 app = Flask(__name__)
 
 # Configure Flask-Mail
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'  # Example: using Gmail
+app.config['MAIL_SERVER'] = 'weavertyler1022@gmail.com'  # Example: using Gmail
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
-app.config['MAIL_USERNAME'] = 'your-email@gmail.com'  # Your email address
-app.config['MAIL_PASSWORD'] = 'your-email-password'  # Your email password or app password
-app.config['MAIL_DEFAULT_SENDER'] = 'your-email@gmail.com'
+app.config['MAIL_USERNAME'] = 'weavertyler1022@gmail.com'  # Your email address
+app.config['MAIL_PASSWORD'] = 'hardenrules'  # Your email password or app password
+app.config['MAIL_DEFAULT_SENDER'] = 'weavertyler1022@gmail.com'
 
 mail = Mail(app)
 
@@ -29,7 +29,7 @@ def submit_review():
         review = request.form['review']
 
         # Create the email message
-        msg = Message('New Review Submitted', recipients=['your-email@example.com'])
+        msg = Message('New Review Submitted', recipients=['weavertyler1022@gmail.com'])
         msg.html = f"""
         <h2>New Review from {name}</h2>
         <p><strong>Name:</strong> {name}</p>
