@@ -31,24 +31,15 @@ window.addEventListener("load", function () {
       }
     }
   }
-  // Call once to set the initial state when the page loads
-  showScrollToTop();
-
-  // Add scroll event listener
-  window.addEventListener("scroll", showScrollToTop);
-});
-
-// Photos (with Lazy Loading)
-let elem = document.querySelector('.photos__slider');
-function handlePhotos() {
-  let flkty = new Flickity(elem, {
+  const carousel = document.querySelector('.photos__slider')
+  new Flickity(carousel, {
     wrapAround: true,
     autoplay: 5,
     fullscreen: true,
     pageDots: false,
     prevNextButtons: true,
-    lazyLoad: true,
-    on: [ 
+    // lazyLoad: true,
+    on: [
       {
         ready: function () {
           heightCard();
@@ -56,6 +47,32 @@ function handlePhotos() {
       }
     ],
   });
+  // Call once to set the initial state when the page loads
+  showScrollToTop();
+
+  // Add scroll event listener
+  window.addEventListener("scroll", showScrollToTop);
+  document.querySelector('.photos__slider').classList.remove('hidden');
+});
+
+// Photos (with Lazy Loading)
+// let elem = document.querySelector('.photos__slider');
+// function handlePhotos() {
+//   let flkty = new Flickity(elem, {
+//     wrapAround: true,
+//     autoplay: 5,
+//     fullscreen: true,
+//     pageDots: false,
+//     prevNextButtons: true,
+//     lazyLoad: true,
+//     on: [ 
+//       {
+//         ready: function () {
+//           heightCard();
+//         },
+//       }
+//     ],
+//   });
 
 //   // Lazy load images in the carousel
 //   const images = document.querySelectorAll('.photos__slider-item img[data-src]');
@@ -80,7 +97,7 @@ function handlePhotos() {
 //   };
 
 //   lazyLoadImages(); // Initialize lazy loading for images
-};
+// };
 
 function heightCard() {
   let slides = document.querySelectorAll(".photos__slider-item");
