@@ -47,6 +47,7 @@ function handlePhotos() {
     fullscreen: true,
     pageDots: false,
     prevNextButtons: true,
+    lazyloading: true,
     on: [ 
       {
         ready: function () {
@@ -56,29 +57,29 @@ function handlePhotos() {
     ],
   });
 
-  // Lazy load images in the carousel
-  const images = document.querySelectorAll('.photos__slider-item img[data-src]');
-  const loadImage = (img) => {
-    img.src = img.getAttribute('data-src');
-    img.removeAttribute('data-src');
-  };
+//   // Lazy load images in the carousel
+//   const images = document.querySelectorAll('.photos__slider-item img[data-src]');
+//   const loadImage = (img) => {
+//     img.src = img.getAttribute('data-src');
+//     img.removeAttribute('data-src');
+//   };
 
-  const lazyLoadImages = () => {
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          loadImage(entry.target);
-          observer.unobserve(entry.target);
-        }
-      });
-    });
+//   const lazyLoadImages = () => {
+//     const imageObserver = new IntersectionObserver((entries, observer) => {
+//       entries.forEach(entry => {
+//         if (entry.isIntersecting) {
+//           loadImage(entry.target);
+//           observer.unobserve(entry.target);
+//         }
+//       });
+//     });
 
-    images.forEach(image => {
-      imageObserver.observe(image);
-    });
-  };
+//     images.forEach(image => {
+//       imageObserver.observe(image);
+//     });
+//   };
 
-  lazyLoadImages(); // Initialize lazy loading for images
+//   lazyLoadImages(); // Initialize lazy loading for images
 };
 
 function heightCard() {
