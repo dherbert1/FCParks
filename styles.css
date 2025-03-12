@@ -1051,6 +1051,9 @@ p {
     line-height: normal;
   }
 }
+.homepage .audio {
+  z-index: 60000000;
+}
 
 .eventspage {
   overflow-x: hidden;
