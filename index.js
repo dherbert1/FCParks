@@ -31,15 +31,24 @@ window.addEventListener("load", function () {
       }
     }
   }
-  const carousel = document.querySelector('.photos__slider')
-  new Flickity(carousel, {
+  // Call once to set the initial state when the page loads
+  showScrollToTop();
+
+  // Add scroll event listener
+  window.addEventListener("scroll", showScrollToTop);
+});
+
+// Photos (with Lazy Loading)
+let elem = document.querySelector('.photos__slider');
+function handlePhotos() {
+  let flkty = new Flickity(elem, {
     wrapAround: true,
     autoplay: 5,
     fullscreen: true,
     pageDots: false,
     prevNextButtons: true,
-    // lazyLoad: true,
-    on: [
+    lazyLoad: true,
+    on: [ 
       {
         ready: function () {
           heightCard();
@@ -47,57 +56,31 @@ window.addEventListener("load", function () {
       }
     ],
   });
-  // Call once to set the initial state when the page loads
-  showScrollToTop();
 
-  // Add scroll event listener
-  window.addEventListener("scroll", showScrollToTop);
-  document.querySelector('.photos__slider').classList.remove('hidden');
-});
+  // Lazy load images in the carousel
+  const images = document.querySelectorAll('.photos__slider-item img[data-src]');
+  const loadImage = (img) => {
+    img.src = img.getAttribute('data-src');
+    img.removeAttribute('data-src');
+  };
 
-// Photos (with Lazy Loading)
-// let elem = document.querySelector('.photos__slider');
-// function handlePhotos() {
-//   let flkty = new Flickity(elem, {
-//     wrapAround: true,
-//     autoplay: 5,
-//     fullscreen: true,
-//     pageDots: false,
-//     prevNextButtons: true,
-//     lazyLoad: true,
-//     on: [ 
-//       {
-//         ready: function () {
-//           heightCard();
-//         },
-//       }
-//     ],
-//   });
+  const lazyLoadImages = () => {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          loadImage(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    });
 
-//   // Lazy load images in the carousel
-//   const images = document.querySelectorAll('.photos__slider-item img[data-src]');
-//   const loadImage = (img) => {
-//     img.src = img.getAttribute('data-src');
-//     img.removeAttribute('data-src');
-//   };
+    images.forEach(image => {
+      imageObserver.observe(image);
+    });
+  };
 
-//   const lazyLoadImages = () => {
-//     const imageObserver = new IntersectionObserver((entries, observer) => {
-//       entries.forEach(entry => {
-//         if (entry.isIntersecting) {
-//           loadImage(entry.target);
-//           observer.unobserve(entry.target);
-//         }
-//       });
-//     });
-
-//     images.forEach(image => {
-//       imageObserver.observe(image);
-//     });
-//   };
-
-//   lazyLoadImages(); // Initialize lazy loading for images
-// };
+  lazyLoadImages(); // Initialize lazy loading for images
+};
 
 function heightCard() {
   let slides = document.querySelectorAll(".photos__slider-item");
