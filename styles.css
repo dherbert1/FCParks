@@ -540,6 +540,10 @@ p {
   margin: 45px 0p;
 }
 
+.hidden {
+  display: none;
+}
+
 .photos {
   position: relative;
 }

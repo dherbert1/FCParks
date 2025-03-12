@@ -38,7 +38,7 @@ window.addEventListener("load", function () {
   window.addEventListener("scroll", showScrollToTop);
 });
 
-// Photos
+// Photos (with Lazy Loading)
 let elem = document.querySelector('.photos__slider');
 function handlePhotos() {
   let flkty = new Flickity(elem, {
@@ -55,6 +55,30 @@ function handlePhotos() {
       }
     ],
   });
+
+  // Lazy load images in the carousel
+  const images = document.querySelectorAll('.photos__slider-item img[data-src]');
+  const loadImage = (img) => {
+    img.src = img.getAttribute('data-src');
+    img.removeAttribute('data-src');
+  };
+
+  const lazyLoadImages = () => {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          loadImage(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+
+    images.forEach(image => {
+      imageObserver.observe(image);
+    });
+  };
+
+  lazyLoadImages(); // Initialize lazy loading for images
 };
 
 function heightCard() {
@@ -76,7 +100,6 @@ window.addEventListener("load", function () {
 window.addEventListener("resize", function () {
   handlePhotos();
 });
-
 
 // Click Hamburger, Show Menu
 const btnMenu = document.querySelector(".header__cta-hamburger .bars"),
@@ -153,129 +176,6 @@ function percentLoading(percent) {
   progress.style.width = `${percent}%`;
   percentNumber.innerHTML = `${percent}%`;
 }
-
-
-// // Validate Form
-// function validateForm() {
-//   let form = document.querySelector(".getintouch__content-form"),
-//     fullname = document.querySelector("#fullname"),
-//     email = document.querySelector("#email"),
-//     company = document.querySelector("#company"),
-//     subject = document.querySelector("#subject"),
-//     message = document.querySelector("#message");
-
-//   if (!form) {
-//     console.log("Form not found");
-//     return;
-//   }
-
-//   function getParentInput(e, selector = "") {
-//     // Condition has to be met to run
-//     while (e.parentElement) {
-//       if (e.parentElement.matches(selector)) {
-//         return e.parentElement;
-//       }
-//       // let e = its parent and run again
-//       e = e.parentElement;
-//     }
-//   }
-
-//   // Show error
-//   function showError(input, texterror = "") {
-//     const parentInput = getParentInput(input, ".form-group");
-//     let error = parentInput.querySelector(".error");
-//     if (texterror != "") {
-//       error.innerText = texterror;
-//       input.classList.add("--error");
-//     } else {
-//       error.innerText = texterror;
-//       input.classList.remove("--error");
-//     }
-//   }
-
-//   // Validate full name
-//   function isValidFullname(fullname) {
-//     let regName = /^[a-zA-Z]+(?: [a-zA-Z]+)+$/;
-//     let adjustedFullname = fullname.trim().replace(/\s+/g, " ");
-//     return regName.test(adjustedFullname);
-//   }
-
-//   // Validate email
-//   function isValidEmail(email) {
-//     let emailReg = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-//     return emailReg.test(email);
-//   }
-
-//   // Check input
-//   function checkInputs() {
-//     let dataCustomers = [];
-//     let isError = false;
-
-//     // Validate Full Name
-//     const valueFullName = fullname.value.trim();
-//     if (valueFullName === "") {
-//       showError(fullname, "Please input your full name");
-//       isError = true;
-//     } else if (!isValidFullname(valueFullName)) {
-//       showError(fullname, "Please input first & last name with space");
-//       isError = true;
-//     } else {
-//       showError(fullname);
-//       dataCustomers.push(valueFullName);
-//     }
-
-//     // Validate Email
-//     const valueEmail = email.value.trim();
-//     if (valueEmail === "") {
-//       showError(email, "Please input your email");
-//       isError = true;
-//     } else if (!isValidEmail(valueEmail)) {
-//       showError(email, "Please input a valid email");
-//       isError = true;
-//     } else {
-//       showError(email);
-//       dataCustomers.push(valueEmail);
-//     }
-
-//     // Validate Subject
-//     const valueSubject = subject.value.trim();
-//     if (valueSubject === "") {
-//       showError(subject, "Please input your subject");
-//       isError = true;
-//     } else {
-//       showError(subject);
-//       dataCustomers.push(valueSubject);
-//     }
-
-//     // Push company if any
-//     const valueCompany = company.value.trim();
-//     if (valueCompany !== "") {
-//       dataCustomers.push(valueCompany);
-//     }
-
-//     // Validate Message
-//     const valueMessage = message.value.trim();
-//     if (valueMessage === "") {
-//       showError(message, "Please input your message");
-//       isError = true;
-//     } else {
-//       showError(message);
-//       dataCustomers.push(valueMessage);
-//     }
-
-//     return isError ? false : dataCustomers;
-//   }
-
-//   // Submit Form and Check All Input
-//   form.addEventListener("submit", function (e) {
-//     e.preventDefault();
-//     const isChecked = checkInputs();
-//     if (!isChecked) {
-//       console.log("resubmit");
-//     }
-//   });
-// }
-// validateForm();
 
 // FAQ
 let acc = document.getElementsByClassName("accordion");
