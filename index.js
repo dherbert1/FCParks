@@ -47,7 +47,7 @@ function handlePhotos() {
     fullscreen: true,
     pageDots: false,
     prevNextButtons: true,
-    lazyloading: true,
+    lazyLoad: true,
     on: [ 
       {
         ready: function () {
