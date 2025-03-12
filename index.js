@@ -52,7 +52,7 @@ window.addEventListener("load", function () {
 
   // Add scroll event listener
   window.addEventListener("scroll", showScrollToTop);
-  document.querySelector('.carousel-container').classList.remove('hidden');
+  document.querySelector('.photos__slider').classList.remove('hidden');
 });
 
 // Photos (with Lazy Loading)
