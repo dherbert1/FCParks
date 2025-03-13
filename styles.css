@@ -1051,6 +1051,9 @@ p {
     line-height: normal;
   }
 }
+.homepage .logo__top {
+  border-radius: 50%;
+}
 
 .eventspage {
   overflow-x: hidden;
