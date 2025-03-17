@@ -1254,6 +1254,7 @@ p {
   background-color: #f5f5dc;
   border-radius: 20px;
   margin-right: 300px;
+  margin-left: auto;
 }
 
 .contactpage * {
