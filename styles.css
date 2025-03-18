@@ -1250,6 +1250,10 @@ p {
   max-height: 400px;
 }
 
+.map {
+  margin: auto;
+}
+
 .rates_container {
   background-color: #f5f5dc;
   border-radius: 20px;
