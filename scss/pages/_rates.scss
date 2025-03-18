@@ -23,12 +23,15 @@
 }
 
 .map{
-    margin: auto;
+    margin-left: auto;
 }
 
 .rates_container{
     background-color: #f5f5dc;
     border-radius: 20px;
     margin-right: 1200px;
-    text-align: center;
+}
+
+.statement, .label{
+ text-align: center;
 }
