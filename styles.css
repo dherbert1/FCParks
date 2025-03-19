@@ -1274,6 +1274,7 @@ p {
   max-height: 70px;
   min-height: 25px;
   text-align: center;
+  align-items: center;
 }
 
 .contactpage * {
