@@ -1273,6 +1273,7 @@ p {
   max-width: 80px;
   max-height: 70px;
   min-height: 25px;
+  text-align: center;
 }
 
 .contactpage * {
