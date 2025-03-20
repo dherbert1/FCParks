@@ -1274,10 +1274,15 @@ p {
   max-height: 70px;
   min-height: 25px;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
 }
 
 .dropDown {
-  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .contactpage * {
