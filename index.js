@@ -196,5 +196,6 @@ for (i = 0; i < acc.length; i++) {
 
 // For rates page
 function ratesDropDown(){
-  
+  const ddContainer = document.querySelectorAll('.dd_container');
+  const dropDown = document.querySelectorAll('.dropdown');
 }
