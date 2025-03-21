@@ -193,3 +193,8 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
+// For rates page
+function ratesDropDown(){
+  
+}
