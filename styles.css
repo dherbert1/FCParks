@@ -888,6 +888,7 @@ p {
   align-items: center;
   justify-content: center;
   position: relative;
+  margin-bottom: 20px;
 }
 .footer__bottom::before {
   content: "";
