@@ -48,6 +48,7 @@ function handlePhotos() {
     pageDots: false,
     prevNextButtons: true,
     lazyLoad: true,
+    adaptiveHeight: true,
     on: [ 
       {
         ready: function () {
