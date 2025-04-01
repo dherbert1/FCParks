@@ -42,7 +42,7 @@
         text-decoration: none;
         display: block;
         padding: 20px 0;
-        
+
         @include mixins.transition(var(--duration));
 
         &.active {
@@ -60,5 +60,45 @@
   &.active {
     opacity: 1;
     visibility: visible;
+  }
+
+  .dropdown {
+    font-size: var(--fs-navmenu);
+    letter-spacing: var(--ls-navmenu);
+    line-height: var(--lh-navmenu);
+    color: var(--white-cl);
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    padding: 20px 0;
+  }
+
+  .dropdown .dropbtn {
+    font-size: inherit;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--white-cl);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    float: none;
+    color: var(--black-cl);
+    padding: 12px 16px;
+    display: block;
+    text-align: left;
+
+    @include mixins.transition(var(--duration));
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
   }
 }
