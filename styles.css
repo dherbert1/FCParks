@@ -797,7 +797,7 @@ p {
   font-size: var(--fs-navmenu);
   letter-spacing: var(--ls-navmenu);
   line-height: var(--lh-navmenu);
-  color: var(--white-cl);
+  color: var(--black-cl);
   text-transform: uppercase;
   text-decoration: none;
   display: block;
