@@ -1447,23 +1447,17 @@ p {
   border-radius: 50%;
 }
 
-.dropdown-content {
-  top: 0;
-  left: 0;
-  opacity: 0;
+.dropbtn {
+  padding-top: 50px;
 }
 
-.dropdown-content:hover {
+.dropbtn:hover .dropdown-content {
   top: 0;
   left: 0;
   z-index: 500000000;
   opacity: 1;
   background-color: var(--white-cl);
   color: var(--black-cl);
-}
-
-.dropbtn {
-  padding-top: 50px;
 }
 
 /*# sourceMappingURL=styles.css.map */
