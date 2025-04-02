@@ -1451,4 +1451,8 @@ p {
   visibility: hidden;
 }
 
+.dd:hover {
+  visibility: visible;
+}
+
 /*# sourceMappingURL=styles.css.map */
