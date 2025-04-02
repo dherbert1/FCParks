@@ -1,7 +1,7 @@
 @use "../core/mixins";
 
 .homepage {
-overflow-x: hidden;  
+  overflow-x: hidden;
   min-width: 320px;
 
   .open {
@@ -94,15 +94,23 @@ overflow-x: hidden;
       }
     }
   }
-  .logo__top{
+
+  .logo__top {
     border-radius: 50%;
   }
 }
-.dropdown-content {
- margin-top: 60px;
 
+.dropdown-content {
+  position: absolute;
+  top: 0;
+  left: 0;
   opacity: 0;
 }
-.dropdown-content:hover{
+
+.dropdown-content:hover {
+  position: absolute;
+  top: 0; 
+  left: 0;
   opacity: 1;
+  background-color: var(--white-cl);
 }

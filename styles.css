@@ -1448,12 +1448,18 @@ p {
 }
 
 .dropdown-content {
-  margin-top: 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
   opacity: 0;
 }
 
 .dropdown-content:hover {
+  position: absolute;
+  top: 0;
+  left: 0;
   opacity: 1;
+  background-color: var(--white-cl);
 }
 
 /*# sourceMappingURL=styles.css.map */
