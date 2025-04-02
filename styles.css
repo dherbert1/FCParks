@@ -1448,12 +1448,11 @@ p {
 }
 
 .dropdown-content {
-  display: inline-block;
+  margin-top: 60px;
   opacity: 0;
 }
 
 .dropdown-content:hover {
-  display: inline-block;
   opacity: 1;
 }
 
