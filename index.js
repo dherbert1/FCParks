@@ -200,5 +200,4 @@ function ratesDropDown(){
   const ddContainer = document.querySelectorAll('.dd_container');
   const dropDown = document.querySelectorAll('.dropdown');
   const shelterRent = document.querySelector('#shelterrent')
-  
 }
