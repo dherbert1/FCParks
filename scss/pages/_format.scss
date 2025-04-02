@@ -107,9 +107,10 @@
 }
 
 .dropdown-content:hover {
-  top: 0; 
+  top: 0;
   left: 0;
+  padding-top: 50px;
   opacity: 1;
   background-color: var(--white-cl);
-  color:var(--black-cl);
+  color: var(--black-cl);
 }
