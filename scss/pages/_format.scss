@@ -99,10 +99,11 @@ overflow-x: hidden;
   }
 }
 .dropdown-content {
+  display: inline-block;
 
   opacity: 0;
 }
 .dropdown-content:hover{
-
+  display: inline-block;
   opacity: 1;
 }
