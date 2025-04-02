@@ -118,6 +118,11 @@
 .dropbtn{
   padding-top: 50px;
 }
+.dropdown-content{
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
 .dropbtn:hover{
   .dropdown-content {
     top: 0;
