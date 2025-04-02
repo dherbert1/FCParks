@@ -1448,11 +1448,11 @@ p {
 }
 
 .dd {
-  visibility: hidden;
+  opacity: 0;
 }
 
 .dd:hover {
-  visibility: visible;
+  opacity: 1;
 }
 
 /*# sourceMappingURL=styles.css.map */

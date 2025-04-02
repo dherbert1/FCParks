@@ -99,8 +99,10 @@ overflow-x: hidden;
   }
 }
 .dd{
-  visibility: hidden;
+
+  opacity: 0;
 }
 .dd:hover{
-  visibility: visible;
+
+  opacity: 1;
 }
