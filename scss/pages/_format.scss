@@ -115,25 +115,3 @@
 //   background-color: var(--white-cl);
 //   color: var(--black-cl);
 // }
-.dropbtn{
-  padding-top: 50px;
-}
-.dropdown-content{
-  top: 0;
-  left: 0;
-  opacity: 0;
-}
-.dropbtn:hover{
-  .dropdown-content {
-    top: 0;
-    left: 0;
-    z-index: 500000000;
-    opacity: 1;
-    background-color: var(--white-cl);
-    color: var(--black-cl);
-  }
-}
-.fa fa-caret-down{
-  color: var(--black-cl);
-  background-color: var(--black-cl);
-}
