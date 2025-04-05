@@ -156,6 +156,7 @@
 
   &.active {
     background: var(--white-cl);
+    overflow: visible;
   }
 
   @include mixins.sm {
