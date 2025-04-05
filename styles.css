@@ -734,6 +734,9 @@ p {
   background: var(--white-cl);
   overflow: visible;
 }
+.header.hover {
+  overflow: visible;
+}
 @media (max-width: 991.98px) {
   .header {
     background: var(--white-cl);

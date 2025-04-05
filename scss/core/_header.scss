@@ -159,6 +159,10 @@
     overflow: visible;
   }
 
+  &.hover {
+    overflow: visible;
+  }
+
   @include mixins.sm {
     background: var(--white-cl);
   }
