@@ -1454,6 +1454,7 @@ p {
 .dropdown {
   position: relative;
   display: inline-block;
+  overflow: visible;
 }
 
 .dropdown-button {
@@ -1463,10 +1464,12 @@ p {
   font-size: 16px;
   border: none;
   cursor: pointer;
+  overflow: visible;
 }
 
 .dropdown-button i {
   margin-left: 8px;
+  overflow: visible;
 }
 
 .dropdown-content {
@@ -1476,6 +1479,7 @@ p {
   min-width: 160px;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  overflow: visible;
 }
 
 .dropdown-content a {
@@ -1483,6 +1487,7 @@ p {
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  overflow: visible;
 }
 
 .dropdown-content a:hover {
@@ -1492,10 +1497,12 @@ p {
 
 .dropdown:hover .dropdown-content {
   display: block;
+  overflow: visible;
 }
 
 .dropdown:hover .dropdown-button {
   background-color: #2980b9;
+  overflow: visible;
 }
 
 /*# sourceMappingURL=styles.css.map */
