@@ -1,9 +1,9 @@
 @use "./mixins";
 
 .header {
+  background: var(--white-cl);
   min-width: 320px;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: visible;
   height: var(--height-header);
   position: fixed;
   top: 0;
@@ -152,14 +152,6 @@
 
   &.scroll {
     background: var(--white-cl);
-  }
-
-  &.active {
-    background: var(--white-cl);
-    overflow: visible;
-  }
-  &.hover {
-    overflow: visible;
   }
 
   @include mixins.sm {
