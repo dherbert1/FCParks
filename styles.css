@@ -1448,6 +1448,11 @@ p {
   position: relative;
   display: inline-block;
   overflow: visible;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  line-height: var(--line-height);
+  color: var(--black-cl);
 }
 
 .dropdown-button {
@@ -1468,7 +1473,7 @@ p {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: white;
+  background-color: var(--white-cl);
   min-width: 160px;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -1494,7 +1499,8 @@ p {
 }
 
 .dropdown:hover .dropdown-button {
-  background-color: #2980b9;
+  background-color: var(--white-cl);
+  color: var(--black-cl);
   overflow: visible;
 }
 
