@@ -1485,7 +1485,7 @@ p {
 }
 
 .dropdown-content a:hover {
-  background-color: #f1f1f1;
+  background-color: var(--accent-cl);
   overflow: visible;
 }
 
@@ -1497,10 +1497,6 @@ p {
 .dropdown:hover .dropdown-button {
   background-color: var(--white-cl);
   color: var(--black-cl);
-  overflow: visible;
-}
-
-.option {
   overflow: visible;
 }
 
