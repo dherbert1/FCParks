@@ -1287,6 +1287,7 @@ p {
 .ratesPage .map {
   margin-left: auto;
   margin-right: auto;
+  display: grid;
 }
 .ratesPage .rates_container {
   background-color: #f5f5dc;
