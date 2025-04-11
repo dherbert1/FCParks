@@ -1511,4 +1511,9 @@ p {
   /* Optional: Add styles specific to individual images */
 }
 
+.map {
+  margin: auto;
+  width: 50%;
+}
+
 /*# sourceMappingURL=styles.css.map */
