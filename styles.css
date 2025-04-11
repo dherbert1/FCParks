@@ -1297,10 +1297,10 @@ p {
 }
 .ratesPage .dropdown {
   min-width: 0;
-  max-width: 100px;
+  max-width: 200px;
   max-height: 70px;
   min-height: 25px;
-  width: 100px;
+  width: 200px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -1509,6 +1509,11 @@ p {
 
 .history__picture {
   /* Optional: Add styles specific to individual images */
+}
+
+.map {
+  margin: auto;
+  width: 50%;
 }
 
 /*# sourceMappingURL=styles.css.map */
