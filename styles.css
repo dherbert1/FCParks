@@ -1511,10 +1511,4 @@ p {
   /* Optional: Add styles specific to individual images */
 }
 
-/* effort to center the google maps */
-.map {
-  margin: auto;
-  width: 50%;
-}
-
 /*# sourceMappingURL=styles.css.map */
