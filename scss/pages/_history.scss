@@ -6,6 +6,7 @@
     margin-right: auto;
     display: grid;
     column-count: 2;
+    grid-template-columns: auto auto;
     margin-top: 50px;
     margin-bottom: 50px;
 }
