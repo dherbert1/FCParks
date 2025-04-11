@@ -1507,11 +1507,11 @@ p {
   max-height: 60%;
   margin-left: auto;
   margin-right: auto;
-  display: inline-grid;
-  column-count: 2;
-  grid-template-columns: left right;
   margin-top: 50px;
   margin-bottom: 50px;
+  grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  gap: var(--gap);
 }
 
 /*# sourceMappingURL=style.css.map */
