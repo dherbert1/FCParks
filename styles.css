@@ -1502,17 +1502,11 @@ p {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--gap);
-  margin-top: 100px;
-  margin-bottom: 50px;
+  margin: 150px 30px 50px 30px;
 }
 
 .history__picture {
   /* Optional: Add styles specific to individual images */
-}
-
-.Map_Center {
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /*# sourceMappingURL=styles.css.map */
