@@ -13,30 +13,7 @@ function scrollToTop() {
 scrollToTop();
 
 // Hide when scroll to top
-window.addEventListener("load", function () {
-  function showScrollToTop() {
-    const backToTop = document.getElementById("btnup");
-    let scrollY = window.scrollY;
-    let documentHeight = document.documentElement.scrollHeight;
-    let windowHeight = window.innerHeight;
 
-    // Calculate half the height of the page
-    let halfPage = (documentHeight - windowHeight) / 2;
-
-    if (backToTop) {
-      if (scrollY > halfPage) {
-        backToTop.style.display = "block";
-      } else {
-        backToTop.style.display = "none";
-      }
-    }
-  }
-  // Call once to set the initial state when the page loads
-  showScrollToTop();
-
-  // Add scroll event listener
-  window.addEventListener("scroll", showScrollToTop);
-});
 
 // Photos (with Lazy Loading)
 let elem = document.querySelector('.photos__slider');
