@@ -1,9 +1,13 @@
 @use "../core/mixins";
 
+.history__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); // Two columns max
+  gap: var(--gap); // Add spacing between columns and rows
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
 .history__picture {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    grid-template-columns: 1fr 1fr 1fr;
-    display: grid;
-    gap: var(--gap);
+  /* Optional: Add styles specific to individual images */
 }
