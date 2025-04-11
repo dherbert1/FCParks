@@ -1504,7 +1504,7 @@ p {
 
 .history__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--gap);
   margin-top: 50px;
   margin-bottom: 50px;
