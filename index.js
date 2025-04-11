@@ -13,7 +13,30 @@ function scrollToTop() {
 scrollToTop();
 
 // Hide when scroll to top
+window.addEventListener("load", function () {
+  function showScrollToTop() {
+    const backToTop = document.getElementById("btnup");
+    let scrollY = window.scrollY;
+    let documentHeight = document.documentElement.scrollHeight;
+    let windowHeight = window.innerHeight;
 
+    // Calculate half the height of the page
+    let halfPage = (documentHeight - windowHeight) / 2;
+
+    if (backToTop) {
+      if (scrollY > halfPage) {
+        backToTop.style.display = "block";
+      } else {
+        backToTop.style.display = "none";
+      }
+    }
+  }
+  // Call once to set the initial state when the page loads
+  showScrollToTop();
+
+  // Add scroll event listener
+  window.addEventListener("scroll", showScrollToTop);
+});
 
 // Photos (with Lazy Loading)
 let elem = document.querySelector('.photos__slider');
@@ -105,20 +128,7 @@ function menuMobileHandle() {
 menuMobileHandle();
 
 // Scroll, Header Change Background
-function headerColorChange() {
-  const header = document.querySelector(".header");
-  const headerHeight = 100;
 
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > headerHeight) {
-      header.classList.add("scroll");
-    } else {
-      header.classList.remove("scroll");
-    }
-  });
-}
-
-headerColorChange();
 
 // Initial Loading
 function initalLoading() {
