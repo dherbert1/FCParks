@@ -2,7 +2,6 @@
 
 .header {
   background: var(--white-cl);
-  min-width: 320px;
   overflow: visible;
   height: var(--height-header);
   position: fixed;
@@ -150,9 +149,7 @@
     }
   }
 
-  &.scroll {
-    background: var(--white-cl);
-  }
+
 
   @include mixins.sm {
     background: var(--white-cl);

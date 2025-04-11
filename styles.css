@@ -608,7 +608,6 @@ p {
 
 .header {
   background: var(--white-cl);
-  min-width: 320px;
   overflow: visible;
   height: var(--height-header);
   position: fixed;
@@ -726,9 +725,6 @@ p {
   .header .container .header__cta-hamburger {
     display: flex;
   }
-}
-.header.scroll {
-  background: var(--white-cl);
 }
 @media (max-width: 991.98px) {
   .header {
@@ -1506,7 +1502,7 @@ p {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--gap);
-  margin-top: 50px;
+  margin-top: 100px;
   margin-bottom: 50px;
 }
 
