@@ -1510,4 +1510,9 @@ p {
   /* Optional: Add styles specific to individual images */
 }
 
+.Map_Center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /*# sourceMappingURL=styles.css.map */
