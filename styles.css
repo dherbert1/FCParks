@@ -1305,11 +1305,11 @@ p {
   height: 50px;
   width: 400px;
   border-radius: 40%;
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .board__description__p {
-  text-align: center;
   font-size: 1.2rem;
   line-height: 1.5;
   margin-top: 15px;
