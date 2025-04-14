@@ -1333,6 +1333,7 @@ p {
 
 .main {
   margin-bottom: 300px;
+  overflow-x: hidden;
 }
 
 /*# sourceMappingURL=styles.css.map */
