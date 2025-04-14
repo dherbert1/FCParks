@@ -1,3 +1,6 @@
+.boardmemberspage{
+  overflow-x: hidden;
+}
 .main__content {
     display: grid;
     grid-template-columns: repeat(3, 1fr); // Two columns max
@@ -54,5 +57,4 @@
   }
   .main{
     margin-bottom:300px;
-    overflow-x: hidden;
   }

@@ -1270,6 +1270,10 @@ p {
   /* Optional: Add styles specific to individual images */
 }
 
+.boardmemberspage {
+  overflow-x: hidden;
+}
+
 .main__content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1334,7 +1338,6 @@ p {
 
 .main {
   margin-bottom: 300px;
-  overflow-x: hidden;
 }
 
 /*# sourceMappingURL=styles.css.map */
