@@ -1266,4 +1266,36 @@ p {
   /* Optional: Add styles specific to individual images */
 }
 
+.history__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap);
+  margin: 150px 30px 50px 30px;
+}
+
+.left__container {
+  justify-content: left;
+  align-items: center;
+}
+
+.center__container {
+  justify-content: center;
+  align-items: center;
+}
+
+.right__container {
+  justify-content: right;
+  align-items: center;
+}
+
+.board__description {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 0 20px;
+  text-align: center;
+  background-color: var(--white-cl);
+  height: 100px;
+  width: fit-content;
+}
+
 /*# sourceMappingURL=styles.css.map */
