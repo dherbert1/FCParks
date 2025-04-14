@@ -193,7 +193,7 @@
 
     @include mixins.sm {
       .header__menu {
-        li:not(:first-child) {
+        li:not(:first-child), .dropdown {
           display: none;
         }
       }

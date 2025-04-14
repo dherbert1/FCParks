@@ -762,7 +762,7 @@ p {
   transform: rotate(-45deg) translate(6px, -6px);
 }
 @media (max-width: 991.98px) {
-  .header .container .header__menu li:not(:first-child) {
+  .header .container .header__menu li:not(:first-child), .header .container .header__menu .dropdown {
     display: none;
   }
   .header .container .header__cta-hamburger {
