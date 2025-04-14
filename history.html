@@ -8,9 +8,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <!-- Title & Google/Icon Setup -->
-  <title>Format - FC Parks & Campgrounds</title>
+  <title>History - FC P&C</title>
   <link rel="canonical" href="https://google.com">
-  <link rel="icon" class="logo__top" type="image/x-icon" href="./images/favicon.ico">
+  <link rel="icon" class="logo__top" type="image/x-icon" href="./images/icon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- Link CSS -->
   <link rel="stylesheet" href="./styles.css">
@@ -18,39 +19,32 @@
 
 </head>
 
-<body class="homepage">
+<body class="historypage">
   <header class="header">
     <div class="container">
       <ul class="header__menu">
         <li class="header__menu-logo">
           <a href="./index.html">
-            <img src="./images/logo2.png" alt="FC-Park-logo" class="header__logo-img">
+            <img src="./images/logo.png" alt="FC-Park-logo" class="header__logo-img">
           </a>
         </li>
         <li><a href="./index.html">home</a></li>
-        <title>Dropdown Menu</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-        </head>
-
-        <body>
-
-          <div class="dropdown">
-            <button class="dropdown-button">
-              About <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <a class="option" href="./history.html">History</a>
-              <a class="option" href="./boardmembers.html">Board Members</a>
-              <a class="option" href="./contact.html">Contact</a>
-            </div>
+        <div class="dropdown">
+          <button class="dropdown-button">
+            About <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a class="option" href="./history.html">history</a>
+            <a class="option" href="./boardmembers.html">board members</a>
+            <a class="option" href="./contact.html">contact</a>
           </div>
-
-          </li>
-          <li><a href="./events.html">events</a></li>
-          <li><a href="./parkmap.html">park map</a></li>
-          <li><a href="./attractions.html">area attractions</a></li>
-          <li><a href="./rates.html">rates</a></li>
-          <li><a href="./reviews.html">reviews</a></li>
+        </div>
+        <li><a href="./events.html">events</a></li>
+        <li><a href="./parkmap.html">park map</a></li>
+        <li><a href="./attractions.html">area attractions</a></li>
+        <li><a href="./rates.html">rates</a></li>
+        <li><a href="./reviews.html">reviews</a></li>
+        <li><a href="./contact.html">contact</a></li>
       </ul>
       <div class="header__cta">
         <div class="header__cta-hamburger">
@@ -65,12 +59,22 @@
     <div class="nav__blurbg"></div>
     <ul class="header__menu">
       <li><a href="./index.html">home</a></li>
-      <li><a href="./events.html">events</a></li>
-      <li><a href="./parkmap.html">park map</a></li>
-
-      <li><a href="./attractions.html">area attractions</a></li>
-      <li><a href="./rates.html">rates</a></li>
-      <li><a href="./reviews.html">reviews</a></li>
+        <div class="dropdown">
+          <button class="dropbtn">
+            About <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a class="option" href="./history.html">history</a>
+            <a class="option" href="./boardmembers.html">board members</a>
+            <a class="option" href="./contact.html">contact</a>
+          </div>
+        </div>
+        <li><a href="./events.html">events</a></li>
+        <li><a href="./parkmap.html">park map</a></li>
+        <li><a href="./attractions.html">area attractions</a></li>
+        <li><a href="./rates.html">rates</a></li>
+        <li><a href="./reviews.html">reviews</a></li>
+        <li><a href="./contact.html">contact</a></li>
     </ul>
   </nav>
   <main class="main">
@@ -146,19 +150,13 @@
       </div>
     </div>
   </main>
-  </div>
   <div class="break"></div>
   <footer class="footer">
     <div class="container">
       <div class="footer__top">
         <a href="./home.html" class="footer__top-logo">
-          <img src="./images/logo2.png" alt="FC-Park-logo" class="header__logo-img">
+          <img src="./images/logo.svg" alt="FC-Park-logo" class="footer__logo-img">
         </a>
-        <!-- <div class="footer__top-social" id="socialbtn">
-                    <a href="https://www.facebook.com/playfranklinco/" target="_blank">
-                        <img src="./images/icon-facebook.svg" alt="Facebook">
-                    </a>
-                </div> -->
       </div>
       <div class="footer__middle">
         <div class="footer__middle-menu">
@@ -173,6 +171,7 @@
               <a href="./attractions.html">area attractions</a>
               <a href="./rates.html">rates</a>
               <a href="./reviews.html">reviews</a>
+              <a href="./contact.html">contact</a>
             </div>
           </div>
         </div>
@@ -185,6 +184,7 @@
       </div>
     </div>
   </footer>
+</body>
 
   <!-- Javascript -->
   <script src="./index.js"></script>
