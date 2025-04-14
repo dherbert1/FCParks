@@ -16,3 +16,12 @@
   justify-content:right;
   align-items:center;
 }
+.board__description{
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 0 20px;
+    text-align: center;
+    background-color: var(--white-cl);
+    height:100px;
+    width:fit-content;
+}
