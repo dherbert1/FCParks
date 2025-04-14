@@ -539,10 +539,6 @@ p {
   margin: 45px 0p;
 }
 
-.hidden {
-  display: none;
-}
-
 .photos {
   position: relative;
 }
@@ -663,6 +659,55 @@ p {
   .header .container .header__menu-logo {
     width: 150px;
   }
+}
+.header .container .header__menu .dropdown {
+  position: relative;
+  display: inline-block;
+  overflow: visible;
+  font-family: inherit;
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  line-height: var(--line-height);
+  color: var(--black-cl);
+}
+.header .container .header__menu .dropdown-button {
+  background-color: var(--white-cl);
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.header .container .header__menu .dropdown-button i {
+  margin-left: 8px;
+  overflow: visible;
+}
+.header .container .header__menu .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--white-cl);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  overflow: visible;
+}
+.header .container .header__menu .dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  overflow: visible;
+  transition: var(--duration);
+}
+.header .container .header__menu .dropdown-content a:hover {
+  background-color: var(--accent);
+  overflow: visible;
+}
+.header .container .header__menu .dropdown:hover .dropdown-content {
+  display: block;
+  overflow: visible;
+}
+.header .container .header__menu .dropdown:hover .dropdown-button {
+  background-color: var(--white-cl);
+  color: var(--black-cl);
+  overflow: visible;
 }
 .header .container .header__cta-hamburger {
   display: none;
@@ -1148,10 +1193,6 @@ p {
   font-size: var(--fs-h2);
 }
 
-.photos__slider-item {
-  height: 500px;
-}
-
 .gallerypage {
   /* Slideshow container */
   /* Next & previous buttons */
@@ -1306,54 +1347,6 @@ p {
   justify-content: center;
 }
 
-.contactpage * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-.contactpage body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-}
-.contactpage header {
-  text-align: center;
-  margin-bottom: 20px;
-  padding: top 60px;
-}
-.contactpage form {
-  width: 100%;
-  max-width: 500px;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.contactpage form input[type=text],
-.contactpage form input[type=email],
-.contactpage form textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-}
-.contactpage form input[type=submit] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-.contactpage form input[type=submit]:hover {
-  background-color: #45a049;
-}
-
 .homepage {
   overflow-x: hidden;
   min-width: 320px;
@@ -1439,62 +1432,6 @@ p {
 }
 .homepage .logo__top {
   border-radius: 50%;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-  overflow: visible;
-  font-family: inherit;
-  font-size: var(--font-size);
-  font-weight: var(--font-weight);
-  line-height: var(--line-height);
-  color: var(--black-cl);
-}
-
-.dropdown-button {
-  background-color: var(--white-cl);
-  cursor: pointer;
-  text-transform: uppercase;
-}
-
-.dropdown-button i {
-  margin-left: 8px;
-  overflow: visible;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: var(--white-cl);
-  min-width: 160px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  overflow: visible;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  overflow: visible;
-}
-
-.dropdown-content a:hover {
-  background-color: var(--accent);
-  overflow: visible;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-  overflow: visible;
-}
-
-.dropdown:hover .dropdown-button {
-  background-color: var(--white-cl);
-  color: var(--black-cl);
-  overflow: visible;
 }
 
 .history__grid {
