@@ -7,14 +7,20 @@
 .left__container{
     justify-content:left;
     align-items:center;
+    width:30%;
+    height:100px;
 }  
 .center__container{
   justify-content:center;
   align-items:center;
+  width:30%;
+  height:100px;
 }
 .right__container{
   justify-content:right;
   align-items:center;
+  width:30%;
+  height:100px;
 }
 .board__description{
     font-size: 1.2rem;
