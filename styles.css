@@ -1281,6 +1281,7 @@ p {
   align-items: center;
   width: 30%;
   height: 100px;
+  margin: bottom 50px;
 }
 
 .center__container {
@@ -1288,6 +1289,7 @@ p {
   align-items: center;
   width: 30%;
   height: 100px;
+  margin: bottom 50px;
 }
 
 .right__container {
@@ -1295,6 +1297,7 @@ p {
   align-items: center;
   width: 30%;
   height: 100px;
+  margin-bottom: 50px;
 }
 
 .board__description {
@@ -1304,12 +1307,12 @@ p {
   background-color: var(--white-cl);
   height: 50px;
   width: 400px;
-  border-radius: 25%;
-  text-align: center center;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
 }
 
 .board__description__p {
-  text-align: center center;
   font-size: 1.2rem;
   line-height: 1.5;
   margin-top: 15px;
@@ -1322,6 +1325,10 @@ p {
   display: block;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--gap);
+}
+
+.break {
+  margin-top: 20px;
 }
 
 /*# sourceMappingURL=styles.css.map */
