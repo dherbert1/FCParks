@@ -188,9 +188,18 @@ body.__disable-scroll {
   height: 100vh;
   overflow: hidden;
 }
-body .container-fluid, body .container {
+body .container-fluid {
   width: 100%;
   max-width: var(--max-width-container-fluid);
+  padding-right: var(--gap);
+  padding-left: var(--gap);
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+}
+body .container {
+  width: 100%;
+  max-width: var(--max-width-container);
   padding-right: var(--gap);
   padding-left: var(--gap);
   margin-right: auto;

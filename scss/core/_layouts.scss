@@ -18,9 +18,19 @@ body {
     overflow: hidden;
   }
 
-  .container-fluid, .container {
+  .container-fluid {
     width: 100%;
     max-width: var(--max-width-container-fluid);
+    padding-right: var(--gap);
+    padding-left: var(--gap);
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+  }
+
+  .container {
+    width: 100%;
+    max-width: var(--max-width-container);
     padding-right: var(--gap);
     padding-left: var(--gap);
     margin-right: auto;
