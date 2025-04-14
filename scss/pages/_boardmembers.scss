@@ -1,0 +1,18 @@
+.history__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); // Two columns max
+    gap: var(--gap); // Add spacing between columns and rows
+    margin: 150px 30px 50px 30px;
+  }
+.left__container{
+    justify-content:left;
+    align-items:center;
+}  
+.center__container{
+  justify-content:center;
+  align-items:center;
+}
+.right__container{
+  justify-content:right;
+  align-items:center;
+}
