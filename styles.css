@@ -181,7 +181,6 @@ body {
   max-width: var(--max-width-page);
   margin: auto;
   scroll-behavior: smooth;
-  font-family: "dsr";
   font-size: var(--fs-body);
   line-height: var(--lh-body);
 }
@@ -189,18 +188,9 @@ body.__disable-scroll {
   height: 100vh;
   overflow: hidden;
 }
-body .container-fluid {
+body .container-fluid, body .container {
   width: 100%;
   max-width: var(--max-width-container-fluid);
-  padding-right: var(--gap);
-  padding-left: var(--gap);
-  margin-right: auto;
-  margin-left: auto;
-  position: relative;
-}
-body .container {
-  width: 100%;
-  max-width: var(--max-width-container);
   padding-right: var(--gap);
   padding-left: var(--gap);
   margin-right: auto;
@@ -1508,11 +1498,6 @@ p {
 
 .history__picture {
   /* Optional: Add styles specific to individual images */
-}
-
-.Map_Center {
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /*# sourceMappingURL=styles.css.map */
