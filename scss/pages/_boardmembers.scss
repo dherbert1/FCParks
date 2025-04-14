@@ -23,7 +23,7 @@
   align-items:center;
   width:30%;
   height:100px;
-  margin: bottom 50px;
+  margin-bottom: 50px;
 }
 .board__description{
     font-size: 1.2rem;
@@ -32,11 +32,11 @@
     background-color: var(--white-cl);
     height:50px;
     width:400px;
-    border-radius: 50%;
-    text-align:center center;
+    border-radius: 40%;
+    text-align:center;
 }
 .board__description__p{
-  text-align:center center;
+  text-align:center;
   font-size: 1.2rem;
   line-height: 1.5;
   margin-top: 15px;;
