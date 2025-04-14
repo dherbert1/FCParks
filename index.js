@@ -127,45 +127,6 @@ function menuMobileHandle() {
 }
 menuMobileHandle();
 
-// Scroll, Header Change Background
-
-
-// Initial Loading
-function initalLoading() {
-  let loadedCount = 0,
-    images = document.querySelectorAll("img").length;
-  (container = document.querySelector(".homepage")), (imgLoad = imagesLoaded(container)), (loading = document.querySelector(".loading"));
-
-  imgLoad
-    .on("progress", function (instance) {
-      loadedCount++;
-      percent = Math.floor((loadedCount / images) * 100);
-      percentLoading(percent);
-      console.log(loadedCount);
-    })
-    .on("fail", function (instance) {
-      console.log("Fail");
-    })
-    .on("done", function (instance) {
-      console.log("Done");
-    })
-    .on("always", function (instance) {
-      console.log("Always");
-      loading.classList.toggle("--loaded");
-      container.classList.remove("--disable-scroll");
-    });
-}
-
-initalLoading();
-
-function percentLoading(percent) {
-  let progress = document.querySelector(".loading-bar"),
-    percentNumber = document.querySelector(".loading__inner-per");
-
-  progress.style.width = `${percent}%`;
-  percentNumber.innerHTML = `${percent}%`;
-}
-
 // FAQ
 let acc = document.getElementsByClassName("accordion");
 let i;
