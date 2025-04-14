@@ -1310,6 +1310,7 @@ p {
   font-size: 1.2rem;
   line-height: 1.5;
   margin-top: 15px;
+  justify-content: center;
 }
 
 .pic__img {
@@ -1319,6 +1320,10 @@ p {
   display: block;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--gap);
+}
+
+.break {
+  padding-top: 20px;
 }
 
 /*# sourceMappingURL=styles.css.map */
