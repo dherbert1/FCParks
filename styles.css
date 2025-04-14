@@ -1316,8 +1316,8 @@ p {
 }
 
 .pic__img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 300px;
   margin: 0 auto;
   display: block;
   grid-template-columns: repeat(3, 1fr);
@@ -1326,6 +1326,10 @@ p {
 
 .break {
   margin-top: 20px;
+}
+
+.main {
+  margin-bottom: 300px;
 }
 
 /*# sourceMappingURL=styles.css.map */
