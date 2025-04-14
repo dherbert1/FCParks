@@ -664,16 +664,16 @@ p {
   position: relative;
   display: inline-block;
   overflow: visible;
-  font-family: inherit;
-  font-size: var(--font-size);
-  font-weight: var(--font-weight);
-  line-height: var(--line-height);
   color: var(--black-cl);
 }
 .header .container .header__menu .dropdown-button {
   background-color: var(--white-cl);
   cursor: pointer;
   text-transform: uppercase;
+  font-family: inherit;
+  font-size: var(--fs-txtmenu);
+  line-height: var(--lh-txtmenu);
+  letter-spacing: var(--ls-txtmenu);
 }
 .header .container .header__menu .dropdown-button i {
   margin-left: 8px;
@@ -762,7 +762,8 @@ p {
   transform: rotate(-45deg) translate(6px, -6px);
 }
 @media (max-width: 991.98px) {
-  .header .container .header__menu li:not(:first-child), .header .container .header__menu .dropdown {
+  .header .container .header__menu li:not(:first-child),
+  .header .container .header__menu .dropdown {
     display: none;
   }
   .header .container .header__cta-hamburger {
