@@ -32,6 +32,7 @@
 
       .open__content {
         z-index: 1;
+        columns: 3;
         position: relative;
         top: 50%;
         @include mixins.transform(translateY(-50%));
