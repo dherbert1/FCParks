@@ -79,7 +79,7 @@
             letter-spacing: var(--ls-txtmenu);
             @include mixins.transition(var(--duration));
 
-            @include mixins.sm {
+            @include mixins.xs {
               font-size: var(--fs-txtmenu-sm);
               line-height: var(--lh-txtmenu-sm);
               letter-spacing: var(--ls-txtmenu-sm);
