@@ -1050,9 +1050,12 @@ p {
     position: relative;
     max-height: 980px;
     min-height: 650px;
+    display: grid;
+    grid-template-columns: 12;
   }
   .homepage .open .open__photos {
     display: flex;
+    columns: 3;
     align-items: center;
     justify-content: center;
     position: relative;
