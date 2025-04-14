@@ -9,18 +9,21 @@
     align-items:center;
     width:30%;
     height:100px;
+    margin: bottom 50px;
 }  
 .center__container{
   justify-content:center;
   align-items:center;
   width:30%;
   height:100px;
+  margin: bottom 50px;
 }
 .right__container{
   justify-content:right;
   align-items:center;
   width:30%;
   height:100px;
+  margin: bottom 50px;
 }
 .board__description{
     font-size: 1.2rem;
@@ -29,7 +32,7 @@
     background-color: var(--white-cl);
     height:50px;
     width:400px;
-    border-radius: 25%;
+    border-radius: 50%;
     text-align:center center;
 }
 .board__description__p{
