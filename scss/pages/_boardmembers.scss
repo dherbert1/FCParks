@@ -20,9 +20,14 @@
     font-size: 1.2rem;
     line-height: 1.5;
     margin: 0 20px;
-    text-align: center;
     background-color: var(--white-cl);
-    height:100px;
-    width:fit-content;
+    height:50px;
+    width:400px;
     border-radius: 25%;
+    text-align:center center;
+}
+.board__description__p{
+  text-align:center center;
+  font-size: 1.2rem;
+  line-height: 1.5;
 }
