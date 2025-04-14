@@ -1,4 +1,4 @@
-.history__grid {
+.main__content {
     display: grid;
     grid-template-columns: repeat(2, 1fr); // Two columns max
     gap: var(--gap); // Add spacing between columns and rows
@@ -37,3 +37,12 @@
   font-size: 1.2rem;
   line-height: 1.5;
 }
+.pic__img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+    grid-template-columns: repeat(2, 1fr); // Two columns max
+    gap: var(--gap); // Add spacing between columns and rows
+  }

@@ -1266,7 +1266,7 @@ p {
   /* Optional: Add styles specific to individual images */
 }
 
-.history__grid {
+.main__content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--gap);
@@ -1276,16 +1276,22 @@ p {
 .left__container {
   justify-content: left;
   align-items: center;
+  width: 30%;
+  height: 100px;
 }
 
 .center__container {
   justify-content: center;
   align-items: center;
+  width: 30%;
+  height: 100px;
 }
 
 .right__container {
   justify-content: right;
   align-items: center;
+  width: 30%;
+  height: 100px;
 }
 
 .board__description {
@@ -1303,6 +1309,16 @@ p {
   text-align: center center;
   font-size: 1.2rem;
   line-height: 1.5;
+}
+
+.pic__img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap);
 }
 
 /*# sourceMappingURL=styles.css.map */
