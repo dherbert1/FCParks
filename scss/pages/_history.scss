@@ -6,7 +6,8 @@
   gap: var(--gap); // Add spacing between columns and rows
   margin: 150px 30px 50px 30px;
 }
-
-.history__picture {
-  /* Optional: Add styles specific to individual images */
-}
+  @include mixins.sm {
+    grid-template-columns: 1fr; // One column on small screens
+    margin: 0; // Remove margins on small screens
+    padding: 0; // Remove padding on small screens
+  }
