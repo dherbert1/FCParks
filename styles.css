@@ -18,3 +18,89 @@ body::before {
   border-bottom: 2px solid black;
   content: "Error: Declarations may only be used within style rules.\a    \2577 \a 10 \2502      grid-template-columns: 1fr; // One column on small screens\a    \2502      ^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   scss/pages/_history.scss 10:5  @content\a   scss/core/_mixins.scss 15:3    sm()\a   scss/pages/_history.scss 9:3   @use\a   scss/styles.scss 20:1          root stylesheet";
 }
+.ratespage .dropdown {
+  min-width: 0;
+  max-width: 200px;
+  max-height: 70px;
+  min-height: 25px;
+  width: 200px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.history__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap);
+  margin: 150px 30px 50px 30px;
+}
+
+.history__picture {
+  /* Optional: Add styles specific to individual images */
+}
+
+.boardmemberspage {
+  overflow-x: hidden;
+}
+.boardmemberspage .main__content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap);
+  margin: 150px 30px 50px 30px;
+}
+.boardmemberspage .left__container {
+  justify-content: left;
+  align-items: center;
+  width: 30%;
+  height: 100px;
+  margin: bottom 50px;
+}
+.boardmemberspage .center__container {
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 100px;
+  margin: bottom 50px;
+}
+.boardmemberspage .right__container {
+  justify-content: right;
+  align-items: center;
+  width: 30%;
+  height: 100px;
+  margin-bottom: 50px;
+}
+.boardmemberspage .board__description {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 0 20px;
+  background-color: var(--white-cl);
+  height: 50px;
+  width: 400px;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+}
+.boardmemberspage .board__description__p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-top: 15px;
+}
+.boardmemberspage .pic__img {
+  width: 150px;
+  height: 300px;
+  margin: 0 auto;
+  display: block;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap);
+}
+.boardmemberspage .break {
+  margin-top: 20px;
+}
+.boardmemberspage .main {
+  margin-bottom: 300px;
+}
+
+/*# sourceMappingURL=styles.css.map */
