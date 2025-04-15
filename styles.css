@@ -1263,10 +1263,6 @@ p {
   margin: 150px 30px 50px 30px;
 }
 
-.history__picture {
-  /* Optional: Add styles specific to individual images */
-}
-
 .boardmemberspage {
   overflow-x: hidden;
 }
@@ -1320,9 +1316,6 @@ p {
   display: block;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--gap);
-}
-.boardmemberspage .break {
-  margin-top: 20px;
 }
 .boardmemberspage .main {
   margin-bottom: 300px;

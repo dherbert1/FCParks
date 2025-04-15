@@ -59,12 +59,7 @@
     grid-template-columns: repeat(3, 1fr); // Two columns max
     gap: var(--gap); // Add spacing between columns and rows
   }
-
-  .break {
-    margin-top: 20px;
-  }
-
-  .main {
-    margin-bottom: 300px;
+  .main{
+    margin-bottom:300px;
   }
 }
