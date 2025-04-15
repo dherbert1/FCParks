@@ -1273,39 +1273,34 @@ p {
 .boardmemberspage {
   overflow-x: hidden;
 }
-
-.main__content {
+.boardmemberspage .main__content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--gap);
   margin: 150px 30px 50px 30px;
 }
-
-.left__container {
+.boardmemberspage .left__container {
   justify-content: left;
   align-items: center;
   width: 30%;
   height: 100px;
   margin: bottom 50px;
 }
-
-.center__container {
+.boardmemberspage .center__container {
   justify-content: center;
   align-items: center;
   width: 30%;
   height: 100px;
   margin: bottom 50px;
 }
-
-.right__container {
+.boardmemberspage .right__container {
   justify-content: right;
   align-items: center;
   width: 30%;
   height: 100px;
   margin-bottom: 50px;
 }
-
-.board__description {
+.boardmemberspage .board__description {
   font-size: 1.2rem;
   line-height: 1.5;
   margin: 0 20px;
@@ -1316,14 +1311,12 @@ p {
   display: flex;
   justify-content: center;
 }
-
-.board__description__p {
+.boardmemberspage .board__description__p {
   font-size: 1.2rem;
   line-height: 1.5;
   margin-top: 15px;
 }
-
-.pic__img {
+.boardmemberspage .pic__img {
   width: 150px;
   height: 300px;
   margin: 0 auto;
@@ -1331,12 +1324,10 @@ p {
   grid-template-columns: repeat(3, 1fr);
   gap: var(--gap);
 }
-
-.break {
+.boardmemberspage .break {
   margin-top: 20px;
 }
-
-.main {
+.boardmemberspage .main {
   margin-bottom: 300px;
 }
 
