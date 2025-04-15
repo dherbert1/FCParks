@@ -11,7 +11,7 @@
       max-height: 980px;
       min-height: 650px;
       display: grid;
-      grid-template-columns: 2fr 3fr;
+      grid-template-columns: 2fr 2fr;
       align-items: center;
       padding: 0px 100px;
       column-gap: 100px;
@@ -31,12 +31,11 @@
 
       .open__content {
         z-index: 1;
-        columns: 3;
         position: relative;
+        display:flex;
 
         .container {
           h1 {
-            display: flex;
             position: relative;
             z-index: 1;
           }
