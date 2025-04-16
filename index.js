@@ -2,8 +2,8 @@
 function initialLoading() {
   const container = document.querySelector(".homepage");
   const loading = document.querySelector(".loading");
-  const images = document.querySelectorAll("img");
-  const imgLoad = imagesLoaded(document.body);
+  const images = container?.querySelectorAll("img") || [];
+  const imgLoad = imagesLoaded(container);
   let loadedCount = 0;
 
   imgLoad
@@ -11,12 +11,20 @@ function initialLoading() {
       loadedCount++;
       const percent = Math.floor((loadedCount / images.length) * 100);
       updateLoadingBar(percent);
-      console.log(`Loaded ${loadedCount} images`);
     })
-    .on("fail", () => console.warn("Some images failed to load"))
-    .on("done", () => console.log("All images successfully loaded"))
+    .on("fail", (instance) => {
+      console.warn("⚠️ Some images failed to load. This may be expected.");
+      instance.images.forEach((img) => {
+        if (!img.isLoaded) {
+          console.warn("❌ Failed image:", img.img?.src);
+        }
+      });
+    })
+    .on("done", () => {
+      console.log("✅ All visible images loaded.");
+    })
     .on("always", () => {
-      console.log("Image load finished");
+      console.log("✅ Image loading process finished.");
       loading?.classList.toggle("--loaded");
       container?.classList.remove("--disable-scroll");
     });
