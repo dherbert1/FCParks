@@ -67,24 +67,18 @@ function initPhotoSlider() {
     adaptiveHeight: true,
   });
 
-  // Recalculate layout on Flickity ready
+  // Adjust height when Flickity is ready
   flkty.on("ready", () => {
     setTimeout(adjustSlideHeights, 100);
   });
 
-  // Recalculate layout when lazy-loaded images are loaded
+  // Adjust when lazy images load
   flkty.on("lazyLoad", () => {
     flkty.resize();
     adjustSlideHeights();
   });
 
-  // Recalculate layout after all images (including lazy) are loaded
-  imagesLoaded(elem, () => {
-    flkty.resize();
-    adjustSlideHeights();
-  });
-
-  // IntersectionObserver for any images with data-src (extra lazy load)
+  // Extra image observer for any data-src images
   const images = elem.querySelectorAll("img[data-src]");
   const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach((entry) => {
@@ -96,19 +90,21 @@ function initPhotoSlider() {
       }
     });
   });
-
   images.forEach((img) => observer.observe(img));
 }
 
 function adjustSlideHeights() {
-  const slides = document.querySelectorAll(".photos__slider-item");
-  let maxHeight = 0;
-  slides.forEach((slide) => {
-    maxHeight = Math.max(maxHeight, slide.offsetHeight);
-  });
-  slides.forEach((slide) => {
-    slide.style.height = `${maxHeight}px`;
-  });
+  setTimeout(() => {
+    const slides = document.querySelectorAll(".photos__slider-item");
+    let maxHeight = 0;
+    slides.forEach((slide) => {
+      slide.style.height = "auto"; // Reset height first
+      maxHeight = Math.max(maxHeight, slide.offsetHeight);
+    });
+    slides.forEach((slide) => {
+      slide.style.height = `${maxHeight}px`;
+    });
+  }, 50); // Small delay for layout to settle
 }
 
 // === Mobile Menu Toggle ===
@@ -150,14 +146,21 @@ function setupAccordions() {
   });
 }
 
-// === Initialize All ===
+// === Initialize Everything ===
 window.addEventListener("load", () => {
+  const slider = document.querySelector(".photos__slider");
+
+  if (slider) {
+    imagesLoaded(slider, () => {
+      initPhotoSlider(); // Only init Flickity when ready
+    });
+  }
+
   initialLoading();
   setupScrollToTop();
-  initPhotoSlider();
   setupAccordions();
   setupMobileMenu();
 });
 
-// Re-adjust photo slider on resize
+// === Resize Handling for Slider Height ===
 window.addEventListener("resize", adjustSlideHeights);
