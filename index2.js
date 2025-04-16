@@ -50,11 +50,14 @@ function scrollToTop() {
       pageDots: false,
       prevNextButtons: true,
       lazyLoad: true,
-      adaptiveHeight: true,
+      adaptiveHeight: false, // Disable Flickity's built-in adaptiveHeight
       on: [
         {
           ready: function () {
-            heightCard();
+            heightCard(); // Ensure height is set after the slider is initialized
+          },
+          change: function () {
+            heightCard(); // Recalculate height whenever the slide changes
           },
         },
       ],
@@ -87,12 +90,17 @@ function scrollToTop() {
   };
   
   function heightCard() {
-    let slides = document.querySelectorAll(".photos__slider-item img");
+    const slides = document.querySelectorAll(".photos__slider-item");
     let maxHeight = 0;
-    let loadedCount = 0;
+    
+    // Wait for all images to load
+    let loadedImages = 0;
+    const totalImages = slides.length;
   
-    // Ensure images are fully loaded before calculating height
-    slides.forEach(function (img) {
+    slides.forEach(function (slide) {
+      const img = slide.querySelector('img');
+      
+      // Check if image is already loaded
       if (img.complete) {
         checkHeight(img);
       } else {
@@ -100,15 +108,19 @@ function scrollToTop() {
       }
     });
   
+    // Update height calculation after all images are loaded
     function checkHeight(img) {
-      const parent = img.closest('.photos__slider-item');
-      if (parent) {
-        const height = parent.offsetHeight;
-        if (height > maxHeight) maxHeight = height;
+      const slide = img.closest('.photos__slider-item');
+      if (slide) {
+        const height = slide.offsetHeight;
+        if (height > maxHeight) {
+          maxHeight = height;
+        }
+        loadedImages++;
   
-        loadedCount++;
-        if (loadedCount === slides.length) {
-          document.querySelectorAll(".photos__slider-item").forEach(slide => {
+        // Once all images are loaded, update the height of all slides
+        if (loadedImages === totalImages) {
+          slides.forEach(slide => {
             slide.style.height = `${maxHeight}px`;
           });
         }
@@ -117,11 +129,12 @@ function scrollToTop() {
   }
   
   window.addEventListener("load", function () {
-    handlePhotos();
+    handlePhotos(); // Initialize photos when window is loaded
   });
   
   window.addEventListener("resize", function () {
-    handlePhotos();
+    heightCard(); // Recalculate heights on window resize
+    handlePhotos(); // Reinitialize the photos slider
   });
   
   // Click Hamburger, Show Menu
