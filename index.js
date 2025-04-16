@@ -1,47 +1,63 @@
-// Scroll to top
-function scrollToTop() {
-  const backToTop = document.getElementById("btnup");
-  if (backToTop) {
-    backToTop.addEventListener("click", function () {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
+// === Initial Loading Animation ===
+function initialLoading() {
+  const container = document.querySelector(".homepage");
+  const loading = document.querySelector(".loading");
+  const images = document.querySelectorAll("img");
+  const imgLoad = imagesLoaded(document.body);
+  let loadedCount = 0;
+
+  imgLoad
+    .on("progress", () => {
+      loadedCount++;
+      const percent = Math.floor((loadedCount / images.length) * 100);
+      updateLoadingBar(percent);
+      console.log(`Loaded ${loadedCount} images`);
+    })
+    .on("fail", () => console.warn("Some images failed to load"))
+    .on("done", () => console.log("All images successfully loaded"))
+    .on("always", () => {
+      console.log("Image load finished");
+      loading?.classList.toggle("--loaded");
+      container?.classList.remove("--disable-scroll");
     });
+}
+
+function updateLoadingBar(percent) {
+  const progress = document.querySelector(".loading-bar");
+  const percentText = document.querySelector(".loading__inner-per");
+  if (progress && percentText) {
+    progress.style.width = `${percent}%`;
+    percentText.innerHTML = `${percent}%`;
   }
 }
-scrollToTop();
 
-// Hide when scroll to top
-window.addEventListener("load", function () {
-  function showScrollToTop() {
-    const backToTop = document.getElementById("btnup");
-    let scrollY = window.scrollY;
-    let documentHeight = document.documentElement.scrollHeight;
-    let windowHeight = window.innerHeight;
+// === Scroll To Top Button ===
+function setupScrollToTop() {
+  const backToTop = document.getElementById("btnup");
+  if (!backToTop) return;
 
-    // Calculate half the height of the page
-    let halfPage = (documentHeight - windowHeight) / 2;
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 
-    if (backToTop) {
-      if (scrollY > halfPage) {
-        backToTop.style.display = "block";
-      } else {
-        backToTop.style.display = "none";
-      }
-    }
+  function toggleButtonVisibility() {
+    const scrollY = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight;
+    const winHeight = window.innerHeight;
+    const halfway = (docHeight - winHeight) / 2;
+    backToTop.style.display = scrollY > halfway ? "block" : "none";
   }
-  // Call once to set the initial state when the page loads
-  showScrollToTop();
 
-  // Add scroll event listener
-  window.addEventListener("scroll", showScrollToTop);
-});
+  window.addEventListener("scroll", toggleButtonVisibility);
+  toggleButtonVisibility(); // Initial check
+}
 
-// Photos (with Lazy Loading)
-let elem = document.querySelector('.photos__slider');
-function handlePhotos() {
-  let flkty = new Flickity(elem, {
+// === Lazy Loaded Photo Slider ===
+function initPhotoSlider() {
+  const elem = document.querySelector(".photos__slider");
+  if (!elem) return;
+
+  const flkty = new Flickity(elem, {
     wrapAround: true,
     autoplay: 5,
     fullscreen: true,
@@ -49,140 +65,99 @@ function handlePhotos() {
     prevNextButtons: true,
     lazyLoad: true,
     adaptiveHeight: true,
-    on: [ 
-      {
-        ready: function () {
-          heightCard();
-        },
+  });
+
+  // Recalculate layout on Flickity ready
+  flkty.on("ready", () => {
+    setTimeout(adjustSlideHeights, 100);
+  });
+
+  // Recalculate layout when lazy-loaded images are loaded
+  flkty.on("lazyLoad", () => {
+    flkty.resize();
+    adjustSlideHeights();
+  });
+
+  // Recalculate layout after all images (including lazy) are loaded
+  imagesLoaded(elem, () => {
+    flkty.resize();
+    adjustSlideHeights();
+  });
+
+  // IntersectionObserver for any images with data-src (extra lazy load)
+  const images = elem.querySelectorAll("img[data-src]");
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        img.src = img.dataset.src;
+        img.removeAttribute("data-src");
+        obs.unobserve(img);
       }
-    ],
+    });
   });
 
-  // Lazy load images in the carousel
-  const images = document.querySelectorAll('.photos__slider-item img[data-src]');
-  const loadImage = (img) => {
-    img.src = img.getAttribute('data-src');
-    img.removeAttribute('data-src');
-  };
+  images.forEach((img) => observer.observe(img));
+}
 
-  const lazyLoadImages = () => {
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          loadImage(entry.target);
-          observer.unobserve(entry.target);
-        }
-      });
-    });
-
-    images.forEach(image => {
-      imageObserver.observe(image);
-    });
-  };
-
-  lazyLoadImages(); // Initialize lazy loading for images
-};
-
-function heightCard() {
-  let slides = document.querySelectorAll(".photos__slider-item");
+function adjustSlideHeights() {
+  const slides = document.querySelectorAll(".photos__slider-item");
   let maxHeight = 0;
-  slides.forEach(function (slide) {
-    let height = slide.offsetHeight;
-    if (height > maxHeight) {
-      maxHeight = height;
-    }
+  slides.forEach((slide) => {
+    maxHeight = Math.max(maxHeight, slide.offsetHeight);
   });
-  slides.forEach(function (slide) {
+  slides.forEach((slide) => {
     slide.style.height = `${maxHeight}px`;
   });
 }
-window.addEventListener("load", function () {
-  handlePhotos();
-});
-window.addEventListener("resize", function () {
-  handlePhotos();
-});
 
-// Click Hamburger, Show Menu
-const btnMenu = document.querySelector(".header__cta-hamburger .bars"),
-  nav = document.querySelector(".nav");
-header = document.querySelector(".header");
-function menuMobileHandle() {
+// === Mobile Menu Toggle ===
+function setupMobileMenu() {
+  const btnMenu = document.querySelector(".header__cta-hamburger .bars");
+  const nav = document.querySelector(".nav");
+  const header = document.querySelector(".header");
+
+  if (!btnMenu || !nav || !header) return;
+
   btnMenu.addEventListener("click", function () {
     this.classList.toggle("active");
     nav.classList.toggle("active");
     header.classList.toggle("active");
   });
-  function hideNav() {
-    btnMenu.classList.remove("active");
-    nav.classList.remove("active");
-    header.classList.toggle("active");
-  }
-  window.addEventListener("resize", function () {
-    let wWindow = window.innerWidth;
-    if (wWindow > 991.98) {
-      hideNav();
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 991.98) {
+      btnMenu.classList.remove("active");
+      nav.classList.remove("active");
+      header.classList.remove("active");
     }
   });
 }
-menuMobileHandle();
 
-// Initial Loading
-function initalLoading() {
-  let loadedCount = 0,
-    images = document.querySelectorAll("img").length;
-  (container = document.querySelector(".homepage")), (loading = document.querySelector(".loading"));
-
-  imgLoad
-    .on("progress", function (instance) {
-      loadedCount++;
-      percent = Math.floor((loadedCount / images) * 100);
-      percentLoading(percent);
-      console.log(loadedCount);
-    })
-    .on("fail", function (instance) {
-      console.log("Fail");
-    })
-    .on("done", function (instance) {
-      console.log("Done");
-    })
-    .on("always", function (instance) {
-      console.log("Always");
-      loading.classList.toggle("--loaded");
-      container.classList.remove("--disable-scroll");
+// === FAQ Accordion ===
+function setupAccordions() {
+  const accordions = document.querySelectorAll(".accordion");
+  accordions.forEach((acc) => {
+    acc.addEventListener("click", function () {
+      this.classList.toggle("active");
+      const panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = `${panel.scrollHeight}px`;
+      }
     });
-}
-
-initalLoading();
-
-function percentLoading(percent) {
-  let progress = document.querySelector(".loading-bar"),
-    percentNumber = document.querySelector(".loading__inner-per");
-
-  progress.style.width = `${percent}%`;
-  percentNumber.innerHTML = `${percent}%`;
-}
-
-
-// FAQ
-let acc = document.getElementsByClassName("accordion");
-let i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function () {
-    this.classList.toggle("active");
-    let panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    }
   });
 }
 
-// For rates page
-function ratesDropDown(){
-  const ddContainer = document.querySelectorAll('.dd_container');
-  const dropDown = document.querySelectorAll('.dropdown');
-  const shelterRent = document.querySelector('#shelterrent')
-}
+// === Initialize All ===
+window.addEventListener("load", () => {
+  initialLoading();
+  setupScrollToTop();
+  initPhotoSlider();
+  setupAccordions();
+  setupMobileMenu();
+});
+
+// Re-adjust photo slider on resize
+window.addEventListener("resize", adjustSlideHeights);
