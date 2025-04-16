@@ -71,7 +71,7 @@ function initPhotoSlider() {
     fullscreen: true,
     pageDots: false,
     prevNextButtons: true,
-    lazyLoad: true,
+    lazyLoad: 2,
     adaptiveHeight: true,
   });
 
@@ -85,20 +85,6 @@ function initPhotoSlider() {
     flkty.resize();
     adjustSlideHeights();
   });
-
-  // Extra image observer for any data-src images
-  const images = elem.querySelectorAll("img[data-src]");
-  const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const img = entry.target;
-        img.src = img.dataset.src;
-        img.removeAttribute("data-src");
-        obs.unobserve(img);
-      }
-    });
-  });
-  images.forEach((img) => observer.observe(img));
 }
 
 function adjustSlideHeights() {
