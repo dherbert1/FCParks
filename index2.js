@@ -224,4 +224,31 @@ function scrollToTop() {
     const dropDown = document.querySelectorAll('.dropdown');
     const shelterRent = document.querySelector('#shelterrent');
   }
-  
+
+function initPhotoSlider() {
+  const elem = document.querySelector(".photos__slider");
+  if (!elem) return;
+
+  const flkty = new Flickity(elem, {
+    wrapAround: true,
+    autoplay: 5,
+    fullscreen: true,
+    pageDots: false,
+    prevNextButtons: true,
+    lazyLoad: true,
+    adaptiveHeight: true,
+  });
+
+  // Adjust height when Flickity is ready
+  flkty.on("ready", () => {
+    imagesLoaded(elem, () => {
+      adjustSlideHeights(); // Ensure images are loaded before adjusting heights
+    });
+  });
+
+  // Adjust when lazy images load
+  flkty.on("lazyLoad", () => {
+    flkty.resize();
+    adjustSlideHeights();
+  });
+}
