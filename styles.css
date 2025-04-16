@@ -1206,10 +1206,9 @@ p {
 }
 .ratespage .rates_main {
   margin: 40px auto 10px auto;
-  padding-top: 50px;
+  padding-top: 20px;
   padding-right: auto;
   padding-left: auto;
-  padding-top: 100px;
 }
 .ratespage .rates {
   margin-top: 100px;
@@ -1230,7 +1229,6 @@ p {
 .ratespage .map {
   margin-left: auto;
   margin-right: auto;
-  display: grid;
 }
 .ratespage .rates_container {
   background-color: #f5f5dc;
