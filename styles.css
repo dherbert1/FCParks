@@ -1241,7 +1241,8 @@ p {
 .ratespage .label {
   text-align: center;
 }
-.ratespage .dropdown {
+
+/*.ratespage .dropdown {
   min-width: 0;
   max-width: 200px;
   max-height: 70px;
@@ -1253,6 +1254,7 @@ p {
   display: flex;
   justify-content: center;
 }
+  */
 
 .history__grid {
   display: grid;
