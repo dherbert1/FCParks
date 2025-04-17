@@ -1277,7 +1277,7 @@ p {
   align-items: center;
   width: 30%;
   height: 100px;
-  margin: bottom 50px;
+  margin-bottom: 50px;
 }
 .boardmemberspage .center__container {
   justify-content: center;
