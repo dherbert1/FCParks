@@ -130,7 +130,6 @@
       &-hamburger {
         display: none;
         position: relative;
-        cursor: pointer;
         width: 45px;
         height: 45px;
         background-color: var(--white-cl);
@@ -142,6 +141,8 @@
           left: 50%;
           transform: translate(-50%, -50%);
           position: absolute;
+          cursor: pointer;
+
 
           span,
           &:after,
