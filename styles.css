@@ -1268,6 +1268,7 @@ p {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--gap);
+  height: 450px;
   margin: 150px 30px 50px 30px;
 }
 .boardmemberspage .left__container {
