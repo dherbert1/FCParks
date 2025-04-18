@@ -712,7 +712,6 @@ p {
 .header .container .header__cta-hamburger {
   display: none;
   position: relative;
-  cursor: pointer;
   width: 45px;
   height: 45px;
   background-color: var(--white-cl);
@@ -724,6 +723,7 @@ p {
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
+  cursor: pointer;
 }
 .header .container .header__cta-hamburger .bars span, .header .container .header__cta-hamburger .bars:after, .header .container .header__cta-hamburger .bars:before {
   content: "";
@@ -839,16 +839,12 @@ p {
   text-decoration: none;
   display: block;
   padding: 20px 0;
-  display: flex;
-  justify-content: center;
 }
 .nav .dropdown .dropbtn {
   font-size: inherit;
   background-color: inherit;
   font-family: inherit;
   margin: 0;
-  color: var(--white-cl);
-  text-transform: uppercase;
 }
 .nav .dropdown-content {
   display: none;
@@ -1260,6 +1256,9 @@ p {
   margin-right: auto;
   display: flex;
   justify-content: center;
+}
+.ratespage .dd_container {
+  z-index: 3;
 }
 
 .history__grid {
