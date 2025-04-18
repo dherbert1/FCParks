@@ -1253,6 +1253,9 @@ p {
   display: flex;
   justify-content: center;
 }
+.ratespage .dd_container {
+  z-index: 3;
+}
 
 .history__grid {
   display: grid;
