@@ -1225,7 +1225,9 @@ p {
   max-height: 800px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: -70px;
+  margin-top: 90px;
+  position: relative;
+  z-index: 0;
 }
 .ratespage .map {
   margin-left: auto;
@@ -1236,6 +1238,8 @@ p {
   border-radius: 20px;
   margin-right: 50%;
   margin-left: 10%;
+  position: relative;
+  z-index: 1;
 }
 .ratespage .statement,
 .ratespage .label {
