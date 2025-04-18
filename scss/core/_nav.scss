@@ -71,6 +71,8 @@
     text-decoration: none;
     display: block;
     padding: 20px 0;
+    display: flex;
+    justify-content: center;
   }
 
   .dropdown .dropbtn {
@@ -78,6 +80,8 @@
     background-color: inherit;
     font-family: inherit;
     margin: 0;
+    color: var(--white-cl);
+    text-transform: uppercase;
   }
 
   .dropdown-content {
