@@ -1241,8 +1241,7 @@ p {
 .ratespage .label {
   text-align: center;
 }
-
-.ratespage .dd_container .dropdown {
+.ratespage .dropdown {
   min-width: 0;
   max-width: 200px;
   max-height: 70px;
@@ -1254,7 +1253,6 @@ p {
   display: flex;
   justify-content: center;
 }
-  
 
 .history__grid {
   display: grid;
@@ -1270,6 +1268,7 @@ p {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--gap);
+  height: 450px;
   margin: 150px 30px 50px 30px;
 }
 .boardmemberspage .left__container {
