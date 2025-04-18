@@ -1241,7 +1241,7 @@ p {
 .ratespage .label {
   text-align: center;
 }
-.ratespage .rates_dropdown {
+.ratespage .rates_dd {
   min-width: 0;
   max-width: 200px;
   max-height: 70px;
