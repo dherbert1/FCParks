@@ -56,8 +56,6 @@
     width: 150px;
     height: 300px;
     margin: 0 auto;
-    display: block;
-    grid-template-columns: repeat(3, 1fr); // Two columns max
     gap: var(--gap); // Add spacing between columns and rows
   }
   .main{
