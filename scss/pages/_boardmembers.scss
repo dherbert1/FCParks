@@ -34,11 +34,14 @@
     }
   }
 
-  .left__container, .right__container, .center__container {
+  .bm_container {
     justify-content: left;
     align-items: center;
     width: 100%;
     margin-bottom: 50px;
+    .-item {
+      
+    }
     // @include mixins.xxs{
     //   justify-content: left;
     //   align-items: center;

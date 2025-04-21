@@ -1309,7 +1309,7 @@ p {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-.boardmemberspage .left__container, .boardmemberspage .right__container, .boardmemberspage .center__container {
+.boardmemberspage .bm_container {
   justify-content: left;
   align-items: center;
   width: 100%;
