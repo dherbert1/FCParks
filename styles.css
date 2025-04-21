@@ -1302,7 +1302,7 @@ p {
 .boardmemberspage .left__container, .boardmemberspage .right__container, .boardmemberspage .center__container {
   justify-content: left;
   align-items: center;
-  width: 30%;
+  width: 100%;
   height: 100px;
   margin-bottom: 50px;
 }
