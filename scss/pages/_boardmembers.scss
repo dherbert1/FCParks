@@ -4,27 +4,33 @@
   min-width: 320px;
   padding-top: var(--height-header);
 
+  .title_boardmembers {
+    height: 7vh;
+    width: 100vw;
+    text-align: center;
+    padding-bottom: 20px;
+    display: block;
+    color: var(--white-cl);
+    font-size: 50px;
+    text-align: center;
+    margin-top: 150px;
+  }
+
   .main__content {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); // Two columns max
-    gap: var(--gap); // Add spacing between columns and rows
-    height:450px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
     margin: 150px 30px 50px 30px;
     
 
     @include mixins.sm{
-      grid-template-columns: repeat(1, 1fr); // Two columns max
-
+      grid-template-columns: repeat(1, 1fr); 
     }
     @include mixins.md{
-      grid-template-columns: repeat(2, 1fr); // Two columns max
-
-
+      grid-template-columns: repeat(2, 1fr);
     }
     @include mixins.lg{
-      grid-template-columns: repeat(3, 1fr); // Two columns max
-
-
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 
@@ -32,48 +38,43 @@
     justify-content: left;
     align-items: center;
     width: 100%;
-    height: 100px;
     margin-bottom: 50px;
-    @include mixins.xxs{
-      justify-content: left;
-      align-items: center;
-      width: 100%;
-      height: 100px;
-      margin-bottom: 50px;
-    }
-    @include mixins.xs{
-      justify-content: left;
-      align-items: center;
-      width: 100%;
-      height: 100px;
-      margin-bottom: 50px;
-    }
-    @include mixins.sm{
-      justify-content: left;
-      align-items: center;
-      width: 100%;
-      height: 100px;
-      margin-bottom: 50px;
-    }
-    @include mixins.md{
-      justify-content: left;
-      align-items: center;
-      width: 100%;
-      height: 100px;
-      margin-bottom: 50px;
-    }
-    @include mixins.lg{
-      justify-content: left;
-      align-items: center;
-      width: 100%;
-      height: 100px;
-      margin-bottom: 50px;
-    }
+    // @include mixins.xxs{
+    //   justify-content: left;
+    //   align-items: center;
+    //   width: 100%;
+    //   margin-bottom: 50px;
+    // }
+    // @include mixins.xs{
+    //   justify-content: left;
+    //   align-items: center;
+    //   width: 100%;
+    //   margin-bottom: 50px;
+    // }
+    // @include mixins.sm{
+    //   justify-content: left;
+    //   align-items: center;
+    //   width: 100%;
+    //   height: 100px;
+    //   margin-bottom: 50px;
+    // }
+    // @include mixins.md{
+    //   justify-content: left;
+    //   align-items: center;
+    //   width: 100%;
+    //   height: 100px;
+    //   margin-bottom: 50px;
+    // }
+    // @include mixins.lg{
+    //   justify-content: left;
+    //   align-items: center;
+    //   width: 100%;
+    //   height: 100px;
+    //   margin-bottom: 50px;
+    // }
   }
   .board__description {
-    font-size: 1.2rem;
-    line-height: 1.5;
-    margin: 0 20px;
+    margin: 0px 20px;
     background-color: var(--white-cl);
     height: 50px;
     width: 400px;
@@ -86,18 +87,11 @@
     font-size: 1.2rem;
     line-height: 1.5;
     margin-top: 15px;
-    ;
   }
 
   .pic__img {
-    width: 150px;
     height: 300px;
     margin: 0 auto;
-    gap: var(--gap); // Add spacing between columns and rows
-  }
-  .main{
-    margin-bottom:300px;
+    gap: var(--gap);
   }
 }
-
-// Media Queries
