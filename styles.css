@@ -1275,12 +1275,82 @@ p {
   height: 450px;
   margin: 150px 30px 50px 30px;
 }
+@media (max-width: 575.98px) {
+  .boardmemberspage .main__content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 767.98px) {
+  .boardmemberspage .main__content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 991.98px) {
+  .boardmemberspage .main__content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 1199.98px) {
+  .boardmemberspage .main__content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 1440px) {
+  .boardmemberspage .main__content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 .boardmemberspage .left__container, .boardmemberspage .right__container, .boardmemberspage .center__container {
   justify-content: left;
   align-items: center;
   width: 30%;
   height: 100px;
   margin-bottom: 50px;
+}
+@media (max-width: 575.98px) {
+  .boardmemberspage .left__container, .boardmemberspage .right__container, .boardmemberspage .center__container {
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 767.98px) {
+  .boardmemberspage .left__container, .boardmemberspage .right__container, .boardmemberspage .center__container {
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 991.98px) {
+  .boardmemberspage .left__container, .boardmemberspage .right__container, .boardmemberspage .center__container {
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 1199.98px) {
+  .boardmemberspage .left__container, .boardmemberspage .right__container, .boardmemberspage .center__container {
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 1440px) {
+  .boardmemberspage .left__container, .boardmemberspage .right__container, .boardmemberspage .center__container {
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 50px;
+  }
 }
 .boardmemberspage .board__description {
   font-size: 1.2rem;
@@ -1306,52 +1376,6 @@ p {
 }
 .boardmemberspage .main {
   margin-bottom: 300px;
-}
-
-@media (max-width: 575.98px) {
-  .main__content {
-    grid-template-columns: repeat(1, 1fr);
-    gap: var(--gap);
-    height: 450px;
-    margin: 150px 30px 50px 30px;
-  }
-  .left__container, .right__container, .center__container {
-    justify-content: left;
-    align-items: center;
-    width: 100%;
-    height: 100px;
-    margin-bottom: 50px;
-  }
-}
-@media (max-width: 767.98px) {
-  .main__content {
-    grid-template-columns: repeat(1, 1fr);
-    gap: var(--gap);
-    height: 450px;
-    margin: 150px 30px 50px 30px;
-  }
-  .left__container, .right__container, .center__container {
-    justify-content: left;
-    align-items: center;
-    width: 100%;
-    height: 100px;
-    margin-bottom: 50px;
-  }
-}
-@media (max-width: 991.98px) {
-  .main__content {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--gap);
-    height: 450px;
-    margin: 150px 30px 50px 30px;
-  }
-  .left__container, .right__container, .center__container {
-    justify-content: left;
-    align-items: center;
-    width: 100%;
-    height: 100px;
-    margin-bottom: 50px;
-  }
 }
 
 /*# sourceMappingURL=styles.css.map */
