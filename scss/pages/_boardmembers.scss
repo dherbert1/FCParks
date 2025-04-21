@@ -10,6 +10,30 @@
     gap: var(--gap); // Add spacing between columns and rows
     height:450px;
     margin: 150px 30px 50px 30px;
+    
+    @include mixins.xxs{
+      grid-template-columns: repeat(1, 1fr); // Two columns max
+
+    }
+    @include mixins.xs{
+      grid-template-columns: repeat(1, 1fr); // Two columns max
+
+    }
+    @include mixins.sm{
+      grid-template-columns: repeat(2, 1fr); // Two columns max
+
+
+    }
+    @include mixins.md{
+      grid-template-columns: repeat(3, 1fr); // Two columns max
+
+
+    }
+    @include mixins.lg{
+      grid-template-columns: repeat(3, 1fr); // Two columns max
+
+
+    }
   }
 
   .left__container, .right__container, .center__container {
@@ -18,6 +42,41 @@
     width: 30%;
     height: 100px;
     margin-bottom: 50px;
+    @include mixins.xxs{
+      justify-content: left;
+      align-items: center;
+      width: 100%;
+      height: 100px;
+      margin-bottom: 50px;
+    }
+    @include mixins.xs{
+      justify-content: left;
+      align-items: center;
+      width: 100%;
+      height: 100px;
+      margin-bottom: 50px;
+    }
+    @include mixins.sm{
+      justify-content: left;
+      align-items: center;
+      width: 100%;
+      height: 100px;
+      margin-bottom: 50px;
+    }
+    @include mixins.md{
+      justify-content: left;
+      align-items: center;
+      width: 100%;
+      height: 100px;
+      margin-bottom: 50px;
+    }
+    @include mixins.lg{
+      justify-content: left;
+      align-items: center;
+      width: 100%;
+      height: 100px;
+      margin-bottom: 50px;
+    }
   }
   .board__description {
     font-size: 1.2rem;
@@ -50,51 +109,3 @@
 }
 
 // Media Queries
-@include mixins.xxs{
-  .main__content {
-    grid-template-columns: repeat(1, 1fr); // Two columns max
-    gap: var(--gap); // Add spacing between columns and rows
-    height: 450px;
-    margin: 150px 30px 50px 30px;
-  }
-
-  .left__container, .right__container, .center__container {
-    justify-content: left;
-    align-items: center;
-    width: 100%;
-    height: 100px;
-    margin-bottom: 50px;
-  }
-}
-@include mixins.xs{
-  .main__content {
-    grid-template-columns: repeat(1, 1fr); // Two columns max
-    gap: var(--gap); // Add spacing between columns and rows
-    height: 450px;
-    margin: 150px 30px 50px 30px;
-  }
-
-  .left__container, .right__container, .center__container {
-    justify-content: left;
-    align-items: center;
-    width: 100%;
-    height: 100px;
-    margin-bottom: 50px;
-  }
-}
-@include mixins.sm{
-  .main__content {
-    grid-template-columns: repeat(2, 1fr); // Two columns max
-    gap: var(--gap); // Add spacing between columns and rows
-    height: 450px;
-    margin: 150px 30px 50px 30px;
-  }
-
-  .left__container, .right__container, .center__container {
-    justify-content: left;
-    align-items: center;
-    width: 100%;
-    height: 100px;
-    margin-bottom: 50px;
-  }
-}
