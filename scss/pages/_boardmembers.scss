@@ -11,21 +11,13 @@
     height:450px;
     margin: 150px 30px 50px 30px;
     
-    @include mixins.xxs{
-      grid-template-columns: repeat(1, 1fr); // Two columns max
 
-    }
-    @include mixins.xs{
-      grid-template-columns: repeat(1, 1fr); // Two columns max
-
-    }
     @include mixins.sm{
-      grid-template-columns: repeat(2, 1fr); // Two columns max
-
+      grid-template-columns: repeat(1, 1fr); // Two columns max
 
     }
     @include mixins.md{
-      grid-template-columns: repeat(3, 1fr); // Two columns max
+      grid-template-columns: repeat(2, 1fr); // Two columns max
 
 
     }
