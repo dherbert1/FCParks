@@ -1130,6 +1130,7 @@ p {
 .eventspage {
   overflow-x: hidden;
   min-width: 320px;
+  padding-top: var(--height-header);
 }
 .eventspage .event_calendar {
   width: 100vw;
@@ -1197,12 +1198,13 @@ p {
 .reviewspage {
   overflow-x: hidden;
   min-width: 320px;
-  padding-top: 145px;
+  padding-top: var(--height-header);
 }
 
 .ratespage {
   overflow-x: hidden;
   min-width: 320px;
+  padding-top: var(--height-header);
 }
 .ratespage .rates_main {
   margin: 40px auto 10px auto;
@@ -1258,7 +1260,12 @@ p {
   justify-content: center;
 }
 
-.history__grid {
+.historypage {
+  overflow-x: hidden;
+  min-width: 320px;
+  padding-top: var(--height-header);
+}
+.historypage .history__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--gap);
@@ -1267,6 +1274,8 @@ p {
 
 .boardmemberspage {
   overflow-x: hidden;
+  min-width: 320px;
+  padding-top: var(--height-header);
 }
 .boardmemberspage .main__content {
   display: grid;

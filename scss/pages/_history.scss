@@ -1,8 +1,14 @@
 @use "../core/mixins";
 
-.history__grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); // Two columns max
-  gap: var(--gap); // Add spacing between columns and rows
-  margin: 150px 30px 50px 30px;
+.historypage {
+  overflow-x: hidden;
+  min-width: 320px;
+  padding-top: var(--height-header);
+
+  .history__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); // Two columns max
+    gap: var(--gap); // Add spacing between columns and rows
+    margin: 150px 30px 50px 30px;
+  }
 }

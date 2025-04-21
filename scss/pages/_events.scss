@@ -3,6 +3,7 @@
 .eventspage {
   overflow-x: hidden;
   min-width: 320px;
+  padding-top: var(--height-header);
 
   .event_calendar {
     width: 100vw;

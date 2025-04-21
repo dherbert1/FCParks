@@ -2,6 +2,7 @@
 .ratespage {
   overflow-x: hidden;
   min-width: 320px;
+  padding-top: var(--height-header);
 
   .rates_main {
     margin: 40px auto 10px auto;

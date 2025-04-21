@@ -1,6 +1,8 @@
 @use "../core/mixins";
 .boardmemberspage {
   overflow-x: hidden;
+  min-width: 320px;
+  padding-top: var(--height-header);
 
   .main__content {
     display: grid;
