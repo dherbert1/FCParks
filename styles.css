@@ -1277,11 +1277,21 @@ p {
   min-width: 320px;
   padding-top: var(--height-header);
 }
+.boardmemberspage .title_boardmembers {
+  height: 7vh;
+  width: 100vw;
+  text-align: center;
+  padding-bottom: 20px;
+  display: block;
+  color: var(--white-cl);
+  font-size: 50px;
+  text-align: center;
+  margin-top: 150px;
+}
 .boardmemberspage .main__content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--gap);
-  height: 450px;
   margin: 150px 30px 50px 30px;
 }
 @media (max-width: 991.98px) {
@@ -1303,58 +1313,10 @@ p {
   justify-content: left;
   align-items: center;
   width: 100%;
-  height: 100px;
   margin-bottom: 50px;
 }
-@media (max-width: 575.98px) {
-  .boardmemberspage .left__container, .boardmemberspage .right__container, .boardmemberspage .center__container {
-    justify-content: left;
-    align-items: center;
-    width: 100%;
-    height: 100px;
-    margin-bottom: 50px;
-  }
-}
-@media (max-width: 767.98px) {
-  .boardmemberspage .left__container, .boardmemberspage .right__container, .boardmemberspage .center__container {
-    justify-content: left;
-    align-items: center;
-    width: 100%;
-    height: 100px;
-    margin-bottom: 50px;
-  }
-}
-@media (max-width: 991.98px) {
-  .boardmemberspage .left__container, .boardmemberspage .right__container, .boardmemberspage .center__container {
-    justify-content: left;
-    align-items: center;
-    width: 100%;
-    height: 100px;
-    margin-bottom: 50px;
-  }
-}
-@media (max-width: 1199.98px) {
-  .boardmemberspage .left__container, .boardmemberspage .right__container, .boardmemberspage .center__container {
-    justify-content: left;
-    align-items: center;
-    width: 100%;
-    height: 100px;
-    margin-bottom: 50px;
-  }
-}
-@media (max-width: 1440px) {
-  .boardmemberspage .left__container, .boardmemberspage .right__container, .boardmemberspage .center__container {
-    justify-content: left;
-    align-items: center;
-    width: 100%;
-    height: 100px;
-    margin-bottom: 50px;
-  }
-}
 .boardmemberspage .board__description {
-  font-size: 1.2rem;
-  line-height: 1.5;
-  margin: 0 20px;
+  margin: 0px 20px;
   background-color: var(--white-cl);
   height: 50px;
   width: 400px;
@@ -1368,13 +1330,9 @@ p {
   margin-top: 15px;
 }
 .boardmemberspage .pic__img {
-  width: 150px;
   height: 300px;
   margin: 0 auto;
   gap: var(--gap);
-}
-.boardmemberspage .main {
-  margin-bottom: 300px;
 }
 
 /*# sourceMappingURL=styles.css.map */
