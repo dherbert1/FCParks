@@ -1275,22 +1275,8 @@ p {
   height: 450px;
   margin: 150px 30px 50px 30px;
 }
-.boardmemberspage .left__container {
+.boardmemberspage .left__container, .boardmemberspage .right__container, .boardmemberspage .center__container {
   justify-content: left;
-  align-items: center;
-  width: 30%;
-  height: 100px;
-  margin-bottom: 50px;
-}
-.boardmemberspage .center__container {
-  justify-content: center;
-  align-items: center;
-  width: 30%;
-  height: 100px;
-  margin: bottom 50px;
-}
-.boardmemberspage .right__container {
-  justify-content: right;
   align-items: center;
   width: 30%;
   height: 100px;
