@@ -35,12 +35,11 @@
   }
 
   .bm_container {
-    justify-content: left;
-    align-items: center;
     width: 100%;
     margin-bottom: 50px;
-    .-item {
-      
+    &-item {
+      display: flex;
+      justify-content: center;
     }
     // @include mixins.xxs{
     //   justify-content: left;
