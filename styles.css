@@ -1310,10 +1310,12 @@ p {
   }
 }
 .boardmemberspage .bm_container {
-  justify-content: left;
-  align-items: center;
   width: 100%;
   margin-bottom: 50px;
+}
+.boardmemberspage .bm_container-item {
+  display: flex;
+  justify-content: center;
 }
 .boardmemberspage .board__description {
   margin: 0px 20px;
