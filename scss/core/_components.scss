@@ -129,7 +129,7 @@ a {
     flex-direction: column;
   }
 
-  
+
   @include mixins.xs {
     justify-content: center;
     flex-direction: column;
@@ -220,7 +220,7 @@ p {
 // Textbox
 .textbox {
   &.__align-left {
-    p { 
+    p {
       margin-top: 19px;
 
       @include mixins.xxs {
@@ -347,6 +347,19 @@ p {
     flex-direction: row;
     gap: 17px;
   }
+}
+
+.title {
+  font-size: var(--fs-h1);
+  line-height: var(--lh-h1);
+  letter-spacing: var(--ls-h1);
+  width: 100%;
+  text-align: center;
+  padding-bottom: 20px;
+  display: block;
+  color: var(--white-cl);
+  text-align: center;
+  margin-top: 50px;
 }
 
 .break {
