@@ -850,14 +850,16 @@ p {
   color: var(--black-cl);
   text-transform: uppercase;
   text-decoration: none;
-  display: block;
   padding: 20px 0;
+  display: grid;
 }
 .nav .dropdown .dropbtn {
   font-size: inherit;
   background-color: inherit;
   font-family: inherit;
   margin: 0;
+  color: var(--white-cl);
+  text-transform: uppercase;
 }
 .nav .dropdown-content {
   display: none;
@@ -1235,7 +1237,7 @@ p {
   margin-left: auto;
   margin-right: auto;
 }
-.ratespage .ratesdd_container {
+.ratespage .ratesd_container {
   background-color: #f5f5dc;
   border-radius: 20px;
   margin-right: 50%;
@@ -1258,6 +1260,9 @@ p {
   margin-right: auto;
   display: flex;
   justify-content: center;
+}
+.ratespage .dd_container {
+  font-size: 50px;
 }
 
 .historypage {
