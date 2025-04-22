@@ -1,99 +1,58 @@
 @use "../core/mixins";
+
 .boardmemberspage {
   overflow-x: hidden;
   min-width: 320px;
   padding-top: var(--height-header);
 
-  .title_boardmembers {
-    height: 7vh;
-    width: 100vw;
-    text-align: center;
-    padding-bottom: 20px;
-    display: block;
-    color: var(--white-cl);
-    font-size: 50px;
-    text-align: center;
-    margin-top: 150px;
-  }
-
-  .main__content {
+  .boardmembers {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--gap);
-    margin: 150px 30px 50px 30px;
-    
+    margin: 45px 90px;
 
-    @include mixins.sm{
-      grid-template-columns: repeat(1, 1fr); 
-    }
-    @include mixins.md{
-      grid-template-columns: repeat(2, 1fr);
-    }
-    @include mixins.lg{
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
+    .bm_container {
+      width: 100%;
+      margin-bottom: 50px;
 
-  .bm_container {
-    width: 100%;
-    margin-bottom: 50px;
-    &-item {
-      display: flex;
-      justify-content: center;
+      @include mixins.sm {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include mixins.xs {
+        padding: 15px;
+      }
+
+      @include mixins.xxxs {
+        grid-template-columns: 1fr;
+      }
+
+      &-item {
+        border-radius: 40px;
+        padding: 20px 30px 32px 30px;
+        background: var(--white-cl);
+
+        .board__description {
+          display: flex;
+          margin: 0px 20px;
+          color: var(--black-cl);
+          border-radius: 40px;
+          justify-content: center;
+
+          &__p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            margin-top: 15px;
+          }
+        }
+
+        .pic__img {
+          height: 300px;
+          margin: 0 auto;
+          gap: var(--gap);
+          border-radius: 13%;
+        }
+      }
     }
-    // @include mixins.xxs{
-    //   justify-content: left;
-    //   align-items: center;
-    //   width: 100%;
-    //   margin-bottom: 50px;
-    // }
-    // @include mixins.xs{
-    //   justify-content: left;
-    //   align-items: center;
-    //   width: 100%;
-    //   margin-bottom: 50px;
-    // }
-    // @include mixins.sm{
-    //   justify-content: left;
-    //   align-items: center;
-    //   width: 100%;
-    //   height: 100px;
-    //   margin-bottom: 50px;
-    // }
-    // @include mixins.md{
-    //   justify-content: left;
-    //   align-items: center;
-    //   width: 100%;
-    //   height: 100px;
-    //   margin-bottom: 50px;
-    // }
-    // @include mixins.lg{
-    //   justify-content: left;
-    //   align-items: center;
-    //   width: 100%;
-    //   height: 100px;
-    //   margin-bottom: 50px;
-    // }
-  }
-  .board__description {
-    margin: 0px 20px;
-    background-color: var(--white-cl);
-    height: 50px;
-    width: 400px;
-    border-radius: 40px;
-    display: flex;
-    justify-content: center;
-  }
-
-  .board__description__p {
-    font-size: 1.2rem;
-    line-height: 1.5;
-    margin-top: 15px;
-  }
-
-  .pic__img {
-    height: 300px;
-    margin: 0 auto;
-    gap: var(--gap);
   }
 }

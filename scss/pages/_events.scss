@@ -7,26 +7,12 @@
 
   .event_calendar {
     width: 100vw;
-    background-color: var(--dark-brown-cl);
     padding: 10px;
-
-    .title_events {
-      height: 7vh;
-      width: 100vw;
-      text-align: center;
-      padding-bottom: 20px;
-      display: block;
-      color: var(--white-cl);
-      font-size: 50px;
-      text-align: center;
-      margin-top: 150px;
-    }
 
     .calendar {
       grid-template-columns: 1fr 1fr 1fr;
       display: grid;
       gap: var(--gap);
-      background-color: var(--main-cl);
       padding: 45px 90px;
 
       @include mixins.sm {
