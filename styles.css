@@ -1262,7 +1262,7 @@ p {
   justify-content: center;
 }
 .ratespage .dd_container {
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .historypage {
@@ -1275,6 +1275,11 @@ p {
   grid-template-columns: repeat(2, 1fr);
   gap: var(--gap);
   margin: 150px 30px 50px 30px;
+}
+@media (max-width: 1199.98px) {
+  .historypage .history__grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .boardmemberspage {
