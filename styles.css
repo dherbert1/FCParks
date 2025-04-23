@@ -687,6 +687,7 @@ p {
   font-size: var(--fs-txtmenu);
   line-height: var(--lh-txtmenu);
   letter-spacing: var(--ls-txtmenu);
+  color: var(--black-cl);
 }
 .header .container .header__menu .dropdown-button i {
   margin-left: 8px;
