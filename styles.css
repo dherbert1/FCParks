@@ -687,6 +687,7 @@ p {
   font-size: var(--fs-txtmenu);
   line-height: var(--lh-txtmenu);
   letter-spacing: var(--ls-txtmenu);
+  color: var(--black-cl);
 }
 .header .container .header__menu .dropdown-button i {
   margin-left: 8px;
@@ -1237,7 +1238,7 @@ p {
   margin-left: auto;
   margin-right: auto;
 }
-.ratespage .ratesd_container {
+.ratespage .rates_container {
   background-color: #f5f5dc;
   border-radius: 20px;
   margin-right: 50%;
@@ -1262,7 +1263,10 @@ p {
   justify-content: center;
 }
 .ratespage .dd_container {
-  font-size: 15px;
+  font-size: 50px;
+}
+.ratespage .statement {
+  font-size: 6px;
 }
 
 .historypage {
@@ -1275,6 +1279,11 @@ p {
   grid-template-columns: repeat(2, 1fr);
   gap: var(--gap);
   margin: 150px 30px 50px 30px;
+}
+@media (max-width: 1199.98px) {
+  .historypage .history__grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .boardmemberspage {
