@@ -11,45 +11,43 @@
     gap: var(--gap);
     margin: 45px 90px;
 
-    .bm_container {
-      width: 100%;
-      margin-bottom: 50px;
+    @include mixins.sm {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
-      @include mixins.sm {
-        grid-template-columns: repeat(2, 1fr);
-      }
+    @include mixins.xs {
+      padding: 15px;
+    }
 
-      @include mixins.xs {
-        padding: 15px;
-      }
+    @include mixins.xxxs {
+      grid-template-columns: 1fr;
+    }
 
-      @include mixins.xxxs {
-        grid-template-columns: 1fr;
-      }
+    .bm-item {
+      border-radius: 40px;
+      padding: 20px 30px 32px 30px;
+      background: var(--white-cl);
 
-      &-item {
+      .description {
+        display: flex;
+        margin: 0px 20px;
+        color: var(--black-cl);
         border-radius: 40px;
-        padding: 20px 30px 32px 30px;
-        background: var(--white-cl);
+        text-align: center;
 
-        .board__description {
-          display: flex;
-          margin: 0px 20px;
-          color: var(--black-cl);
-          border-radius: 40px;
-          justify-content: center;
-
-          &__p {
-            font-size: 1.2rem;
-            line-height: 1.5;
-            margin-top: 15px;
-          }
+        .name {
+          font-size: 3rem;
+          margin: 15px 0px;
         }
 
-        .pic__img {
+        .title {
+          font-size: 2rem;
+          margin: 15px 0px;
+        }
+
+        img {
           height: 300px;
           margin: 0 auto;
-          gap: var(--gap);
           border-radius: 13%;
         }
       }
