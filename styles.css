@@ -1261,6 +1261,9 @@ p {
   display: flex;
   justify-content: center;
 }
+.ratespage .dd_container {
+  font-size: 15px;
+}
 
 .historypage {
   overflow-x: hidden;
