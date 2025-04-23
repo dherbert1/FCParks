@@ -1264,6 +1264,9 @@ p {
 .ratespage .dd_container {
   font-size: 50px;
 }
+.ratespage .statement {
+  font-size: 60px;
+}
 
 .historypage {
   overflow-x: hidden;
