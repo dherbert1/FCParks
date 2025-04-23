@@ -1303,10 +1303,6 @@ p {
 @media (max-width: 767.98px) {
   .boardmemberspage .boardmembers {
     padding: 15px;
-  }
-}
-@media (max-width: 375.98px) {
-  .boardmemberspage .boardmembers {
     grid-template-columns: 1fr;
   }
 }
@@ -1318,17 +1314,19 @@ p {
 .boardmemberspage .boardmembers .bm-item .description {
   display: flex;
   margin: 0px 20px;
-  color: var(--black-cl);
   border-radius: 40px;
-  text-align: center;
 }
 .boardmemberspage .boardmembers .bm-item .description .name {
   font-size: 3rem;
   margin: 15px 0px;
+  color: var(--black-cl);
+  text-align: center;
 }
 .boardmemberspage .boardmembers .bm-item .description .title {
   font-size: 2rem;
   margin: 15px 0px;
+  color: var(--black-cl);
+  text-align: center;
 }
 .boardmemberspage .boardmembers .bm-item .description img {
   height: 300px;
