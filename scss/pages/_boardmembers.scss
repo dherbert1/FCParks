@@ -17,10 +17,11 @@
 
     @include mixins.xs {
       padding: 15px;
+      grid-template-columns: 1fr;
     }
 
-    @include mixins.xxxs {
-      grid-template-columns: 1fr;
+    @include mixins.xxs {
+      // grid-template-columns: 1fr;
     }
 
     .bm-item {
@@ -31,18 +32,20 @@
       .description {
         display: flex;
         margin: 0px 20px;
-        color: var(--black-cl);
         border-radius: 40px;
-        text-align: center;
 
         .name {
           font-size: 3rem;
           margin: 15px 0px;
+          color: var(--black-cl);
+          text-align: center;
         }
 
         .title {
           font-size: 2rem;
           margin: 15px 0px;
+          color: var(--black-cl);
+          text-align: center;
         }
 
         img {
