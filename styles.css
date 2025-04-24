@@ -9,7 +9,7 @@
 }
 
 /* HTML5 display-role reset for older browsers */
-article,
+/* article,
 aside,
 details,
 figcaption,
@@ -1332,6 +1332,6 @@ p {
   height: 300px;
   margin: 0 auto;
   border-radius: 13%;
-}
+} */
 
 /*# sourceMappingURL=styles.css.map */
