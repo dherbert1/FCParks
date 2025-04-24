@@ -1328,7 +1328,7 @@ p {
   color: var(--black-cl);
   text-align: center;
 }
-.boardmemberspage .boardmembers .bm-item .description img {
+.boardmemberspage .boardmembers .bm-item img {
   height: 300px;
   margin: 0 auto;
   border-radius: 13%;
