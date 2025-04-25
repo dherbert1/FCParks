@@ -14,8 +14,68 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- Link CSS -->
-  <link rel="stylesheet" href="./styles.css">
-  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <!-- <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css"> -->
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .contact-form-container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 600px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    label {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 15px;
+      width: 100%;
+      border-radius: 4px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .error {
+      color: red;
+    }
+  </style>
 
 </head>
 
@@ -44,7 +104,7 @@
         <li><a href="./attractions.html">area attractions</a></li>
         <li><a href="./rates.html">rates</a></li>
         <li><a href="./reviews.html">reviews</a></li>
-        
+
       </ul>
       <div class="header__cta">
         <div class="header__cta-hamburger">
@@ -59,78 +119,81 @@
     <div class="nav__blurbg"></div>
     <ul class="header__menu">
       <li><a href="./index.html">home</a></li>
-        <div class="dropdown">
-          <button class="dropbtn">
-            About <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a class="option" href="./history.html">history</a>
-            <a class="option" href="./boardmembers.html">board members</a>
-            <a class="option" href="./contact.html">contact</a>
-          </div>
+      <div class="dropdown">
+        <button class="dropbtn">
+          About <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a class="option" href="./history.html">history</a>
+          <a class="option" href="./boardmembers.html">board members</a>
+          <a class="option" href="./contact.html">contact</a>
         </div>
-        <li><a href="./events.html">events</a></li>
-        <li><a href="./parkmap.html">park map</a></li>
-        <li><a href="./attractions.html">area attractions</a></li>
-        <li><a href="./rates.html">rates</a></li>
-        <li><a href="./reviews.html">reviews</a></li>
-        
+      </div>
+      <li><a href="./events.html">events</a></li>
+      <li><a href="./parkmap.html">park map</a></li>
+      <li><a href="./attractions.html">area attractions</a></li>
+      <li><a href="./rates.html">rates</a></li>
+      <li><a href="./reviews.html">reviews</a></li>
+
     </ul>
   </nav>
   <main class="main">
-         <h1 style ="padding-top:100px">Contact Us</h1>
-    <form action="/submit_review" method="POST">
-        <label for="name">Your Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
+    <div class="contact-form-container">
+      <h1>Contact Us</h1>
+      <form id="contactForm" method="POST" action="send-email.php">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
 
-        <label for="email">Your Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
 
-        <label for="review">Your Review:</label><br>
-        <textarea id="review" name="review" rows="4" cols="50" required></textarea><br><br>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
 
-        <input type="submit" value="Submit Review">
-    </form> 
-
-</main>
-<div class="break"></div>
-<footer class="footer">
-  <div class="container">
-    <div class="footer__top">
-      <a href="./home.html" class="footer__top-logo">
-        <img src="./images/logo.svg" alt="FC-Park-logo" class="footer__logo-img">
-      </a>
+        <button type="submit">Send Message</button>
+      </form>
+      <div id="responseMessage" class="error"></div>
     </div>
-    <div class="footer__middle">
-      <div class="footer__middle-menu">
-        <p class="heading __label menutitle">menu</p>
-        <div class="menu__list">
-          <div class="menu__list-left">
-            <a href="./index.html">home</a>
-            <a href="./events.html">events</a>
-            <a href="./parkmap.html">park map</a>
-          </div>
-          <div class="menu__list-right">
-            <a href="./attractions.html">area attractions</a>
-            <a href="./rates.html">rates</a>
-            <a href="./reviews.html">reviews</a>
-            <a href="./contact.html">contact</a>
+
+  </main>
+  <div class="break"></div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <a href="./home.html" class="footer__top-logo">
+          <img src="./images/logo.svg" alt="FC-Park-logo" class="footer__logo-img">
+        </a>
+      </div>
+      <div class="footer__middle">
+        <div class="footer__middle-menu">
+          <p class="heading __label menutitle">menu</p>
+          <div class="menu__list">
+            <div class="menu__list-left">
+              <a href="./index.html">home</a>
+              <a href="./events.html">events</a>
+              <a href="./parkmap.html">park map</a>
+            </div>
+            <div class="menu__list-right">
+              <a href="./attractions.html">area attractions</a>
+              <a href="./rates.html">rates</a>
+              <a href="./reviews.html">reviews</a>
+              <a href="./contact.html">contact</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="footer__bottom">
-      <p class="textbody __bd2">© 2025 Franklin County Park Association</p>
-      <div class="footer__bottom-btnup" id="btnup">
-        <img src="./images/arrow-up.svg" alt="Up">
+      <div class="footer__bottom">
+        <p class="textbody __bd2">© 2025 Franklin County Park Association</p>
+        <div class="footer__bottom-btnup" id="btnup">
+          <img src="./images/arrow-up.svg" alt="Up">
+        </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 </body>
 
 <!-- Javascript -->
-<script src="./index.js"></script>
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<!-- <script src="./index.js"></script> -->
+<!-- <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script> -->
 
 </html>
