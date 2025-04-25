@@ -16,6 +16,11 @@
   <!-- Link CSS -->
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <form action="https://formspree.io/f/xwpopvlb" method="POST" class="space-y-6">
 
 </head>
 
@@ -77,20 +82,48 @@
         
     </ul>
   </nav>
-  <main class="main">
-         <h1 style ="padding-top:100px">Contact Us</h1>
-    <form action="/submit_review" method="POST">
-        <label for="name">Your Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
-
-        <label for="email">Your Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
-
-        <label for="review">Your Review:</label><br>
-        <textarea id="review" name="review" rows="4" cols="50" required></textarea><br><br>
-
-        <input type="submit" value="Submit Review">
-    </form> 
+  <body class="bg-gray-50 text-gray-800">
+    <div class="min-h-screen flex items-center justify-center p-6">
+      <div class="max-w-4xl w-full bg-white rounded-2xl shadow-lg p-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Contact Info -->
+        <div class="space-y-6">
+          <h2 class="text-3xl font-bold text-blue-600">Get in Touch</h2>
+          <p class="text-gray-600">We’d love to hear from you! Fill out the form and we’ll get back to you soon.</p>
+          <div>
+            <h4 class="font-semibold">Email</h4>
+            <p>contact@example.com</p>
+          </div>
+          <div>
+            <h4 class="font-semibold">Phone</h4>
+            <p>+1 (555) 123-4567</p>
+          </div>
+          <div>
+            <h4 class="font-semibold">Address</h4>
+            <p>123 Main Street, Suite 100<br />Your City, ST 12345</p>
+          </div>
+        </div>
+        
+        <!-- Contact Form -->
+        <form class="space-y-6">
+          <div>
+            <label class="block text-sm font-medium">Name</label>
+            <input type="text" name="name" placeholder="Your Name" class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium">Email</label>
+            <input type="email" name="email" placeholder="you@example.com" class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium">Message</label>
+            <textarea rows="5" placeholder="Your message..." class="mt-1 w-full border border-gray-300 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+          </div>
+          <button type="submit" class="w-full bg-blue-600 text-white rounded-xl py-2 font-semibold hover:bg-blue-700 transition">Send Message</button>
+        </form>
+  
+      </div>
+    </div>
+  </body>
 
 </main>
 <div class="break"></div>
