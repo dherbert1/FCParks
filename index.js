@@ -158,3 +158,9 @@ window.addEventListener("load", () => {
 
 // === Resize Handling for Slider Height ===
 window.addEventListener("resize", adjustSlideHeights);
+
+//FOR RATESPAGE JS
+const ratesPage = () => {
+  const ddcontainer = document.getElementsByClassName("dd_container");
+  const ratesdd = document.getElementsByClassName("")
+};
