@@ -162,5 +162,7 @@ window.addEventListener("resize", adjustSlideHeights);
 //FOR RATESPAGE JS
 const ratesPage = () => {
   const ddcontainer = document.getElementsByClassName("dd_container");
-  const ratesdd = document.getElementsByClassName("")
+  const ratesdd = document.getElementsByClassName("rates_dd");
+  const drop1 = document.getElementById("dropDown1");
+  const drop2 = document.getElementById("dropDown2");
 };
