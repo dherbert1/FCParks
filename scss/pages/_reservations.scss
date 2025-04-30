@@ -1,17 +1,17 @@
 @use "../core/mixins";
-.ratespage {
+.reservationspage {
   overflow-x: hidden;
   min-width: 320px;
   padding-top: var(--height-header);
 
-  .rates_main {
+  .reservations_main {
     margin: 40px auto 10px auto;
     padding-top: 20px;
     padding-right: auto;
     padding-left: auto;
   }
 
-  .rates {
+  .reservations {
     margin-top: 100px;
     margin-right: auto;
     margin-left: auto;
@@ -38,7 +38,7 @@
     margin-right: auto;
   }
 
-  .rates_container {
+  .reservations_container {
     background-color: #f5f5dc;
     border-radius: 20px;
     margin-right: 50%;
@@ -54,7 +54,7 @@
     font-size: 20px;
   }
 
-  .rates_dd {
+  .reservations_dd {
     min-width: 0;
     max-width: 200px;
     max-height: 70px;
