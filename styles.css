@@ -65,6 +65,7 @@ a {
   --max-width-container: 1198px;
   --gap: 26px;
   --border: 40px;
+  --min-width: 340px;
   --main-cl: #234A07;
   --middle-cl: #6F875A;
   --dark-cl: #412202;
@@ -1058,7 +1059,7 @@ p {
 
 .homepage {
   overflow-x: hidden;
-  min-width: 320px;
+  min-width: var(--min-width);
 }
 @media (min-width: 992px) {
   .homepage .open {
@@ -1145,7 +1146,7 @@ p {
 
 .eventspage {
   overflow-x: hidden;
-  min-width: 320px;
+  min-width: var(--min-width);
   padding-top: var(--height-header);
 }
 .eventspage .event_calendar {
@@ -1200,13 +1201,13 @@ p {
 
 .reviewspage {
   overflow-x: hidden;
-  min-width: 320px;
+  min-width: var(--min-width);
   padding-top: var(--height-header);
 }
 
 .reservationspage {
   overflow-x: hidden;
-  min-width: 320px;
+  min-width: var(--min-width);
   padding-top: var(--height-header);
 }
 .reservationspage .reservations_main {
@@ -1215,20 +1216,20 @@ p {
 
 .contactpage {
   overflow-x: hidden;
-  min-width: 320px;
+  min-width: var(--min-width);
   padding-top: var(--height-header);
 }
 
 .historypage {
   overflow-x: hidden;
-  min-width: 320px;
+  min-width: var(--min-width);
   padding-top: var(--height-header);
 }
 .historypage .history__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--gap);
-  margin: 150px 30px 50px 30px;
+  margin: 50px 30px 50px 30px;
 }
 @media (max-width: 1199.98px) {
   .historypage .history__grid {
@@ -1238,7 +1239,7 @@ p {
 
 .boardmemberspage {
   overflow-x: hidden;
-  min-width: 320px;
+  min-width: var(--min-width);
   padding-top: var(--height-header);
 }
 .boardmemberspage .boardmembers {

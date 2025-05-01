@@ -2,14 +2,14 @@
 
 .historypage {
   overflow-x: hidden;
-  min-width: 320px;
+  min-width: var(--min-width);
   padding-top: var(--height-header);
 
   .history__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr); // Two columns max
     gap: var(--gap); // Add spacing between columns and rows
-    margin: 150px 30px 50px 30px;
+    margin: 50px 30px 50px 30px;
     @include mixins.md {
       grid-template-columns: 1fr; // One column on small screens
     }

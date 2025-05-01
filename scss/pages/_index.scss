@@ -2,7 +2,7 @@
 
 .homepage {
   overflow-x: hidden;  
-  min-width: 320px;
+  min-width: var(--min-width);
 
   .open {
     @include mixins.minW(992px) {

@@ -1,7 +1,7 @@
 @use "../core/mixins";
 .reservationspage {
   overflow-x: hidden;
-  min-width: 320px;
+  min-width: var(--min-width);
   padding-top: var(--height-header);
 
   .reservations_main {
