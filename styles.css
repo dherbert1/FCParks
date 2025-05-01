@@ -1213,6 +1213,12 @@ p {
   height: 1600px;
 }
 
+.contactpage {
+  overflow-x: hidden;
+  min-width: 320px;
+  padding-top: var(--height-header);
+}
+
 .historypage {
   overflow-x: hidden;
   min-width: 320px;

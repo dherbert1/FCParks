@@ -1,1 +1,7 @@
 @use "../core/mixins";
+
+.contactpage {
+    overflow-x: hidden;
+    min-width: 320px;
+    padding-top: var(--height-header);
+  }
