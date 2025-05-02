@@ -1286,4 +1286,53 @@ p {
   border-radius: 13%;
 }
 
+.attractionspage {
+  overflow-x: hidden;
+  min-width: var(--min-width);
+  padding-top: var(--height-header);
+}
+.attractionspage .attractions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap);
+  margin: 45px 90px;
+}
+@media (max-width: 991.98px) {
+  .attractionspage .attractions {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 767.98px) {
+  .attractionspage .attractions {
+    padding: 15px;
+    grid-template-columns: 1fr;
+  }
+}
+.attractionspage .attractions .at-item {
+  border-radius: 40px;
+  padding: 20px 30px 32px 30px;
+  background: var(--white-cl);
+}
+.attractionspage .attractions .at-item .description {
+  margin: 0px 20px;
+  border-radius: 40px;
+}
+.attractionspage .attractions .at-item .description .name {
+  font-size: 3rem;
+  margin: 15px 0px;
+  color: var(--black-cl);
+  text-align: center;
+}
+.attractionspage .attractions .at-item .description .title {
+  font-size: 2rem;
+  margin: 15px 0px;
+  color: var(--black-cl);
+  text-align: center;
+}
+.attractionspage .attractions .at-item img {
+  height: 300px;
+  margin: 0 auto;
+  border-radius: 13%;
+}
+
 /*# sourceMappingURL=styles.css.map */
