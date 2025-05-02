@@ -1337,7 +1337,7 @@ p {
 
 .background {
   background:url('../images/bg.JPG');
-  background-size: contain;
+  background-size: cover;
   position: relative;
   height: 600px;
   width: 100vw;
