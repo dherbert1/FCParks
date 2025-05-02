@@ -1338,8 +1338,8 @@ p {
 .background {
   background:url('../images/bg.JPG');
   position: relative;
-  height: 300px;
-  width: 300px;
+  height: 100%;
+  width: 100vw;
 }
 
 .layer {
