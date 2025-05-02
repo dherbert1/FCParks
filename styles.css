@@ -177,7 +177,7 @@ html {
 }
 
 body {
-  background: var(--main-cl);
+  /*background: var(--main-cl);*/
   width: 100%;
   max-width: var(--max-width-page);
   margin: auto;
