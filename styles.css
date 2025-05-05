@@ -1344,7 +1344,7 @@ p {
   transform-origin: right;
   transition: var(--duration) transform;
 }
-.attractionspage .attractions .at-item .description a:hover:after, .attractionspage .attractions .at-item .description a.active:after {
+.attractionspage .attractions .at-item .description a:hover:after {
   transform: scaleX(1);
   transform-origin: left;
 }

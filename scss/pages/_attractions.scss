@@ -57,8 +57,7 @@
               @include mixins.transition(var(--duration) transform);
             }
   
-            &:hover,
-            &.active {
+            &:hover {
               &:after {
                 transform: scaleX(1);
                 transform-origin: left;
