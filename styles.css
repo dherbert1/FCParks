@@ -1331,6 +1331,7 @@ p {
   font-size: 3rem;
   margin: 15px 0px;
   color: var(--black-cl);
+  display: grid;
   text-align: center;
 }
 .attractionspage .attractions .at-item .description .title {

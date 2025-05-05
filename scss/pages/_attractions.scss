@@ -37,6 +37,7 @@
           font-size: 3rem;
           margin: 15px 0px;
           color: var(--black-cl);
+          display: grid; 
           text-align: center;
         }
 
@@ -47,6 +48,7 @@
           text-align: center;
         }
       }
+
       img {
         height: 300px;
         margin: 0 auto;
