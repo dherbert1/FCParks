@@ -1061,17 +1061,17 @@ p {
   overflow-x: hidden;
   min-width: var(--min-width);
 }
-.homepage .open {
+.homepage .layer {
+  background-color: rgba(35, 74, 7, 0.7);
+  position: absolute;
+}
+.homepage .layer .open {
   background: url("../images/bg.JPG");
   background-size: cover;
   position: relative;
 }
-.homepage .open .layer {
-  background-color: rgba(35, 74, 7, 0.7);
-  position: absolute;
-}
 @media (min-width: 992px) {
-  .homepage .open .layer {
+  .homepage .layer .open {
     height: 100vh;
     position: relative;
     max-height: 980px;
@@ -1082,27 +1082,27 @@ p {
     padding: 0% 10%;
     column-gap: 5%;
   }
-  .homepage .open .layer .open__photos {
+  .homepage .layer .open .open__photos {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     z-index: 2;
   }
-  .homepage .open .layer .open__photos .photos {
+  .homepage .layer .open .open__photos .photos {
     position: absolute;
     width: 100%;
   }
-  .homepage .open .layer .open__content {
+  .homepage .layer .open .open__content {
     z-index: 1;
     position: relative;
     display: flex;
   }
-  .homepage .open .layer .open__content .container h1 {
+  .homepage .layer .open .open__content .container h1 {
     position: relative;
     z-index: 1;
   }
-  .homepage .open .layer .open__content .container p {
+  .homepage .layer .open .open__content .container p {
     max-width: 50%;
     margin: 10px 0 42px 0;
     position: relative;
@@ -1110,46 +1110,46 @@ p {
   }
 }
 @media (max-width: 991.98px) {
-  .homepage .open .layer {
+  .homepage .layer .open {
     padding-top: var(--height-header);
     position: relative;
     overflow: hidden;
   }
-  .homepage .open .layer__content {
+  .homepage .layer .open__content {
     margin-top: 45px;
   }
-  .homepage .open .layer__content h1,
-  .homepage .open .layer__content p {
+  .homepage .layer .open__content h1,
+  .homepage .layer .open__content p {
     max-width: 100%;
     text-align: center;
     font-size: 60px;
     line-height: 70px;
   }
-  .homepage .open .layer__content p {
+  .homepage .layer .open__content p {
     margin: 16px 0 33px 0;
   }
-  .homepage .open .layer__photos {
+  .homepage .layer .open__photos {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 32px;
   }
-  .homepage .open .layer__photos .photos {
+  .homepage .layer .open__photos .photos {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 }
 @media (max-width: 767.98px) {
-  .homepage .open .layer h1,
-  .homepage .open .layer p {
+  .homepage .layer .open h1,
+  .homepage .layer .open p {
     max-width: 100%;
     text-align: center;
     font-size: 40px;
     line-height: normal;
   }
 }
-.homepage .open .logo__top {
+.homepage .layer .logo__top {
   border-radius: 50%;
 }
 
