@@ -4,14 +4,16 @@
   overflow-x: hidden;
   min-width: var(--min-width);
 
-  .layer {
-    background-color: rgba(35, 74, 7, 0.7);
-    position: absolute;
 
-    .open {
-      background: url('../images/bg.JPG');
-      background-size: cover;
-      position: relative;
+
+  .open {
+    background: url('../images/bg.JPG');
+    background-size: cover;
+    position: relative;
+
+    .layer {
+      background-color: rgba(35, 74, 7, 0.7);
+      position: absolute;
 
       @include mixins.minW(992px) {
         height: 100vh;
