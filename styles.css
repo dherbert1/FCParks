@@ -1329,6 +1329,25 @@ p {
   display: grid;
   text-align: center;
 }
+.attractionspage .attractions .at-item .description a {
+  color: var(--black-cl);
+  transition: var(--duration);
+}
+.attractionspage .attractions .at-item .description a:after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  display: block;
+  margin-top: 0px;
+  background: var(--black-cl);
+  transform: scale(0);
+  transform-origin: right;
+  transition: var(--duration) transform;
+}
+.attractionspage .attractions .at-item .description a:hover:after, .attractionspage .attractions .at-item .description a.active:after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
 .attractionspage .attractions .at-item .description .title {
   font-size: 2rem;
   margin: 15px 0px;
