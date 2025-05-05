@@ -7,12 +7,9 @@
   .background {
     background: url('../images/bg.JPG');
     background-size: cover;
-    position: relative;
-    height: 100vh;
 
     .layer {
       background-color: rgba(35, 74, 7, 0.7);
-      position: absolute;
 
       .open {
         @include mixins.minW(992px) {
@@ -62,8 +59,6 @@
 
         @include mixins.sm {
           padding-top: var(--height-header);
-          position: relative;
-          overflow: hidden;
 
           &__content {
             margin-top: 45px;
@@ -85,7 +80,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 32px;
+            padding: 25px;
 
             .photos {
               @include mixins.midimg;

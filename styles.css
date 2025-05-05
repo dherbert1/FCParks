@@ -1064,12 +1064,9 @@ p {
 .homepage .background {
   background: url("../images/bg.JPG");
   background-size: cover;
-  position: relative;
-  height: 100vh;
 }
 .homepage .background .layer {
   background-color: rgba(35, 74, 7, 0.7);
-  position: absolute;
 }
 @media (min-width: 992px) {
   .homepage .background .layer .open {
@@ -1113,8 +1110,6 @@ p {
 @media (max-width: 991.98px) {
   .homepage .background .layer .open {
     padding-top: var(--height-header);
-    position: relative;
-    overflow: hidden;
   }
   .homepage .background .layer .open__content {
     margin-top: 45px;
@@ -1133,7 +1128,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 32px;
+    padding: 25px;
   }
   .homepage .background .layer .open__photos .photos {
     width: 100%;
