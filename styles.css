@@ -1340,7 +1340,6 @@ p {
   content: "";
   display: block;
   text-align: center;
-  width: 0;
   height: 1px;
   background: var(--black-cl);
   transform: scaleX(0);
@@ -1354,6 +1353,7 @@ p {
   transform: scaleX(1);
   transform-origin: left;
   display: block;
+  text-align: center;
   width: 50%;
 }
 .attractionspage .attractions .at-item .description .title {
