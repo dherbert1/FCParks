@@ -1335,18 +1335,18 @@ p {
 }
 .attractionspage .attractions .at-item .description a:after {
   content: "";
-  width: 50%;
-  height: 1px;
   display: block;
-  margin-top: 0px;
+  height: 1px;
   background: var(--black-cl);
-  transform: scale(0);
+  transform: scaleX(0);
   transform-origin: right;
   transition: var(--duration) transform;
+  width: 0;
 }
 .attractionspage .attractions .at-item .description a:hover:after {
   transform: scaleX(1);
   transform-origin: left;
+  width: 100%;
 }
 .attractionspage .attractions .at-item .description .title {
   font-size: 2rem;

@@ -41,29 +41,29 @@
           text-align: center;
         }
         
-          a {
-            color: var(--black-cl);
-            @include mixins.transition(var(--duration));
-  
+        a {
+          color: var(--black-cl);
+          @include mixins.transition(var(--duration));
+        
+          &:after {
+            content: "";
+            display: block;
+            height: 1px;
+            background: var(--black-cl);
+            transform: scaleX(0);
+            transform-origin: right;
+            @include mixins.transition(var(--duration) transform);
+            width: 0; // Start with no width
+          }
+        
+          &:hover {
             &:after {
-              content: "";
-              width: 50%;
-              height: 1px;
-              display: block;
-              margin-top: 0px;
-              background: var(--black-cl);
-              transform: scale(0);
-              transform-origin: right;
-              @include mixins.transition(var(--duration) transform);
-            }
-  
-            &:hover {
-              &:after {
-                transform: scaleX(1);
-                transform-origin: left;
-              }
+              transform: scaleX(1);
+              transform-origin: left;
+              width: 100%; // Expand to fit the text width
             }
           }
+        }
         
         .title {
           font-size: 2rem;
