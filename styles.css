@@ -1335,7 +1335,7 @@ p {
 }
 .attractionspage .attractions .at-item .description a:after {
   content: "";
-  width: 100%;
+  width: 50%;
   height: 1px;
   display: block;
   margin-top: 0px;
