@@ -1331,19 +1331,21 @@ p {
 }
 .attractionspage .attractions .at-item .description a {
   color: var(--black-cl);
-  display: inline-block;
+  display: block;
+  text-align: center;
   position: relative;
   transition: var(--duration);
 }
 .attractionspage .attractions .at-item .description a:after {
   content: "";
   display: block;
+  text-align: center;
+  width: 50%;
   height: 1px;
   background: var(--black-cl);
   transform: scaleX(0);
   transform-origin: right;
   transition: var(--duration) transform;
-  width: 100%;
   position: absolute;
   bottom: 0;
   left: 0;
