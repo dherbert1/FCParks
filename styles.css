@@ -1331,6 +1331,8 @@ p {
 }
 .attractionspage .attractions .at-item .description a {
   color: var(--black-cl);
+  display: inline-block;
+  position: relative;
   transition: var(--duration);
 }
 .attractionspage .attractions .at-item .description a:after {
@@ -1341,12 +1343,14 @@ p {
   transform: scaleX(0);
   transform-origin: right;
   transition: var(--duration) transform;
-  width: 0;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 .attractionspage .attractions .at-item .description a:hover:after {
   transform: scaleX(1);
   transform-origin: left;
-  width: 100%;
 }
 .attractionspage .attractions .at-item .description .title {
   font-size: 2rem;

@@ -37,14 +37,16 @@
           font-size: 3rem;
           margin: 15px 0px;
           color: var(--black-cl);
-          display: grid; 
+          display: grid;
           text-align: center;
         }
-        
+
         a {
           color: var(--black-cl);
+          display: inline-block; // Ensure the link width matches the text width
+          position: relative; // Required for the pseudo-element positioning
           @include mixins.transition(var(--duration));
-        
+
           &:after {
             content: "";
             display: block;
@@ -53,18 +55,20 @@
             transform: scaleX(0);
             transform-origin: right;
             @include mixins.transition(var(--duration) transform);
-            width: 0; // Start with no width
+            width: 100%; // Matches the width of the text
+            position: absolute; // Position it relative to the parent
+            bottom: 0; // Align it at the bottom of the text
+            left: 0; // Start from the left edge of the text
           }
-        
+
           &:hover {
             &:after {
-              transform: scaleX(1);
-              transform-origin: left;
-              width: 100%; // Expand to fit the text width
+              transform: scaleX(1); // Expand the line to match the text width
+              transform-origin: left; // Animate from left to right
             }
           }
         }
-        
+
         .title {
           font-size: 2rem;
           margin: 15px 0px;
