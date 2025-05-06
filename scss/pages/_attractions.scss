@@ -66,8 +66,8 @@
             &:after {
               transform: scaleX(1); // Expand the line to match the text width
               transform-origin: left; // Animate from left to right
-              display: block; // Ensure the pseudo-element is displayed
-              text-align: center; // Center the line
+              display: flex; // Ensure the pseudo-element is displayed
+              align-items: center; // Center the line
               width: 70%; // Set the width to 100% of the text
             }
           }

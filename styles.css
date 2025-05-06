@@ -1352,8 +1352,8 @@ p {
 .attractionspage .attractions .at-item .description a:hover:after {
   transform: scaleX(1);
   transform-origin: left;
-  display: block;
-  text-align: center;
+  display: flex;
+  align-items: center;
   width: 70%;
 }
 .attractionspage .attractions .at-item .description .title {
