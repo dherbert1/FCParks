@@ -1347,7 +1347,7 @@ p {
   transition: var(--duration) transform;
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 15%;
 }
 .attractionspage .attractions .at-item .description a:hover:after {
   transform: scaleX(1);

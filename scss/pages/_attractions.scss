@@ -59,7 +59,7 @@
             @include mixins.transition(var(--duration) transform);
             position: absolute; // Position it relative to the parent
             bottom: 0; // Align it at the bottom of the text
-            left: 0; // Start from the left edge of the text
+            left: 15%; // Start from the left edge of the text
           }
 
           &:hover {
