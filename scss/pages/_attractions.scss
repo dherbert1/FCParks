@@ -52,7 +52,7 @@
             content: "";
             display: block;
             text-align: center;
-            width: 50%;
+            width: 0; // Start with 0 width
             height: 1px;
             background: var(--black-cl);
             transform: scaleX(0);
@@ -67,6 +67,8 @@
             &:after {
               transform: scaleX(1); // Expand the line to match the text width
               transform-origin: left; // Animate from left to right
+              display: block; // Ensure the pseudo-element is displayed
+              width: 50%; // Set the width to 100% of the text
             }
           }
         }
