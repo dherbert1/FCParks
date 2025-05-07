@@ -1247,8 +1247,9 @@ p {
   display: flex;
   justify-content: center;
   margin-top: 2%;
-  margin-left: 30%;
-  margin-right: 30%;
+  margin-left: 50%;
+  margin-right: 50%;
+  border-radius: 20%;
 }
 
 .boardmemberspage {
