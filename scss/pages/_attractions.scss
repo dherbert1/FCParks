@@ -59,7 +59,7 @@
             @include mixins.transition(var(--duration) transform);
             position: absolute; // Position it relative to the parent
             bottom: 0; // Align it at the bottom of the text
-            left: 20%; // Start from the left edge of the text
+            left: 30%; // Start from the left edge of the text
           }
 
           &:hover {
@@ -68,7 +68,7 @@
               transform-origin: left; // Animate from left to right
               display: flex; // Ensure the pseudo-element is displayed
               align-items: center; // Center the line
-              width: 60%; // Set the width to 100% of the text
+              width: 40%; // Set the width to 100% of the text
             }
           }
         }
