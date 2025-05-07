@@ -1244,6 +1244,9 @@ p {
 }
 .historypage .history_aboutp {
   background-color: var(--white-cl);
+  display: flex;
+  justify-content: center;
+  margin-top: 20%;
 }
 
 .boardmemberspage {
