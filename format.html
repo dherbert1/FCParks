@@ -16,6 +16,7 @@
   <!-- Link CSS -->
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <link rel="stylesheet" href="agency-styles-2024.css">
 
 </head>
 
@@ -40,7 +41,7 @@
           </div>
         </div>
         <li><a href="./events.html">events</a></li>
-        
+
         <li><a href="./attractions.html">area attractions</a></li>
         <li><a href="./reservations.html">reservations</a></li>
         <li><a href="./reviews.html">reviews</a></li>
@@ -71,6 +72,273 @@
   </nav>
   <main class="main">
     <!-- CONTENT GOES HERE -->
+    <div class="calendar-grid">
+      <div class="mini-calendar-container">
+        <div class="mini-calendar-header">
+          <a aria-label="Previous month" href="javascript:void(0);" id="previous" onclick="previous()"><i
+              class="fas fa-angle-left"></i></a>
+          <a aria-label="Next month" href="javascript:void(0);" id="next" class="right" onclick="next()"><i
+              class="fas fa-angle-right"></i></a>
+          <div class="mini-calendar-page-heading">
+            <h1 id="monthAndYear">May 2025</h1>
+          </div>
+        </div>
+        <table class="calendar-grid-container" id="calendar-body">
+          <thead>
+            <tr>
+              <th>Sun</th>
+              <th>Mon</th>
+              <th>Tue</th>
+              <th>Wed</th>
+              <th>Thu</th>
+              <th>Fri</th>
+              <th>Sat</th>
+            </tr>
+          </thead>
+          <tbody id="#">
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><a data-day="1" aria-label="May 1">1</a></td>
+              <td><a data-day="2" aria-label="May 2">2</a></td>
+              <td><a data-day="3" aria-label="May 3">3</a></td>
+            </tr>
+            <tr>
+              <td><a data-day="4" aria-label="May 4">4</a></td>
+              <td><a data-day="5" aria-label="May 5">5</a></td>
+              <td><a data-day="6" aria-label="May 6">6</a></td>
+              <td><a data-day="7" aria-label="May 7" class="active">7</a></td>
+              <td class="highlight"><a data-day="8" aria-label="May 8">8</a></td>
+              <td><a data-day="9" aria-label="May 9">9</a></td>
+              <td class="highlight"><a data-day="10" aria-label="May 10">10</a></td>
+            </tr>
+            <tr>
+              <td><a data-day="11" aria-label="May 11">11</a></td>
+              <td><a data-day="12" aria-label="May 12">12</a></td>
+              <td><a data-day="13" aria-label="May 13">13</a></td>
+              <td><a data-day="14" aria-label="May 14">14</a></td>
+              <td><a data-day="15" aria-label="May 15">15</a></td>
+              <td><a data-day="16" aria-label="May 16">16</a></td>
+              <td class="highlight"><a data-day="17" aria-label="May 17">17</a></td>
+            </tr>
+            <tr>
+              <td class="highlight"><a data-day="18" aria-label="May 18">18</a></td>
+              <td><a data-day="19" aria-label="May 19">19</a></td>
+              <td><a data-day="20" aria-label="May 20">20</a></td>
+              <td><a data-day="21" aria-label="May 21">21</a></td>
+              <td><a data-day="22" aria-label="May 22">22</a></td>
+              <td><a data-day="23" aria-label="May 23">23</a></td>
+              <td class="highlight"><a data-day="24" aria-label="May 24">24</a></td>
+            </tr>
+            <tr>
+              <td><a data-day="25" aria-label="May 25">25</a></td>
+              <td><a data-day="26" aria-label="May 26">26</a></td>
+              <td><a data-day="27" aria-label="May 27">27</a></td>
+              <td><a data-day="28" aria-label="May 28">28</a></td>
+              <td><a data-day="29" aria-label="May 29">29</a></td>
+              <td><a data-day="30" aria-label="May 30">30</a></td>
+              <td class="highlight"><a data-day="31" aria-label="May 31">31</a></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="mini-calendar-nav">
+          <p><a href="javascript:void(0);" onclick="choseToday()">Today's Events</a></p>
+          <!-- Filter: 14 -->
+          <p><a href="https://events.in.gov/mounds_state_park_838" target="_blank">View All Events</a></p>
+        </div>
+      </div>
+      <div class="events-list-container">
+        <div class="events-list" id="event-list">
+          <ul>
+            <li>
+              <div class="event-item-details">
+                <a href="https://events.in.gov/event/great-mound-hike-mounds-state-park-4048" target="_blank">Great
+                  Mound Hike, Mounds State Park</a>
+                <p><span class="location-label">Location:</span><a class="location-link"
+                    href="https://events.in.gov/mounds_state_park_838" target="_blank">Mounds State Park</a></p>
+              </div>
+              <div class="event-item-date">
+                <p>May 8</p>
+                <p>5:45 PM</p>
+              </div>
+            </li>
+            <li>
+              <div class="event-item-details">
+                <a href="https://events.in.gov/event/friends-of-mounds-state-park-meeting-mounds-state-park-3227"
+                  target="_blank">Friends of Mounds State Park Meeting, Mounds State Park</a>
+                <p><span class="location-label">Location:</span><a class="location-link"
+                    href="https://events.in.gov/mounds_state_park_838" target="_blank">Mounds State Park</a></p>
+              </div>
+              <div class="event-item-date">
+                <p>May 8</p>
+                <p>7:00 PM</p>
+              </div>
+            </li>
+            <li>
+              <div class="event-item-details">
+                <a href="https://events.in.gov/event/robert-cooper-audubon-society-monthly-bird-hike"
+                  target="_blank">Robert Cooper Audubon Society Monthly Bird Hike, Mounds State Park</a>
+                <p><span class="location-label">Location:</span><a class="location-link"
+                    href="https://events.in.gov/mounds_state_park_838" target="_blank">Mounds State Park</a></p>
+              </div>
+              <div class="event-item-date">
+                <p>May 10</p>
+                <p>9:00 AM</p>
+              </div>
+            </li>
+            <li>
+              <div class="event-item-details">
+                <a href="https://events.in.gov/event/friends-of-mounds-annual-native-plant-sale" target="_blank">Friends
+                  of Mounds Annual Native Plant Sale, Mounds State Park</a>
+                <p><span class="location-label">Location:</span><a class="location-link"
+                    href="https://events.in.gov/mounds_state_park_838" target="_blank">Mounds State Park</a></p>
+              </div>
+              <div class="event-item-date">
+                <p>May 10</p>
+                <p>10:00 AM</p>
+              </div>
+            </li>
+            <li>
+              <div class="event-item-details">
+                <a href="https://events.in.gov/event/full-moon-hike-mounds-state-park-613" target="_blank">Full Moon
+                  Hike, Mounds State Park</a>
+                <p><span class="location-label">Location:</span><a class="location-link"
+                    href="https://events.in.gov/mounds_state_park_838" target="_blank">Mounds State Park</a></p>
+              </div>
+              <div class="event-item-date">
+                <p>May 10</p>
+                <p>9:00 PM</p>
+              </div>
+            </li>
+            <li>
+              <div class="event-item-details">
+                <a href="https://events.in.gov/event/great-mound-hike-mounds-state-park-2221" target="_blank">Great
+                  Mound Hike, Mounds State Park</a>
+                <p><span class="location-label">Location:</span><a class="location-link"
+                    href="https://events.in.gov/mounds_state_park_838" target="_blank">Mounds State Park</a></p>
+              </div>
+              <div class="event-item-date">
+                <p>May 17</p>
+                <p>11:00 AM</p>
+              </div>
+            </li>
+            <li>
+              <div class="event-item-details">
+                <a href="https://events.in.gov/event/fabric-flower-workshop-mounds-state-park" target="_blank">Fabric
+                  Flower Workshop, Mounds State Park</a>
+                <p><span class="location-label">Location:</span><a class="location-link"
+                    href="https://events.in.gov/mounds_state_park_838" target="_blank">Mounds State Park</a></p>
+              </div>
+              <div class="event-item-date">
+                <p>May 17</p>
+                <p>1:00 PM</p>
+              </div>
+            </li>
+            <li>
+              <div class="event-item-details">
+                <a href="https://events.in.gov/event/star-tour-mounds-state-park-7859" target="_blank">Star Tour!,
+                  Mounds State Park</a>
+                <p><span class="location-label">Location:</span><a class="location-link"
+                    href="https://events.in.gov/mounds_state_park_838" target="_blank">Mounds State Park</a></p>
+              </div>
+              <div class="event-item-date">
+                <p>May 17</p>
+                <p>9:00 PM</p>
+              </div>
+            </li>
+            <li>
+              <div class="event-item-details">
+                <a href="https://events.in.gov/event/ham-radio-mounds-state-park-9800" target="_blank">Ham Radio, Mounds
+                  State Park</a>
+                <p><span class="location-label">Location:</span><a class="location-link"
+                    href="https://events.in.gov/mounds_state_park_838" target="_blank">Mounds State Park</a></p>
+              </div>
+              <div class="event-item-date">
+                <p>May 18</p>
+                <p>10:00 AM</p>
+              </div>
+            </li>
+            <li>
+              <div class="event-item-details">
+                <a href="https://events.in.gov/event/nature-journaling-workshop-mounds-state-park-5155"
+                  target="_blank">Nature Journaling Workshop, Mounds State Park</a>
+                <p><span class="location-label">Location:</span><a class="location-link"
+                    href="https://events.in.gov/mounds_state_park_838" target="_blank">Mounds State Park</a></p>
+              </div>
+              <div class="event-item-date">
+                <p>May 18</p>
+                <p>1:00 PM</p>
+              </div>
+            </li>
+            <li>
+              <div class="event-item-details">
+                <a href="https://events.in.gov/event/coffee-with-cardinals-mounds-state-park-6146"
+                  target="_blank">Coffee with Cardinals, Mounds State Park</a>
+                <p><span class="location-label">Location:</span><a class="location-link"
+                    href="https://events.in.gov/mounds_state_park_838" target="_blank">Mounds State Park</a></p>
+              </div>
+              <div class="event-item-date">
+                <p>May 24</p>
+                <p>9:00 AM</p>
+              </div>
+            </li>
+            <li>
+              <div class="event-item-details">
+                <a href="https://events.in.gov/event/reptile-talk-mounds-state-park" target="_blank">Reptile Talk,
+                  Mounds State Park</a>
+                <p><span class="location-label">Location:</span><a class="location-link"
+                    href="https://events.in.gov/mounds_state_park_838" target="_blank">Mounds State Park</a></p>
+              </div>
+              <div class="event-item-date">
+                <p>May 24</p>
+                <p>1:00 PM</p>
+              </div>
+            </li>
+            <li>
+              <div class="event-item-details">
+                <a href="https://events.in.gov/event/pelt-palooza-mounds-state-park" target="_blank">Pelt Palooza!,
+                  Mounds State Park</a>
+                <p><span class="location-label">Location:</span><a class="location-link"
+                    href="https://events.in.gov/mounds_state_park_838" target="_blank">Mounds State Park</a></p>
+              </div>
+              <div class="event-item-date">
+                <p>May 31</p>
+                <p>10:00 AM</p>
+              </div>
+            </li>
+            <li>
+              <div class="event-item-details">
+                <a href="https://events.in.gov/event/campground-cruise-with-a-critter-mounds-state-park"
+                  target="_blank">Campground Cruise with a Critter, Mounds State Park</a>
+                <p><span class="location-label">Location:</span><a class="location-link"
+                    href="https://events.in.gov/mounds_state_park_838" target="_blank">Mounds State Park</a></p>
+              </div>
+              <div class="event-item-date">
+                <p>May 31</p>
+                <p>2:00 PM</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script>
+      var localistGroupId = 34244953066823;
+      var localistFilter = "35121259147310";
+      var localistExcludeTypes = ["39510399185544","33757935954686","34006056633355","33757935964931"];
+      var localistKeyword = "";
+      var localistVenue = "35211714204435";
+      // Load js only once per page
+      if (!document.getElementById("calendar-grid-js")) {
+          script = document.createElement('script');
+          script.id = 'calendar-grid-js';
+          script.type = 'text/javascript';
+          script.src = '/global/javascript/components/calendar-grid.js'; // calendar-grid.js
+          document.getElementsByTagName("head")[0].appendChild(script); 
+      }
+  </script>
   </main>
   <div class="break"></div>
   <footer class="footer">
@@ -89,7 +357,7 @@
               <a href="./events.html">events</a>
               <a href="./history.html">history</a>
               <a href="./boardmembers.html">board members</a>
-              
+
             </div>
             <div class="menu__list-right">
               <a href="./attractions.html">area attractions</a>
@@ -113,5 +381,5 @@
 <!-- Javascript -->
 <script src="./index.js"></script>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-
+<script type="text/javascript" src="/global/javascript/agency-scripts-2024.js"></script>
 </html>
