@@ -1246,7 +1246,9 @@ p {
   background-color: var(--white-cl);
   display: flex;
   justify-content: center;
-  margin-top: 20%;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .boardmemberspage {
