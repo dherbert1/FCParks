@@ -1242,6 +1242,9 @@ p {
     grid-template-columns: 1fr;
   }
 }
+.historypage .history_aboutp {
+  background-color: var(--white-cl);
+}
 
 .boardmemberspage {
   overflow-x: hidden;
