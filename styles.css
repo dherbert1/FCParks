@@ -1250,7 +1250,7 @@ p {
   margin-left: 40%;
   margin-right: 35%;
   border-radius: 20%;
-  padding-left: 10%;
+  padding-left: -10%;
 }
 
 .boardmemberspage {
