@@ -832,7 +832,7 @@ p {
   text-transform: uppercase;
   text-decoration: none;
   display: block;
-  padding: 20px 0;
+  padding: 15px 0;
   transition: var(--duration);
 }
 .nav ul li a.active {
@@ -1250,6 +1250,7 @@ p {
   margin-left: 40%;
   margin-right: 35%;
   border-radius: 20%;
+  padding-left: 10%;
 }
 
 .boardmemberspage {
