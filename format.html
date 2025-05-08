@@ -16,8 +16,54 @@
   <!-- Link CSS -->
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-  <link rel="stylesheet" href="agency-styles-2024.css">
-  <link rel="stylesheet" href="all.min.css">
+  <!-- FullCalendar CSS (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      margin: 20px 0;
+      font-size: 24px;
+    }
+
+    #calendar {
+      max-width: 900px;
+      width: 95%;
+      margin-bottom: 30px;
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .button-group {
+      margin: 10px 0 20px 0;
+    }
+
+    .button-group button {
+      background: #006644;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      margin: 0 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .button-group button:hover {
+      background: #004d33;
+    }
+  </style>
 
 </head>
 
@@ -73,116 +119,58 @@
   </nav>
   <main class="main">
     <!-- CONTENT GOES HERE -->
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Mounds State Park Events Calendar</title>
-    
-      <!-- FullCalendar CSS (CDN) -->
-      <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
-    
-      <style>
-        body {
-          font-family: Arial, sans-serif;
-          background: #f4f4f4;
-          margin: 0;
-          padding: 0;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-    
-        h1 {
-          margin: 20px 0;
-          font-size: 24px;
-        }
-    
-        #calendar {
-          max-width: 900px;
-          width: 95%;
-          margin-bottom: 30px;
-          background: white;
-          padding: 15px;
-          border-radius: 10px;
-          box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-    
-        .button-group {
-          margin: 10px 0 20px 0;
-        }
-    
-        .button-group button {
-          background: #006644;
-          color: white;
-          border: none;
-          padding: 10px 15px;
-          margin: 0 5px;
-          border-radius: 5px;
-          cursor: pointer;
-          font-size: 14px;
-        }
-    
-        .button-group button:hover {
-          background: #004d33;
-        }
-      </style>
-    </head>
-    <body>
-      <h1>Mounds State Park Events - May 2025</h1>
-    
-      <div class="button-group">
-        <button onclick="goToToday()">Today's Events</button>
-        <button onclick="viewAllEvents()">View All Events</button>
-      </div>
-    
-      <div id="calendar"></div>
-    
-      <!-- FullCalendar JS (CDN) -->
-      <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
-    
-      <script>
-        let calendar;
-    
-        // Fetch the event data from events.json
-        fetch('events.json')
-          .then(response => response.json())
-          .then(events => {
-            calendar = new FullCalendar.Calendar(document.getElementById('calendar'), {
-              initialView: 'dayGridMonth',
-              events: events,
-              headerToolbar: {
-                left: 'prev,next today',
-                center: 'title',
-                right: ''
-              },
-              dateClick: function(info) {
-                const dateStr = info.dateStr;
-                const dayEvents = events.filter(e => e.start.startsWith(dateStr));
-                if (dayEvents.length === 0) {
-                  alert("No events on this day.");
-                  return;
-                }
-                const details = dayEvents.map(e => `${e.title} @ ${e.location} (${new Date(e.start).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})})`).join('\n');
-                alert("Events on " + dateStr + ":\n" + details);
-              }
-            });
-            calendar.render();
-          });
-    
-        // Button handlers
-        function goToToday() {
-          calendar.today();
-        }
-    
-        function viewAllEvents() {
-          window.open('events.json', '_blank');
-        }
-      </script>
-    </body>
-    </html>    
+    <h1>Mounds State Park Events - May 2025</h1>
+
+    <div class="button-group">
+      <button onclick="goToToday()">Today's Events</button>
+      <button onclick="viewAllEvents()">View All Events</button>
+    </div>
+
+    <div id="calendar"></div>
   </main>
+
+  <!-- FullCalendar JS (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+
+  <script>
+    let calendar;
+
+    // Fetch the event data from events.json
+    fetch('events.json')
+      .then(response => response.json())
+      .then(events => {
+        calendar = new FullCalendar.Calendar(document.getElementById('calendar'), {
+          initialView: 'dayGridMonth',
+          events: events,
+          headerToolbar: {
+            left: 'prev,next today',
+            center: 'title',
+            right: ''
+          },
+          dateClick: function (info) {
+            const dateStr = info.dateStr;
+            const dayEvents = events.filter(e => e.start.startsWith(dateStr));
+            if (dayEvents.length === 0) {
+              alert("No events on this day.");
+              return;
+            }
+            const details = dayEvents.map(e => `${e.title} @ ${e.location} (${new Date(e.start).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })})`).join('\n');
+            alert("Events on " + dateStr + ":\n" + details);
+          }
+        });
+        calendar.render();
+      });
+
+    // Button handlers
+    function goToToday() {
+      calendar.today();
+    }
+
+    function viewAllEvents() {
+      window.open('events.json', '_blank');
+    }
+  </script>
+
   <div class="break"></div>
   <footer class="footer">
     <div class="container">
@@ -228,4 +216,5 @@
 <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="calander-grid.js"></script>
 <script type="text/javascript" src="glide-polyfilled.min.js"></script>
+
 </html>
