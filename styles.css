@@ -1304,6 +1304,16 @@ p {
   margin: 0 auto;
   border-radius: 13%;
 }
+.boardmemberspage .bm_meets {
+  background-color: var(--white-cl);
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+  margin-left: 30%;
+  margin-right: 25%;
+  border-radius: 20px;
+  padding-left: -10%;
+}
 
 .attractionspage {
   overflow-x: hidden;
