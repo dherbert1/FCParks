@@ -54,14 +54,11 @@
       }
 
       .bm_meets{
+        height: 50px
         background-color: var(--white-cl);
         display: flex;
         justify-content: center;
-        margin-top: 2%;
-        margin-left: 30%;
-        margin-right: 25%;
         border-radius: 20px;
-        padding-left: -10%;
       }
     }
   }
