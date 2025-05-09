@@ -1,4 +1,8 @@
-.formatmain {
+.formatpage {
+  overflow-x: hidden;
+  min-width: var(--min-width);
+  padding-top: var(--header-height);
+  
   body {
     font-family: Arial, sans-serif;
     background: #f4f4f4;
