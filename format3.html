@@ -5,12 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mounds State Park Events Calendar</title>
 
-  <!-- FullCalendar CSS (CDN) -->
-  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
-
-  <!-- Suggested font to match screenshot -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-
   <style>
     body {
       font-family: 'Open Sans', sans-serif;
@@ -19,47 +14,114 @@
       padding: 0;
     }
 
-    h1 {
-      text-align: center;
-      margin: 20px 0;
-      font-size: 24px;
-    }
-
     .container {
       display: flex;
       justify-content: center;
-      gap: 20px;
+      align-items: flex-start;
       padding: 20px;
-      flex-wrap: wrap;
+      gap: 20px;
     }
 
-    #calendar {
-      max-width: 600px;
-      width: 100%;
+    .calendar-container {
       background: white;
-      padding: 15px;
-      border-radius: 10px;
+      padding: 0;
+      border-radius: 20px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      width: 330px;
+    }
+
+    .calendar-header {
+      background: #005e3c;
+      color: white;
+      padding: 10px;
+      border-radius: 20px 20px 0 0;
+      text-align: center;
+      font-weight: bold;
+      font-size: 18px;
+      position: relative;
+    }
+
+    .calendar-header button {
+      background: white;
+      border: none;
+      color: #005e3c;
+      font-weight: bold;
+      border-radius: 5px;
+      padding: 5px 10px;
+      position: absolute;
+      top: 8px;
+      cursor: pointer;
+    }
+
+    .calendar-header .prev {
+      left: 10px;
+    }
+
+    .calendar-header .next {
+      right: 10px;
+    }
+
+    .calendar-body {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      border: 1px solid #ccc;
+      border-top: none;
+    }
+
+    .calendar-day,
+    .calendar-cell {
+      text-align: center;
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+
+    .calendar-day {
+      background: #005e3c;
+      color: white;
+      font-weight: bold;
+    }
+
+    .calendar-cell.has-event {
+      background-color: #d1d1d1;
+    }
+
+    .calendar-cell.today {
+      background-color: #005e3c;
+      color: white;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: space-evenly;
+      padding: 10px;
+    }
+
+    .button-group button {
+      background: #005e3c;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .button-group button:hover {
+      background: #00422c;
     }
 
     .event-list {
-      max-width: 300px;
-      width: 100%;
       background: white;
       padding: 15px;
-      border-radius: 10px;
+      border-radius: 20px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      width: 650px;
+      height: 600px;
       overflow-y: auto;
-      max-height: 600px;
     }
 
     .event-item {
       padding: 10px;
       border-bottom: 1px solid #ddd;
-    }
-
-    .event-item:last-child {
-      border-bottom: none;
     }
 
     .event-title {
@@ -81,150 +143,143 @@
       color: #777;
       text-align: right;
     }
-
-    .button-group {
-      text-align: center;
-      margin: 10px 0 20px 0;
-    }
-
-    .button-group button {
-      background: #006644;
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      margin: 0 5px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 14px;
-    }
-
-    .button-group button:hover {
-      background: #004d33;
-    }
-
-    .fc-daygrid-day.fc-day-today {
-      background-color: #d4edda !important;
-    }
-
-    .fc-daygrid-day.event-day {
-      background-color: #cde5d1 !important;
-    }
   </style>
 </head>
 <body>
-  <h1>Mounds State Park Events - May 2025</h1>
-
-  <div class="button-group">
-    <button onclick="goToToday()">Today's Events</button>
-    <button onclick="viewAllEvents()">View All Events</button>
-  </div>
-
   <div class="container">
-    <div id="calendar"></div>
-    <div class="event-list" id="eventList">
-      <strong>Events This Month:</strong>
+    <div class="calendar-container">
+      <div class="calendar-header">
+        <button class="prev" onclick="changeMonth(-1)">◀</button>
+        <span id="calendarTitle">May 2025</span>
+        <button class="next" onclick="changeMonth(1)">▶</button>
+      </div>
+      <div class="calendar-body" id="calendarDays"></div>
+      <div class="button-group">
+        <button onclick="goToToday()">Today's Events</button>
+        <button onclick="viewAllEvents()">View All Events</button>
+      </div>
+    </div>
+    <div class="event-list">
+      <strong id="eventListTitle">Events This Month:</strong>
       <div id="eventsContainer"></div>
     </div>
   </div>
 
-  <!-- FullCalendar JS (CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
-
   <script>
-    let calendar;
-    let allEvents = [];
+    const calendarDays = document.getElementById('calendarDays');
+    const eventListTitle = document.getElementById('eventListTitle');
+    const eventsContainer = document.getElementById('eventsContainer');
+    const calendarTitle = document.getElementById('calendarTitle');
+
+    let events = [];
+    let currentDate = new Date();
 
     fetch('events.json')
-      .then(response => response.json())
-      .then(events => {
-        allEvents = events;
-        renderEventList(events);
-
-        calendar = new FullCalendar.Calendar(document.getElementById('calendar'), {
-          initialView: 'dayGridMonth',
-          events: events,
-          headerToolbar: {
-            left: 'prev,next today',
-            center: 'title',
-            right: ''
-          },
-          datesSet: function(dateInfo) {
-            const month = dateInfo.start.getMonth();
-            const year = dateInfo.start.getFullYear();
-            const monthEvents = events.filter(e => new Date(e.start).getMonth() === month && new Date(e.start).getFullYear() === year);
-            renderEventList(monthEvents);
-            highlightEventDays(events);
-          },
-          dateClick: function(info) {
-            const dateStr = info.dateStr;
-            const dayEvents = events.filter(e => e.start.startsWith(dateStr));
-            renderEventList(dayEvents, `Events on ${dateStr}`);
-          },
-          eventDidMount: function(info) {
-            info.el.classList.add('event-day');
-          }
-        });
-
-        calendar.render();
-        highlightEventDays(events);
+      .then(res => res.json())
+      .then(data => {
+        events = data;
+        renderCalendar();
+        renderEventListForMonth();
       });
 
-    function renderEventList(events, title = 'Events This Month:') {
-      const container = document.getElementById('eventsContainer');
-      document.getElementById('eventList').querySelector('strong').innerText = title;
-      container.innerHTML = '';
-      if (events.length === 0) {
-        container.innerHTML = '<p>No events found.</p>';
+    function changeMonth(diff) {
+      currentDate.setMonth(currentDate.getMonth() + diff);
+      renderCalendar();
+      renderEventListForMonth();
+    }
+
+    function renderCalendar() {
+      calendarDays.innerHTML = '';
+      const year = currentDate.getFullYear();
+      const month = currentDate.getMonth();
+
+      const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+      calendarTitle.textContent = `${monthNames[month]} ${year}`;
+
+      const firstDay = new Date(year, month, 1).getDay();
+      const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+      const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+      weekdays.forEach(day => {
+        const cell = document.createElement('div');
+        cell.className = 'calendar-day';
+        cell.textContent = day;
+        calendarDays.appendChild(cell);
+      });
+
+      for (let i = 0; i < firstDay; i++) {
+        const cell = document.createElement('div');
+        cell.className = 'calendar-cell';
+        calendarDays.appendChild(cell);
+      }
+
+      for (let i = 1; i <= daysInMonth; i++) {
+        const cell = document.createElement('div');
+        cell.className = 'calendar-cell';
+        cell.textContent = i;
+
+        const fullDate = `${year}-${String(month+1).padStart(2, '0')}-${String(i).padStart(2, '0')}`;
+        const dayEvents = events.filter(e => e.start.startsWith(fullDate));
+
+        if (dayEvents.length > 0) cell.classList.add('has-event');
+        if (new Date().toDateString() === new Date(year, month, i).toDateString()) cell.classList.add('today');
+
+        cell.onclick = () => renderEventList(dayEvents, `Events on ${fullDate}`);
+
+        calendarDays.appendChild(cell);
+      }
+    }
+
+    function renderEventListForMonth() {
+      const year = currentDate.getFullYear();
+      const month = currentDate.getMonth();
+      const monthEvents = events.filter(e => new Date(e.start).getFullYear() === year && new Date(e.start).getMonth() === month);
+      renderEventList(monthEvents, 'Events This Month:');
+    }
+
+    function renderEventList(eventArray, title) {
+      eventListTitle.textContent = title;
+      eventsContainer.innerHTML = '';
+      if (eventArray.length === 0) {
+        eventsContainer.innerHTML = '<p>No events found.</p>';
         return;
       }
-      events.sort((a, b) => new Date(a.start) - new Date(b.start));
-      events.forEach(event => {
-        const item = document.createElement('div');
-        item.className = 'event-item';
+      eventArray.sort((a, b) => new Date(a.start) - new Date(b.start));
+      eventArray.forEach(event => {
+        const div = document.createElement('div');
+        div.className = 'event-item';
 
-        const titleLink = document.createElement('a');
-        titleLink.href = event.url || '#';
-        titleLink.target = '_blank';
-        titleLink.className = 'event-title';
-        titleLink.textContent = event.title;
+        const link = document.createElement('a');
+        link.href = event.url || '#';
+        link.target = '_blank';
+        link.className = 'event-title';
+        link.textContent = event.title;
 
-        const location = document.createElement('span');
-        location.className = 'event-location';
-        location.textContent = `Location: ${event.location || 'N/A'}`;
+        const loc = document.createElement('span');
+        loc.className = 'event-location';
+        loc.textContent = `Location: ${event.location || 'N/A'}`;
 
         const time = document.createElement('div');
         time.className = 'event-time';
-        const timeStr = new Date(event.start).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
-        time.textContent = timeStr;
+        time.textContent = new Date(event.start).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 
-        item.appendChild(titleLink);
-        item.appendChild(location);
-        item.appendChild(time);
-
-        container.appendChild(item);
+        div.appendChild(link);
+        div.appendChild(loc);
+        div.appendChild(time);
+        eventsContainer.appendChild(div);
       });
     }
 
     function goToToday() {
-      calendar.today();
-      const todayStr = new Date().toISOString().split('T')[0];
-      const todayEvents = allEvents.filter(e => e.start.startsWith(todayStr));
+      currentDate = new Date();
+      renderCalendar();
+      const todayStr = currentDate.toISOString().split('T')[0];
+      const todayEvents = events.filter(e => e.start.startsWith(todayStr));
       renderEventList(todayEvents, `Events Today (${todayStr})`);
     }
 
     function viewAllEvents() {
       window.open('events.json', '_blank');
-    }
-
-    function highlightEventDays(events) {
-      document.querySelectorAll('.fc-daygrid-day').forEach(day => day.classList.remove('event-day'));
-      const datesWithEvents = new Set(events.map(e => e.start.split('T')[0]));
-      document.querySelectorAll('.fc-daygrid-day').forEach(dayCell => {
-        const date = dayCell.getAttribute('data-date');
-        if (datesWithEvents.has(date)) {
-          dayCell.classList.add('event-day');
-        }
-      });
     }
   </script>
 </body>
