@@ -123,7 +123,10 @@
     <div class="calendar-days">
       <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
     </div>
-    <div class="calendar-dates" id="calendarDates"></div>
+    <button onclick="exportEvents()" style="margin: 1rem auto; display: block; padding: 0.5rem 1rem; background: #4a90e2; color: white; border: none; border-radius: 5px; cursor: pointer;">
+  Export Events to JSON
+</button>
+
   </div>
 
   <!-- Modal -->
@@ -137,6 +140,26 @@
   </div>
 
   <script>
+    function exportEvents() {
+  const events = {};
+  for (const [key, value] of Object.entries(localStorage)) {
+    if (/^\d{4}-\d{2}-\d{2}$/.test(key)) {
+      events[key] = value;
+    }
+  }
+
+  const jsonStr = JSON.stringify(events, null, 2);
+  const blob = new Blob([jsonStr], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "calendar-events.json";
+  a.click();
+
+  URL.revokeObjectURL(url); // Clean up
+}
+
     const calendarDates = document.getElementById("calendarDates");
     const monthYear = document.getElementById("monthYear");
     const modal = document.getElementById("eventModal");
