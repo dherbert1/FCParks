@@ -126,7 +126,6 @@
     <button onclick="exportEvents()" style="margin: 1rem auto; display: block; padding: 0.5rem 1rem; background: #4a90e2; color: white; border: none; border-radius: 5px; cursor: pointer;">
   Export Events to JSON
 </button>
-
   </div>
 
   <!-- Modal -->
@@ -147,6 +146,29 @@
       events[key] = value;
     }
   }
+document.getElementById("importFile").addEventListener("change", function(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    try {
+      const data = JSON.parse(e.target.result);
+      let added = 0;
+      for (const [key, value] of Object.entries(data)) {
+        if (/^\d{4}-\d{2}-\d{2}$/.test(key) && typeof value === "string") {
+          localStorage.setItem(key, value);
+          added++;
+        }
+      }
+      alert(`Imported ${added} events.`);
+      renderCalendar(current); // Refresh display
+    } catch (err) {
+      alert("Invalid JSON file.");
+    }
+  };
+  reader.readAsText(file);
+});
 
   const jsonStr = JSON.stringify(events, null, 2);
   const blob = new Blob([jsonStr], { type: "application/json" });
@@ -231,6 +253,41 @@
     }
 
     renderCalendar(current);
+    function autoBackup(intervalMinutes = 15) {
+  setInterval(() => {
+    const events = {};
+    for (const [key, value] of Object.entries(localStorage)) {
+      if (/^\d{4}-\d{2}-\d{2}$/.test(key)) {
+        events[key] = value;
+      }
+    }
+
+    const jsonStr = JSON.stringify(events, null, 2);
+    const blob = new Blob([jsonStr], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `calendar-backup-${new Date().toISOString().slice(0, 10)}.json`;
+    a.style.display = "none";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+
+    URL.revokeObjectURL(url);
+    console.log("Backup downloaded");
+  }, intervalMinutes * 60 * 1000);
+}
+
+// Start automatic backup every 15 minutes
+autoBackup(15);
+
   </script>
+  <input type="file" id="importFile" accept=".json" style="display: none;" />
+<button onclick="document.getElementById('importFile').click()" 
+  style="margin: 0 auto 1rem; display: block; padding: 0.5rem 1rem; background: #34a853; color: white; border: none; border-radius: 5px; cursor: pointer;">
+  Import Events from JSON
+</button>
+
 </body>
 </html>
