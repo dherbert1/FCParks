@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Static Calendar</title>
+  <title>Static Calendar with Events</title>
   <style>
     * { box-sizing: border-box; }
     body {
@@ -55,6 +55,14 @@
       align-items: center;
       justify-content: center;
     }
+    .event {
+      background: #ffe0b2;
+      font-size: 0.8rem;
+      color: #333;
+      padding: 0.2rem;
+      border-radius: 5px;
+      margin-top: 0.5rem;
+    }
     @media (max-width: 480px) {
       .calendar-header {
         font-size: 1rem;
@@ -73,12 +81,19 @@
       <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
     </div>
     <div class="calendar-dates" id="calendarDates"></div>
+    
+    <input type="file" id="importFile" accept=".json" style="display: none;" />
+    <button onclick="document.getElementById('importFile').click()" 
+      style="margin: 1rem auto; display: block; padding: 0.5rem 1rem; background: #34a853; color: white; border: none; border-radius: 5px; cursor: pointer;">
+      Import Events from JSON
+    </button>
   </div>
 
   <script>
     const calendarDates = document.getElementById("calendarDates");
     const monthYear = document.getElementById("monthYear");
     const today = new Date();
+    let events = {};
 
     function renderCalendar(date) {
       const year = date.getFullYear();
@@ -102,11 +117,35 @@
         const isToday = i === today.getDate() &&
                         month === today.getMonth() &&
                         year === today.getFullYear();
-        calendarDates.innerHTML += `<div>${isToday ? `<div class="today">${i}</div>` : i}</div>`;
+
+        let eventMarkup = "";
+        if (events[`${year}-${String(month + 1).padStart(2, '0')}-${String(i).padStart(2, '0')}`]) {
+          eventMarkup = `<div class="event">${events[`${year}-${String(month + 1).padStart(2, '0')}-${String(i).padStart(2, '0')}`]}</div>`;
+        }
+
+        calendarDates.innerHTML += `<div>${isToday ? `<div class="today">${i}</div>` : i}${eventMarkup}</div>`;
       }
     }
 
-    renderCalendar(today);
+    document.getElementById("importFile").addEventListener("change", function(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        try {
+          const data = JSON.parse(e.target.result);
+          events = data;
+          renderCalendar(today); // Refresh calendar after importing
+          alert("Events imported successfully.");
+        } catch (err) {
+          alert("Invalid JSON file.");
+        }
+      };
+      reader.readAsText(file);
+    });
+
+    renderCalendar(today); // Initial calendar render
   </script>
 </body>
 </html>
