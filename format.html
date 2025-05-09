@@ -170,6 +170,141 @@
       window.open('events.json', '_blank');
     }
   </script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Calendar</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+    .calendar {
+      width: 100%;
+      max-width: 400px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      background: white;
+    }
+    .calendar-header {
+      background: #4a90e2;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+    }
+    .calendar-header button {
+      background: white;
+      border: none;
+      padding: 0.3rem 0.7rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #4a90e2;
+    }
+    .calendar-days, .calendar-dates {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      text-align: center;
+    }
+    .calendar-days {
+      background: #f0f0f0;
+      font-weight: bold;
+      padding: 0.5rem 0;
+    }
+    .calendar-dates {
+      padding: 1rem 0.5rem;
+    }
+    .calendar-dates div {
+      padding: 0.5rem;
+      margin: 2px;
+      border-radius: 5px;
+    }
+    .calendar-dates div.today {
+      background: #4a90e2;
+      color: white;
+    }
+
+    @media (max-width: 480px) {
+      .calendar-header {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .calendar-days div, .calendar-dates div {
+        font-size: 0.8rem;
+        padding: 0.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="calendar">
+    <div class="calendar-header">
+      <button onclick="changeMonth(-1)">←</button>
+      <div id="monthYear"></div>
+      <button onclick="changeMonth(1)">→</button>
+    </div>
+    <div class="calendar-days">
+      <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+    </div>
+    <div class="calendar-dates" id="calendarDates"></div>
+  </div>
+
+  <script>
+    const calendarDates = document.getElementById("calendarDates");
+    const monthYear = document.getElementById("monthYear");
+
+    let current = new Date();
+
+    const months = ["January", "February", "March", "April", "May", "June",
+                    "July", "August", "September", "October", "November", "December"];
+
+    function renderCalendar(date) {
+      const year = date.getFullYear();
+      const month = date.getMonth();
+      monthYear.textContent = `${months[month]} ${year}`;
+      calendarDates.innerHTML = "";
+
+      const firstDay = new Date(year, month, 1).getDay();
+      const lastDate = new Date(year, month + 1, 0).getDate();
+
+      for (let i = 0; i < firstDay; i++) {
+        calendarDates.innerHTML += "<div></div>";
+      }
+
+      for (let i = 1; i <= lastDate; i++) {
+        const today = new Date();
+        const isToday =
+          i === today.getDate() &&
+          month === today.getMonth() &&
+          year === today.getFullYear();
+
+        calendarDates.innerHTML += `<div class="${isToday ? 'today' : ''}">${i}</div>`;
+      }
+    }
+
+    function changeMonth(delta) {
+      current.setMonth(current.getMonth() + delta);
+      renderCalendar(current);
+    }
+
+    renderCalendar(current);
+  </script>
+</body>
+</html>
 
   <div class="break"></div>
   <footer class="footer">
