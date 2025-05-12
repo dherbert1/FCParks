@@ -166,3 +166,155 @@ const ratesPage = () => {
   const drop1 = document.getElementById("dropDown1");
   const drop2 = document.getElementById("dropDown2");
 };
+
+// FOR EVENTS PAGE JS
+const calendarDays = document.getElementById('calendarDays');
+const eventListTitle = document.getElementById('eventListTitle');
+const eventsContainer = document.getElementById('eventsContainer');
+const calendarTitle = document.getElementById('calendarTitle');
+
+let events = [];
+let currentDate = new Date();
+
+fetch('events.json')
+  .then(res => res.json())
+  .then(data => {
+    events = data;
+    renderCalendar();
+    renderEventListForMonth();
+  });
+
+function changeMonth(diff) {
+  currentDate.setMonth(currentDate.getMonth() + diff);
+  renderCalendar();
+  renderEventListForMonth();
+}
+
+function renderCalendar() {
+  calendarDays.innerHTML = '';
+  const year = currentDate.getFullYear();
+  const month = currentDate.getMonth();
+
+  const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  calendarTitle.textContent = `${monthNames[month]} ${year}`;
+
+  const firstDay = new Date(year, month, 1).getDay();
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+  const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  weekdays.forEach(day => {
+    const cell = document.createElement('div');
+    cell.className = 'calendar-day';
+    cell.textContent = day;
+    calendarDays.appendChild(cell);
+  });
+
+  for (let i = 0; i < firstDay; i++) {
+    const cell = document.createElement('div');
+    cell.className = 'calendar-cell';
+    calendarDays.appendChild(cell);
+  }
+
+  for (let i = 1; i <= daysInMonth; i++) {
+    const cell = document.createElement('div');
+    cell.className = 'calendar-cell';
+    cell.textContent = i;
+
+    const fullDate = `${year}-${String(month + 1).padStart(2, '0')}-${String(i).padStart(2, '0')}`;
+    const dayEvents = events.filter(e => e.start.startsWith(fullDate));
+
+    if (dayEvents.length > 0) cell.classList.add('has-event');
+    if (new Date().toDateString() === new Date(year, month, i).toDateString()) cell.classList.add('today');
+
+    cell.onclick = () => renderEventList(dayEvents, `Events on ${fullDate}`);
+
+    calendarDays.appendChild(cell);
+  }
+}
+
+function renderEventListForMonth() {
+  const year = currentDate.getFullYear();
+  const month = currentDate.getMonth();
+  const monthEvents = events.filter(e => new Date(e.start).getFullYear() === year && new Date(e.start).getMonth() === month);
+  renderEventList(monthEvents, 'Events This Month:');
+}
+
+function renderEventList(eventArray, title) {
+  eventListTitle.textContent = title;
+  eventsContainer.innerHTML = '';
+  if (eventArray.length === 0) {
+    eventsContainer.innerHTML = '<p>No events found.</p>';
+    return;
+  }
+  eventArray.sort((a, b) => new Date(a.start) - new Date(b.start));
+  eventArray.forEach(event => {
+    const div = document.createElement('div');
+    div.className = 'event-item';
+
+    const link = document.createElement('a');
+    link.href = event.url || '#';
+    link.target = '_blank';
+    link.className = 'event-title';
+    link.textContent = event.title;
+
+    const loc = document.createElement('span');
+    loc.className = 'event-location';
+    loc.textContent = `Location: ${event.location || 'N/A'}`;
+
+    const time = document.createElement('div');
+    time.className = 'event-time';
+    time.textContent = new Date(event.start).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+    div.appendChild(link);
+    div.appendChild(loc);
+    div.appendChild(time);
+    eventsContainer.appendChild(div);
+  });
+}
+
+function goToToday() {
+  currentDate = new Date();
+  renderCalendar();
+  const todayStr = currentDate.toISOString().split('T')[0];
+  const todayEvents = events.filter(e => e.start.startsWith(todayStr));
+  renderEventList(todayEvents, `Events Today (${todayStr})`);
+}
+
+function viewAllEvents() {
+  const modal = document.getElementById('allEventsModal');
+  const container = document.getElementById('allEventsContainer');
+  container.innerHTML = 'Loading events...';
+
+  const allEvents = [...events].sort((a, b) => new Date(a.start) - new Date(b.start));
+  if (allEvents.length === 0) {
+    container.innerHTML = '<p>No events found.</p>';
+    return;
+  }
+
+  container.innerHTML = '';
+  allEvents.forEach(event => {
+    const div = document.createElement('div');
+    div.className = 'event-item';
+
+    const link = document.createElement('a');
+    link.href = event.url || '#';
+    link.target = '_blank';
+    link.className = 'event-title';
+    link.textContent = event.title;
+
+    const loc = document.createElement('span');
+    loc.className = 'event-location';
+    loc.textContent = `Location: ${event.location || 'N/A'}`;
+
+    const time = document.createElement('div');
+    time.className = 'event-time';
+    time.textContent = new Date(event.start).toLocaleString();
+
+    div.appendChild(link);
+    div.appendChild(loc);
+    div.appendChild(time);
+    container.appendChild(div);
+  });
+
+  modal.style.display = 'flex';
+}

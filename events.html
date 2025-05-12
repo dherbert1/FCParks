@@ -12,6 +12,7 @@
   <link rel="canonical" href="https://google.com">
   <link rel="icon" class="logo__top" type="image/x-icon" href="./images/icon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap">
 
   <!-- Link CSS -->
   <link rel="stylesheet" href="./styles.css">
@@ -40,11 +41,11 @@
           </div>
         </div>
         <li><a href="./events.html">events</a></li>
-        
+
         <li><a href="./attractions.html">area attractions</a></li>
         <li><a href="./reservations.html">reservations</a></li>
         <li><a href="./reviews.html">reviews</a></li>
-        
+
       </ul>
       <div class="header__cta">
         <div class="header__cta-hamburger">
@@ -70,106 +71,29 @@
     </ul>
   </nav>
   <main class="main">
-    <div class="event_calendar">
-      <div class="title">
-        <h1>Events</h1>
+    <div class="container">
+      <div class="calendar-container">
+        <div class="calendar-header">
+          <button class="prev" onclick="changeMonth(-1)">◀</button>
+          <span id="calendarTitle">May 2025</span>
+          <button class="next" onclick="changeMonth(1)">▶</button>
+        </div>
+        <div class="calendar-body" id="calendarDays"></div>
+        <div class="button-group">
+          <button onclick="goToToday()">Today's Events</button>
+          <button onclick="viewAllEvents()">View All Events</button>
+        </div>
       </div>
-      <div class="calendar">
-        <div class="calendar-item">
-          <div class="name">
-            <h3>January</h3>
-          </div>
-          <p>No Events</p>
-        </div>
-        <div class="calendar-item">
-          <div class="name">
-            <h3>February</h3>
-          </div>
-          <p>No Events</p>
-        </div>
-        <div class="calendar-item">
-          <div class="name">
-            <h3>March</h3>
-          </div>
-          <p>Metamora St. Patrick Parade</p>
-        </div>
-        <div class="calendar-item">
-          <div class="name">
-            <h3>April</h3>
-          </div>
-          <p>Grist Mill Opens</p>
-          <p>Franklin County Antique Machinery Swap</p>
-          <p>Mandolin Gathering</p>
-          <p>Bourbon Tasting and Pie Auction</p>
-        </div>
-        <div class="calendar-item">
-          <div class="name">
-            <h3>May</h3>
-          </div>
-          <p>Metamora Spring Fling/1838 Days</p>
-          <p>Franklin County Quilt Show</p>
-          <p>Family Fun Day</p>
-          <p>Metamora ChainSaw Invitational</p>
-          <p>Girls Weekend</p>
-        </div>
-        <div class="calendar-item">
-          <div class="name">
-            <h3>June</h3>
-          </div>
-          <p>Metamora Strawberry Days</p>
-          <p>Brookville Canoefest??</p>
-          <p>Happy Valley Bluegrass Festival</p>
-          <p>Classic Car Cruise</p>
-          <p>Blazin Inferno Wing Contest</p>
-          <p>1st Responders Rodeo & Concert</p>
-        </div>
-        <div class="calendar-item">
-          <div class="name">
-            <h3>July</h3>
-          </div>
-          <p>Franklin County 4H Fair - July 13-19, 2025</p>
-          <p>Freudentfest - July 18 & 19, 2025</p>
-          <p>Metamora Christmas in July</p>
-          <p>Metamora's Fireman's Festival</p>
-        </div>
-        <div class="calendar-item">
-          <div class="name">
-            <h3>August</h3>
-          </div>
-          <p>Brookville Lions Annual Car Show</p>
-          <p>Brookville on Tap & Bourbon Fest</p>
-          <p>Metamora Children's Day</p>
-        </div>
-        <div class="calendar-item">
-          <div class="name">
-            <h3>September</h3>
-          </div>
-          <p>
-            Franklin County Antique Machinery Show (the last weekend in
-            September)
-          </p>
-          <p>Metamora's Annual Music Festival</p>
-          <p>Bath Conservations Club Antique Tractor Show</p>
-          <p>Brookville Chicken Festival and Fry Off</p>
-        </div>
-        <div class="calendar-item">
-          <div class="name">
-            <h3>October</h3>
-          </div>
-          <p>Halloween Weekend - October 17-19, 2025</p>
-        </div>
-        <div class="calendar-item">
-          <div class="name">
-            <h3>November</h3>
-          </div>
-          <p>No Events</p>
-        </div>
-        <div class="calendar-item">
-          <div class="name">
-            <h3>December</h3>
-          </div>
-          <p>No Events</p>
-        </div>
+      <div class="event-list">
+        <strong id="eventListTitle">Events This Month:</strong>
+        <div id="eventsContainer"></div>
+      </div>
+    </div>
+    <div id="allEventsModal" class="modal">
+      <div class="modal-content">
+        <button class="close-modal" onclick="document.getElementById('allEventsModal').style.display='none'">×</button>
+        <h2>All Events</h2>
+        <div id="allEventsContainer" class="event-list" style="height: 500px;"></div>
       </div>
     </div>
     <div class="break"></div>
@@ -227,7 +151,7 @@
               <a href="./events.html">events</a>
               <a href="./history.html">history</a>
               <a href="./boardmembers.html">board members</a>
-              
+
             </div>
             <div class="menu__list-right">
               <a href="./attractions.html">area attractions</a>
@@ -248,8 +172,8 @@
   </footer>
 </body>
 
-  <!-- Javascript -->
-  <script src="./index.js"></script>
-  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<!-- Javascript -->
+<script src="./index.js"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
 </html>
