@@ -52,15 +52,16 @@
         margin: 0 auto;
         border-radius: 13%;
       }
+    }
+  }
 
-      .bm_meets{
+  .bm_meets{
         height: 50px;
         background-color: var(--white-cl);
         display: flex;
-        margin: 0 auto;
+        margin-right: auto;
+        margin-left: auto;
         justify-content: center;
         border-radius: 20px;
       }
-    }
-  }
 }
