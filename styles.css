@@ -1309,8 +1309,11 @@ p {
   display: flex;
   justify-content: center;
   border-radius: 20px;
-  margin-right: 25%;
+  margin-right: 30%;
   margin-left: 30%;
+}
+.boardmemberspage .bmpara {
+  font-size: 20rem;
 }
 
 .attractionspage {
