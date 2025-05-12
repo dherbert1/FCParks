@@ -1155,21 +1155,21 @@ p {
   min-width: var(--min-width);
   padding-top: var(--height-header);
 }
-.eventspage .container {
+.eventspage .main .container {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   padding: 20px;
   gap: 20px;
 }
-.eventspage .calendar-container {
+.eventspage .main .calendar-container {
   background: white;
   padding: 0;
   border-radius: 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   width: 350px;
 }
-.eventspage .calendar-container .calendar-header {
+.eventspage .main .calendar-container .calendar-header {
   background: #005e3c;
   color: white;
   padding: 10px;
@@ -1179,7 +1179,7 @@ p {
   font-size: 18px;
   position: relative;
 }
-.eventspage .calendar-container .calendar-header button {
+.eventspage .main .calendar-container .calendar-header button {
   background: white;
   border: none;
   color: #005e3c;
@@ -1190,42 +1190,42 @@ p {
   top: 8px;
   cursor: pointer;
 }
-.eventspage .calendar-container .calendar-header button.prev {
+.eventspage .main .calendar-container .calendar-header button.prev {
   left: 10px;
 }
-.eventspage .calendar-container .calendar-header button.next {
+.eventspage .main .calendar-container .calendar-header button.next {
   right: 10px;
 }
-.eventspage .calendar-container .calendar-body {
+.eventspage .main .calendar-container .calendar-body {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   border: 1px solid #ccc;
   border-top: none;
 }
-.eventspage .calendar-container .calendar-body .calendar-day,
-.eventspage .calendar-container .calendar-body .calendar-cell {
+.eventspage .main .calendar-container .calendar-body .calendar-day,
+.eventspage .main .calendar-container .calendar-body .calendar-cell {
   text-align: center;
   padding: 10px;
   border: 1px solid #ddd;
 }
-.eventspage .calendar-container .calendar-body .calendar-day {
+.eventspage .main .calendar-container .calendar-body .calendar-day {
   background: #005e3c;
   color: white;
   font-weight: bold;
 }
-.eventspage .calendar-container .calendar-body .calendar-cell.has-event {
+.eventspage .main .calendar-container .calendar-body .calendar-cell.has-event {
   background-color: #d1d1d1;
 }
-.eventspage .calendar-container .calendar-body .calendar-cell.today {
+.eventspage .main .calendar-container .calendar-body .calendar-cell.today {
   background-color: #005e3c;
   color: white;
 }
-.eventspage .calendar-container .button-group {
+.eventspage .main .calendar-container .button-group {
   display: flex;
   justify-content: space-evenly;
   padding: 10px;
 }
-.eventspage .calendar-container .button-group button {
+.eventspage .main .calendar-container .button-group button {
   background: #005e3c;
   color: white;
   border: none;
@@ -1233,10 +1233,10 @@ p {
   border-radius: 20px;
   cursor: pointer;
 }
-.eventspage .calendar-container .button-group button:hover {
+.eventspage .main .calendar-container .button-group button:hover {
   background: #00422c;
 }
-.eventspage .event-list {
+.eventspage .main .event-list {
   background: white;
   padding: 15px;
   border-radius: 20px;
@@ -1245,31 +1245,31 @@ p {
   height: 335px;
   overflow-y: auto;
 }
-.eventspage .event-list .event-item {
+.eventspage .main .event-list .event-item {
   padding: 10px;
   border-bottom: 1px solid #ddd;
 }
-.eventspage .event-list .event-item .event-title {
+.eventspage .main .event-list .event-item .event-title {
   font-weight: bold;
   color: #004d33;
   text-decoration: underline;
   display: block;
   margin-bottom: 4px;
 }
-.eventspage .event-list .event-item .event-location {
+.eventspage .main .event-list .event-item .event-location {
   color: #555;
   font-size: 14px;
   display: block;
 }
-.eventspage .event-list .event-item .event-time {
+.eventspage .main .event-list .event-item .event-time {
   font-size: 13px;
   color: #777;
   text-align: right;
 }
-.eventspage #allEventsModal {
+.eventspage .main #allEventsModal {
   width: auto;
 }
-.eventspage .modal {
+.eventspage .main .modal {
   display: none;
   position: fixed;
   z-index: 9999;
@@ -1281,7 +1281,7 @@ p {
   justify-content: center;
   align-items: center;
 }
-.eventspage .modal .modal-content {
+.eventspage .main .modal .modal-content {
   background: white;
   padding: 20px;
   border-radius: 20px;
@@ -1292,12 +1292,12 @@ p {
   position: relative;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
-.eventspage .modal .modal-content h2 {
+.eventspage .main .modal .modal-content h2 {
   margin-top: 0;
   color: #005e3c;
   text-align: center;
 }
-.eventspage .modal .modal-content .close-modal {
+.eventspage .main .modal .modal-content .close-modal {
   position: absolute;
   right: 15px;
   top: 10px;
@@ -1308,14 +1308,14 @@ p {
   color: #333;
 }
 @media (max-width: 767.98px) {
-  .eventspage .container {
+  .eventspage .main .container {
     flex-direction: column;
     align-items: center;
   }
-  .eventspage .event-list {
+  .eventspage .main .event-list {
     width: 90%;
   }
-  .eventspage .event-list {
+  .eventspage .main .event-list {
     height: auto;
     max-height: 400px;
   }
