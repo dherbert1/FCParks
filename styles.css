@@ -1155,6 +1155,9 @@ p {
   min-width: var(--min-width);
   padding-top: var(--height-header);
 }
+.eventspage .main {
+  font-family: "Open Sans", sans-serif;
+}
 .eventspage .main .container {
   display: flex;
   justify-content: center;

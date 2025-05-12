@@ -6,6 +6,8 @@
   padding-top: var(--height-header);
 
   .main {
+    font-family: 'Open Sans', sans-serif;
+
     .container {
       display: flex;
       justify-content: center;
@@ -97,7 +99,7 @@
           cursor: pointer;
 
           &:hover {
-            
+
             background: #00422c;
           }
         }
