@@ -40,11 +40,11 @@
           </div>
         </div>
         <li><a href="./events.html">events</a></li>
-        
+
         <li><a href="./attractions.html">area attractions</a></li>
         <li><a href="./reservations.html">reservations</a></li>
         <li><a href="./reviews.html">reviews</a></li>
-        
+
       </ul>
       <div class="header__cta">
         <div class="header__cta-hamburger">
@@ -70,7 +70,25 @@
     </ul>
   </nav>
   <main class="main">
-    <div class="event_calendar">
+    <div class="container">
+      <div class="calendar-container">
+        <div class="calendar-header">
+          <button class="prev" onclick="changeMonth(-1)">◀</button>
+          <span id="calendarTitle">May 2025</span>
+          <button class="next" onclick="changeMonth(1)">▶</button>
+        </div>
+        <div class="calendar-body" id="calendarDays"></div>
+        <div class="button-group">
+          <button onclick="goToToday()">Today's Events</button>
+          <button onclick="viewAllEvents()">View All Events</button>
+        </div>
+      </div>
+      <div class="event-list">
+        <strong id="eventListTitle">Events This Month:</strong>
+        <div id="eventsContainer"></div>
+      </div>
+    </div>
+    <!-- <div class="event_calendar">
       <div class="title">
         <h1>Events</h1>
       </div>
@@ -171,6 +189,13 @@
           <p>No Events</p>
         </div>
       </div>
+    </div> -->
+    <div id="allEventsModal" class="modal">
+      <div class="modal-content">
+        <button class="close-modal" onclick="document.getElementById('allEventsModal').style.display='none'">×</button>
+        <h2>All Events</h2>
+        <div id="allEventsContainer" class="event-list" style="height: 500px;"></div>
+      </div>
     </div>
     <div class="break"></div>
     <div class="open__photos">
@@ -227,7 +252,7 @@
               <a href="./events.html">events</a>
               <a href="./history.html">history</a>
               <a href="./boardmembers.html">board members</a>
-              
+
             </div>
             <div class="menu__list-right">
               <a href="./attractions.html">area attractions</a>
@@ -248,8 +273,8 @@
   </footer>
 </body>
 
-  <!-- Javascript -->
-  <script src="./index.js"></script>
-  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<!-- Javascript -->
+<script src="./index.js"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
 </html>
