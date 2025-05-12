@@ -163,7 +163,6 @@ body {
     flex-direction: column;
     align-items: center;
   }
-  .calendar-container,
   .event-list {
     width: 90%;
   }
