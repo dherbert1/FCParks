@@ -416,7 +416,9 @@ p {
   color: var(--black-cl);
   font-size: var(--fs-body1);
   line-height: var(--lh-body1);
+  display: block;
   letter-spacing: var(--ls-body1);
+  text-align: center;
 }
 
 .textbox.__align-left p {
@@ -1432,7 +1434,7 @@ p {
   margin-left: 30%;
 }
 .boardmemberspage .bmpara {
-  font-size: 20px;
+  font-size: 20rem;
 }
 
 .attractionspage {
