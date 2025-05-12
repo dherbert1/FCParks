@@ -47,6 +47,7 @@
           text-align: center;
         }
       }
+
       img {
         height: 300px;
         margin: 0 auto;
@@ -55,13 +56,12 @@
     }
   }
 
-  .bm_meets{
-        height: 50px;
-        background-color: var(--white-cl);
-        display: flex;
-        justify-content: center;
-        border-radius: 20px;
-        margin-right: 25%;
-        margin-left: 30%;
-      }
+  .bm_meets {
+    height: 50px;
+    background-color: var(--white-cl);
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    margin: 25px 20% 9px 20%;
+  }
 }
