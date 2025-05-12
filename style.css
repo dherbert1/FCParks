@@ -1432,6 +1432,9 @@ p {
   border-radius: 20px;
   margin: 25px 20% 9px 20%;
 }
+.boardmemberspage .bmpara {
+  font-size: 20px;
+}
 
 .attractionspage {
   overflow-x: hidden;
