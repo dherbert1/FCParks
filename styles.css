@@ -1430,11 +1430,16 @@ p {
   display: flex;
   justify-content: center;
   border-radius: 20px;
-  margin-right: 30%;
-  margin-left: 30%;
+  margin: 25px 20% 9px 20%;
 }
 .boardmemberspage .bmpara {
   font-size: 20px;
+}
+.boardmemberspage .meet_title {
+  font-size: 30px;
+  margin: 0px 20px;
+  color: var(--black-cl);
+  text-align: center;
 }
 
 .attractionspage {
