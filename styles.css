@@ -1449,6 +1449,12 @@ p {
   border-radius: 20px;
   margin: 25px 20% 9px 20%;
 }
+.boardmemberspage .title_meet {
+  font-size: 30px;
+  margin: 0px 20px;
+  color: var(--black-cl);
+  text-align: center;
+}
 
 .attractionspage {
   overflow-x: hidden;
