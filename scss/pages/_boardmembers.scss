@@ -68,20 +68,21 @@
   .bmpara {
     font-size: 20px;
   }
+
   .meet_title {
     font-size: 30px;
     margin: 0px 20px;
     color: var(--black-cl);
     text-align: center;
   }
-  .bm_meet_info{
-    height: 50px;
+
+  .bm_meet_info {
     background-color: var(--white-cl);
     display: flex;
-    justify-content: center;
+    align-items: center;
     border-radius: 20px;
-    margin: 25px 20% 9px 20%;
   }
+
   .title_meet {
     font-size: 30px;
     margin: 0px 20px;
