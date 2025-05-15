@@ -1212,6 +1212,7 @@ p {
   text-align: center;
   padding: 10px;
   border: 1px solid #ddd;
+  font-size: 15px;
 }
 .eventspage .main .calendar-container .calendar-body .calendar-day {
   background: #005e3c;
@@ -1229,6 +1230,7 @@ p {
   display: flex;
   justify-content: space-evenly;
   padding: 10px;
+  font-size: 15px;
 }
 .eventspage .main .calendar-container .button-group button {
   background: #005e3c;
