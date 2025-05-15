@@ -1425,9 +1425,8 @@ p {
   border-radius: 13%;
 }
 .boardmemberspage .bm_meets {
-  height: 50px;
   background-color: var(--white-cl);
-  display: flex;
+  display: grid;
   justify-content: center;
   border-radius: 20px;
   margin: 25px 20% 9px 20%;
@@ -1443,8 +1442,8 @@ p {
 }
 .boardmemberspage .bm_meet_info {
   background-color: var(--white-cl);
-  display: flex;
-  align-items: center;
+  display: grid;
+  text-align: center;
   border-radius: 20px;
 }
 .boardmemberspage .title_meet {
