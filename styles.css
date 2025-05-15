@@ -1446,14 +1446,11 @@ p {
   text-align: center;
   border-radius: 20px;
 }
-.boardmemberspage .title_meet {
+.boardmemberspage h2 {
   font-size: 30px;
   margin: 0px 20px;
   color: var(--black-cl);
   text-align: center;
-}
-.boardmemberspage h2 {
-  color: var(--black-cl);
 }
 
 .attractionspage {
