@@ -82,11 +82,13 @@
     border-radius: 20px;
   }
 
-  h2 {
+  .title_meet {
     font-size: 30px;
     margin: 0px 20px;
     color: var(--black-cl);
     text-align: center;
   }
-  
+  h2{
+    color:var(--black-cl)
+  }
 }
