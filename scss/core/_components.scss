@@ -215,7 +215,9 @@ p {
   color: var(--black-cl);
   font-size: var(--fs-body1);
   line-height: var(--lh-body1);
+  display: block;
   letter-spacing: var(--ls-body1);
+  text-align: center;
 }
 
 // Textbox
