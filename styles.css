@@ -1148,6 +1148,12 @@ p {
     line-height: normal;
   }
 }
+.homepage .background .layer .open .des_p_index {
+  background-color: var(--white-cl);
+  display: grid;
+  text-align: center;
+  border-radius: 20px;
+}
 .homepage .background .layer .logo__top {
   border-radius: 50%;
 }
