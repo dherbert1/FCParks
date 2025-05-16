@@ -1108,12 +1108,7 @@ p {
     margin: 10px 0 42px 0;
     position: relative;
     z-index: 1;
-  }
-  .homepage .background .layer .open .open__content .container .des_p_index {
-    background-color: var(--white-cl);
-    display: grid;
-    text-align: center;
-    border-radius: 20px;
+    color: var(--white-cl);
   }
 }
 @media (max-width: 991.98px) {
