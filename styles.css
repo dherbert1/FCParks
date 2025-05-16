@@ -1148,7 +1148,7 @@ p {
     line-height: normal;
   }
 }
-.homepage .background .layer .open .des_p_index {
+.homepage .background .layer .des_p_index {
   background-color: var(--white-cl);
   display: grid;
   text-align: center;
