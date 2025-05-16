@@ -1104,7 +1104,7 @@ p {
     z-index: 1;
   }
   .homepage .background .layer .open .open__content .container p {
-    max-width: 50%;
+    max-width: 100%;
     margin: 10px 0 42px 0;
     position: relative;
     z-index: 1;
