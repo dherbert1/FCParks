@@ -53,18 +53,6 @@
         margin: 0 auto;
         border-radius: 13%;
       }
-
-      a {
-        &:hover {
-          &:after {
-            transform: scaleX(1); // Expand the line to match the text width
-            transform-origin: left; // Animate from left to right
-            display: flex; // Ensure the pseudo-element is displayed
-            align-items: center; // Center the line
-            width: 40%; // Set the width to 100% of the text
-          }
-        }
-      }
     }
 
     .bm_meets {

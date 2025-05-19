@@ -1434,13 +1434,6 @@ p {
   margin: 0 auto;
   border-radius: 13%;
 }
-.boardmemberspage .boardmembers .bm-item a:hover:after {
-  transform: scaleX(1);
-  transform-origin: left;
-  display: flex;
-  align-items: center;
-  width: 40%;
-}
 .boardmemberspage .boardmembers .bm_meets {
   background-color: var(--white-cl);
   display: grid;
