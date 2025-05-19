@@ -1104,10 +1104,11 @@ p {
     z-index: 1;
   }
   .homepage .background .layer .open .open__content .container p {
-    max-width: 50%;
+    max-width: 100%;
     margin: 10px 0 42px 0;
     position: relative;
     z-index: 1;
+    color: var(--white-cl);
   }
 }
 @media (max-width: 991.98px) {
@@ -1117,8 +1118,7 @@ p {
   .homepage .background .layer .open__content {
     margin-top: 45px;
   }
-  .homepage .background .layer .open__content h1,
-  .homepage .background .layer .open__content p {
+  .homepage .background .layer .open__content h1 {
     max-width: 100%;
     text-align: center;
     font-size: 60px;
@@ -1126,6 +1126,11 @@ p {
   }
   .homepage .background .layer .open__content p {
     margin: 16px 0 33px 0;
+    max-width: 100%;
+    margin: 10px 0 42px 0;
+    position: relative;
+    z-index: 1;
+    color: var(--white-cl);
   }
   .homepage .background .layer .open__photos {
     display: flex;
