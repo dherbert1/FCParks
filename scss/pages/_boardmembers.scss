@@ -53,40 +53,52 @@
         margin: 0 auto;
         border-radius: 13%;
       }
+
+      a {
+        &:hover {
+          &:after {
+            transform: scaleX(1); // Expand the line to match the text width
+            transform-origin: left; // Animate from left to right
+            display: flex; // Ensure the pseudo-element is displayed
+            align-items: center; // Center the line
+            width: 40%; // Set the width to 100% of the text
+          }
+        }
+      }
     }
-  }
 
-  .bm_meets {
-    background-color: var(--white-cl);
-    display: grid;
-    justify-content: center;
-    border-radius: 20px;
-    margin: 25px 20% 9px 20%;
-  }
+    .bm_meets {
+      background-color: var(--white-cl);
+      display: grid;
+      justify-content: center;
+      border-radius: 20px;
+      margin: 25px 20% 9px 20%;
+    }
 
-  .bmpara {
-    font-size: 20px;
-  }
+    .bmpara {
+      font-size: 20px;
+    }
 
-  .meet_title {
-    font-size: 30px;
-    margin: 0px 20px;
-    color: var(--black-cl);
-    text-align: center;
-  }
+    .meet_title {
+      font-size: 30px;
+      margin: 0px 20px;
+      color: var(--black-cl);
+      text-align: center;
+    }
 
-  .bm_meet_info {
-    background-color: var(--white-cl);
-    display: grid;
-    text-align: center;
-    border-radius: 20px;
-  }
+    .bm_meet_info {
+      background-color: var(--white-cl);
+      display: grid;
+      text-align: center;
+      border-radius: 20px;
+    }
 
-  h2 {
-    font-size: 30px;
-    margin: 0px 20px;
-    color: var(--black-cl);
-    text-align: center;
+    h2 {
+      font-size: 30px;
+      margin: 0px 20px;
+      color: var(--black-cl);
+      text-align: center;
+    }
+
   }
-  
 }
