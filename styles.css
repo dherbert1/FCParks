@@ -1282,9 +1282,6 @@ p {
   color: #777;
   text-align: right;
 }
-.eventspage .main #allEventsModal {
-  width: auto;
-}
 .eventspage .main .modal {
   display: none;
   position: fixed;
@@ -1307,6 +1304,9 @@ p {
   overflow: hidden;
   position: relative;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.eventspage .main .modal .modal-content #allEventsContainer {
+  width: 100%;
 }
 .eventspage .main .modal .modal-content h2 {
   margin-top: 0;
