@@ -95,8 +95,7 @@
 
         @include mixins.xs {
 
-          h1,
-          p {
+          h1 {
             max-width: 100%;
             text-align: center;
             font-size: 40px;
