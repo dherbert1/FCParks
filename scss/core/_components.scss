@@ -127,16 +127,16 @@ a {
 
   @include mixins.sm {
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
   }
 
 
   @include mixins.xs {
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
 
     .btnmain {
-      width: 75%;
+      width: 30%;
     }
   }
 }
