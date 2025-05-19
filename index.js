@@ -221,7 +221,13 @@ function renderCalendar() {
     cell.textContent = i;
 
     const fullDate = `${year}-${String(month + 1).padStart(2, '0')}-${String(i).padStart(2, '0')}`;
-    const dayEvents = events.filter(e => e.start.startsWith(fullDate));
+    const dayEvents = events.filter(e => {
+      const eventStart = new Date(e.start);
+      const eventEnd = new Date(e.end || e.start);
+      const currentDay = new Date(fullDate);
+      return currentDay >= eventStart && currentDay <= eventEnd;
+    });
+
 
     if (dayEvents.length > 0) cell.classList.add('has-event');
     if (new Date().toDateString() === new Date(year, month, i).toDateString()) cell.classList.add('today');
@@ -263,7 +269,15 @@ function renderEventList(eventArray, title) {
 
     const time = document.createElement('div');
     time.className = 'event-time';
-    time.textContent = new Date(event.start).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    const start = new Date(event.start);
+    const end = event.end ? new Date(event.end) : null;
+    if (event.note && event.note.includes('TBD')) {
+      time.textContent = `${start.toLocaleString('default', { month: 'long', year: 'numeric' })} (Dates TBD)`;
+    } else {
+      time.textContent = end && start.toDateString() !== end.toDateString()
+        ? `${start.toDateString()} – ${end.toDateString()}`
+        : start.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    }
 
     div.appendChild(link);
     div.appendChild(loc);
@@ -276,7 +290,12 @@ function goToToday() {
   currentDate = new Date();
   renderCalendar();
   const todayStr = currentDate.toISOString().split('T')[0];
-  const todayEvents = events.filter(e => e.start.startsWith(todayStr));
+  const todayEvents = events.filter(e => {
+    const eventDate = new Date(e.start);
+    const matchesToday = e.start.startsWith(todayStr);
+    const matchesRecurring = e.recurring === "yearly" && eventDate.getDate() === currentDate.getDate() && eventDate.getMonth() === currentDate.getMonth();
+    return matchesToday || matchesRecurring;
+  });
   renderEventList(todayEvents, `Events Today (${todayStr})`);
 }
 

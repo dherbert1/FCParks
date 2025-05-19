@@ -1,28 +1,15 @@
 [
-    {
-      "title": "Great Mound Hike",
-      "start": "2025-05-08T17:45:00",
-      "location": "Mounds State Park"
-    },
-    {
-      "title": "Friends Meeting",
-      "start": "2025-05-08T19:00:00",
-      "location": "Mounds State Park"
-    },
-    {
-      "title": "Monthly Bird Hike",
-      "start": "2025-05-10T09:00:00",
-      "location": "Mounds State Park"
-    },
-    {
-      "title": "Native Plant Sale",
-      "start": "2025-05-10T10:00:00",
-      "location": "Mounds State Park"
-    },
-    {
-      "title": "Full Moon Hike",
-      "start": "2025-05-10T21:00:00",
-      "location": "Mounds State Park"
-    }
-  ]
-  
+  {
+    "title": "Metamora St. Patrick Parade",
+    "start": "2025-03-01",
+    "note": "TBD in March",
+    "location": "Metamora, IN",
+    "recurring": "yearly"
+  },
+  {
+    "title": "Grist Mill Opens",
+    "start": "2025-04-01",
+    "note": "TBD in April",
+    "recurring": "yearly"
+  }
+]

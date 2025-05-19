@@ -10,6 +10,7 @@
 
     .container {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       align-items: flex-start;
       padding: 20px;
@@ -114,8 +115,12 @@
       border-radius: 20px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       width: 650px;
-      height: 335px;
+      height: 355px;
       overflow-y: auto;
+
+      #eventListTitle {
+        font-size: 15px;
+      }
 
       .event-item {
         padding: 10px;
