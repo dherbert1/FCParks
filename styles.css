@@ -1434,29 +1434,36 @@ p {
   margin: 0 auto;
   border-radius: 13%;
 }
-.boardmemberspage .bm_meets {
+.boardmemberspage .boardmembers .bm-item a:hover:after {
+  transform: scaleX(1);
+  transform-origin: left;
+  display: flex;
+  align-items: center;
+  width: 40%;
+}
+.boardmemberspage .boardmembers .bm_meets {
   background-color: var(--white-cl);
   display: grid;
   justify-content: center;
   border-radius: 20px;
   margin: 25px 20% 9px 20%;
 }
-.boardmemberspage .bmpara {
+.boardmemberspage .boardmembers .bmpara {
   font-size: 20px;
 }
-.boardmemberspage .meet_title {
+.boardmemberspage .boardmembers .meet_title {
   font-size: 30px;
   margin: 0px 20px;
   color: var(--black-cl);
   text-align: center;
 }
-.boardmemberspage .bm_meet_info {
+.boardmemberspage .boardmembers .bm_meet_info {
   background-color: var(--white-cl);
   display: grid;
   text-align: center;
   border-radius: 20px;
 }
-.boardmemberspage h2 {
+.boardmemberspage .boardmembers h2 {
   font-size: 30px;
   margin: 0px 20px;
   color: var(--black-cl);
@@ -1489,10 +1496,6 @@ p {
   border-radius: 40px;
   padding: 20px 30px 32px 30px;
   background: var(--white-cl);
-}
-.attractionspage .attractions .at-item .description {
-  margin: 0px 20px;
-  border-radius: 40px;
 }
 .attractionspage .attractions .at-item .description .name {
   font-size: 3rem;
