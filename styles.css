@@ -1074,7 +1074,6 @@ p {
 }
 @media (min-width: 992px) {
   .homepage .background .layer .open {
-    padding-bottom: 100px;
     position: relative;
     max-height: 980px;
     min-height: 650px;
@@ -1083,6 +1082,7 @@ p {
     align-items: center;
     padding: 0% 10%;
     column-gap: 5%;
+    padding-bottom: 100px;
   }
   .homepage .background .layer .open .open__photos {
     display: flex;

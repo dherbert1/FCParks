@@ -14,7 +14,6 @@
 
       .open {
         @include mixins.minW(992px) {
-          padding-bottom: 100px;
           position: relative;
           max-height: 980px;
           min-height: 650px;
@@ -23,6 +22,7 @@
           align-items: center;
           padding: 0% 10%;
           column-gap: 5%;
+          padding-bottom: 100px;
 
           .open__photos {
             display: flex;
