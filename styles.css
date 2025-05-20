@@ -1063,6 +1063,7 @@ p {
 .homepage {
   overflow-x: hidden;
   min-width: var(--min-width);
+  padding-top: var(--height-header);
 }
 .homepage .background {
   background: url("../images/bg.JPG");
@@ -1073,7 +1074,7 @@ p {
 }
 @media (min-width: 992px) {
   .homepage .background .layer .open {
-    height: 100vh;
+    padding-bottom: 100px;
     position: relative;
     max-height: 980px;
     min-height: 650px;
