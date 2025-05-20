@@ -10,12 +10,13 @@
     grid-template-columns: repeat(2, 1fr); // Two columns max
     gap: var(--gap); // Add spacing between columns and rows
     margin: 50px 30px 50px 30px;
+
     @include mixins.md {
       grid-template-columns: 1fr; // One column on small screens
     }
   }
 
-  .history_aboutp{
+  .history_aboutp {
     background-color: var(--white-cl);
     display: flex;
     justify-content: center;
@@ -23,9 +24,15 @@
     margin-left: 30%;
     margin-right: 25%;
     border-radius: 20px;
-    }
+  }
 
-    .historyp{
+  h1.history__title {
+    padding-top: 70px;
+    display: grid;
+    text-align: center;
+
+    .historyp {
       font-size: 23px;
     }
+  }
 }

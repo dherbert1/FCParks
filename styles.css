@@ -1380,7 +1380,12 @@ p {
   margin-right: 25%;
   border-radius: 20px;
 }
-.historypage .historyp {
+.historypage h1.history__title {
+  padding-top: 70px;
+  display: grid;
+  text-align: center;
+}
+.historypage h1.history__title .historyp {
   font-size: 23px;
 }
 
