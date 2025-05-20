@@ -1116,9 +1116,6 @@ p {
   .homepage .background .layer .open {
     padding-top: var(--height-header);
   }
-  .homepage .background .layer .open__content {
-    margin-top: 45px;
-  }
   .homepage .background .layer .open__content h1 {
     max-width: 100%;
     text-align: center;
