@@ -3,6 +3,7 @@
 .homepage {
   overflow-x: hidden;
   min-width: var(--min-width);
+  padding-top: var(--height-header);
 
   .background {
     background: url('../images/bg.JPG');
