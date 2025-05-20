@@ -2,777 +2,930 @@
 <html lang="en">
 
 <head>
-  <!-- Text & View Setup -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Text & View Setup -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <!-- Title & Google/Icon Setup -->
-  <title>Format - FC P&C</title>
-  <link rel="canonical" href="https://google.com">
-  <link rel="icon" class="logo__top" type="image/x-icon" href="./images/icon.ico">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Title & Google/Icon Setup -->
+    <title>Format - FC P&C</title>
+    <link rel="canonical" href="https://google.com">
+    <link rel="icon" class="logo__top" type="image/x-icon" href="./images/icon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- Link CSS -->
-  <link rel="stylesheet" href="./styles.css">
-  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-  <!-- FullCalendar CSS (CDN) -->
-  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <!-- FullCalendar CSS (CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
 
-  <style>
-      body {
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-  h1 {
-    margin: 20px 0;
-    font-size: 24px;
-  }
+        h1 {
+            margin: 20px 0;
+            font-size: 24px;
+        }
 
-  #calendar {
-    max-width: 900px;
-    width: 95%;
-    margin-bottom: 30px;
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
+        #calendar {
+            max-width: 900px;
+            width: 95%;
+            margin-bottom: 30px;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
 
-  .button-group {
-    margin: 10px 0 20px 0;
-  }
+        .button-group {
+            margin: 10px 0 20px 0;
+        }
 
-  .button-group button {
-    background: #006644;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    margin: 0 5px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-  }
+        .button-group button {
+            background: #006644;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin: 0 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
 
-  .button-group button:hover {
-    background: #004d33;
-  }
-  </style>
+        .button-group button:hover {
+            background: #004d33;
+        }
+    </style>
 
 </head>
 
 <body class="formatpage">
-  <header class="header">
-    <div class="container">
-      <ul class="header__menu">
-        <li class="header__menu-logo">
-          <a href="./index.html">
-            <img src="./images/logo.png" alt="FC-Park-logo" class="header__logo-img">
-          </a>
-        </li>
-        <li><a href="./index.html">home</a></li>
-        <div class="dropdown">
-          <button class="dropdown-button">
-            About <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a class="option" href="./history.html">history</a>
-            <a class="option" href="./boardmembers.html">board members</a>
-            <a class="option" href="./contact.html">contact</a>
-          </div>
+    <header class="header">
+        <div class="container">
+            <ul class="header__menu">
+                <li class="header__menu-logo">
+                    <a href="./index.html">
+                        <img src="./images/logo.png" alt="FC-Park-logo" class="header__logo-img">
+                    </a>
+                </li>
+                <li><a href="./index.html">home</a></li>
+                <div class="dropdown">
+                    <button class="dropdown-button">
+                        About <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a class="option" href="./history.html">history</a>
+                        <a class="option" href="./boardmembers.html">board members</a>
+                        <a class="option" href="./contact.html">contact</a>
+                    </div>
+                </div>
+                <li><a href="./events.html">events</a></li>
+
+                <li><a href="./attractions.html">area attractions</a></li>
+                <li><a href="./reservations.html">reservations</a></li>
+                <li><a href="./reviews.html">reviews</a></li>
+
+            </ul>
+            <div class="header__cta">
+                <div class="header__cta-hamburger">
+                    <div class="bars">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <li><a href="./events.html">events</a></li>
+    </header>
+    <nav class="nav">
+        <div class="nav__blurbg"></div>
+        <ul class="header__menu">
+            <li><a href="./index.html">home</a></li>
+            <li><a href="./history.html">history</a></li>
+            <li><a href="./boardmembers.html">board members</a></li>
+            <li><a href="./contact.html">contact</a></li>
+            <li><a href="./events.html">events</a></li>
+            <li><a href="./attractions.html">area attractions</a></li>
+            <li><a href="./reservations.html">reservations</a></li>
+            <li><a href="./reviews.html">reviews</a></li>
 
-        <li><a href="./attractions.html">area attractions</a></li>
-        <li><a href="./reservations.html">reservations</a></li>
-        <li><a href="./reviews.html">reviews</a></li>
-
-      </ul>
-      <div class="header__cta">
-        <div class="header__cta-hamburger">
-          <div class="bars">
-            <span></span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-  <nav class="nav">
-    <div class="nav__blurbg"></div>
-    <ul class="header__menu">
-      <li><a href="./index.html">home</a></li>
-      <li><a href="./history.html">history</a></li>
-      <li><a href="./boardmembers.html">board members</a></li>
-      <li><a href="./contact.html">contact</a></li>
-      <li><a href="./events.html">events</a></li>
-      <li><a href="./attractions.html">area attractions</a></li>
-      <li><a href="./reservations.html">reservations</a></li>
-      <li><a href="./reviews.html">reviews</a></li>
-
-    </ul>
-  </nav>
-  <main class="main">
-    <div class="col-sm-8">
+        </ul>
+    </nav>
+    <main class="main">
+        <div class="col-sm-8">
             <div class=" content-zone csc-content-zone" name="cell-1">
-    
 
 
-    <div class="content-node csc-content-node" style="">
-        <div class="content-widget csc-content-widget cs-content-node-sm" style="">
-            <div class="cs-html-widget">
-    <h2 style="text-align:center;">Calendar<br></h2>
-</div>
-        </div>
-    </div>
 
-    
-
-
-    <div class="content-node csc-content-node" style="padding-top:None;padding-right:15px;padding-bottom:None;padding-left:15px;border-width:None;border-style:None;border-color:#000000;border-radius:None;">
-        <div class="content-widget csc-content-widget cs-content-node-sm" style="max-height: 500px; overflow-x: hidden; overflow-x: scroll;">
-            
-    <div class="cs-calendar-widget">
-            <div class="cs-calendar-search-link" style="visibility: hidden;">
-                <a href="/sys/calendar/searchlinks/7af5ca7c91b743eeb91873344711a4e4/Calendar" data-follow="">Calendar Links</a>
-            </div>
-        <div id="calendarHeader_7af5ca7c91b743eeb91873344711a4e4" class="cs-cal-header">
-            <div class="cs-cal-header-left">
-                <div id="GroupSelector_7af5ca7c91b743eeb91873344711a4e4" class="cs-calButton dropdown groupSelector">
-                    <button id="groupSelectorBtn" class="btn btn-default dropdown-toggle pull-left" type="button" aria-label="group selection" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        <i class="fa fa-calendar-check-o"></i>
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu checkbox-menu allow-focus" role="menu" aria-labelledby="groupSelectorBtn">
-                            <li>
-                                <label for="fd67957b23454524b47706fd332ca0db">
-                                    <input type="checkbox" name="selectedEventGroup_7af5ca7c91b743eeb91873344711a4e4" value="fd67957b23454524b47706fd332ca0db" id="fd67957b23454524b47706fd332ca0db" checked="" role="menuitemcheckbox" style="outline-offset:5px;">
-                                    FCHS Events
-                                </label>
-                            </li>
-                    </ul>
+                <div class="content-node csc-content-node" style="">
+                    <div class="content-widget csc-content-widget cs-content-node-sm" style="">
+                        <div class="cs-html-widget">
+                            <h2 style="text-align:center;">Calendar<br></h2>
+                        </div>
+                    </div>
                 </div>
-                <button id="prev_7af5ca7c91b743eeb91873344711a4e4" class="cal-btn-prev btn btn-default" aria-label="previous"><i class="fa fa-chevron-left"></i></button>
-                <button id="next_7af5ca7c91b743eeb91873344711a4e4" class="cal-btn-next btn btn-default" aria-label="next"><i class="fa fa-chevron-right"></i></button>
-            </div>
-            <div id="CalendarHeaderRight_7af5ca7c91b743eeb91873344711a4e4" class="cs-cal-header-right">
-                <button id="iCalExport_7af5ca7c91b743eeb91873344711a4e4" class="cal-btn-ical btn btn-default dropdown-toggle" type="button" aria-label="export" onclick="$.dialog('/sys/calendar/ical?widgetId=7af5ca7c91b743eeb91873344711a4e4&amp;type=Calendar')" title="iCal Export" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    <i class="fa fa-calendar-plus-o"></i> Export
-                </button>
-                <button id="calPrint_7af5ca7c91b743eeb91873344711a4e4" class="cal-btn-print btn btn-default dropdown-toggle" type="button" title="Print" aria-label="print">
-                    <i class="fa fa-print"></i>
-                </button>
-                <div id="ViewSelector_7af5ca7c91b743eeb91873344711a4e4" class="cs-calButton dropdown viewSelector">
-                    <button id="calViewsBtn" class="btn btn-default dropdown-toggle" type="button" aria-label="calendar views" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        <span id="viewButtonTxt_7af5ca7c91b743eeb91873344711a4e4" class="viewButtonTxt">List</span>
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu allow-focus dropdown-menu-right" role="menu" aria-labelledby="calViewsBtn">
-                                                                        <li>
-                                                                            <a href="#" class="calChangeMonthView" data-view="dayGridMonth" role="menuitem">Month</a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="#" id="calChangeWeekView" data-view="timeGridWeek" role="menuitem">Week</a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="#" id="calChangeDayView" data-view="timeGridDay" role="menuitem">Day</a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="#" id="calChangeListViewThirty" data-view="listThirty" role="menuitem">List</a>
-                                                                        </li>
-                    </ul>
+
+
+
+
+                <div class="content-node csc-content-node"
+                    style="padding-top:None;padding-right:15px;padding-bottom:None;padding-left:15px;border-width:None;border-style:None;border-color:#000000;border-radius:None;">
+                    <div class="content-widget csc-content-widget cs-content-node-sm"
+                        style="max-height: 500px; overflow-x: hidden; overflow-x: scroll;">
+
+                        <div class="cs-calendar-widget">
+                            <div class="cs-calendar-search-link" style="visibility: hidden;">
+                                <a href="/sys/calendar/searchlinks/7af5ca7c91b743eeb91873344711a4e4/Calendar"
+                                    data-follow="">Calendar Links</a>
+                            </div>
+                            <div id="calendarHeader_7af5ca7c91b743eeb91873344711a4e4" class="cs-cal-header">
+                                <div class="cs-cal-header-left">
+                                    <div id="GroupSelector_7af5ca7c91b743eeb91873344711a4e4"
+                                        class="cs-calButton dropdown groupSelector">
+                                        <button id="groupSelectorBtn" class="btn btn-default dropdown-toggle pull-left"
+                                            type="button" aria-label="group selection" data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="true">
+                                            <i class="fa fa-calendar-check-o"></i>
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu checkbox-menu allow-focus" role="menu"
+                                            aria-labelledby="groupSelectorBtn">
+                                            <li>
+                                                <label for="fd67957b23454524b47706fd332ca0db">
+                                                    <input type="checkbox"
+                                                        name="selectedEventGroup_7af5ca7c91b743eeb91873344711a4e4"
+                                                        value="fd67957b23454524b47706fd332ca0db"
+                                                        id="fd67957b23454524b47706fd332ca0db" checked=""
+                                                        role="menuitemcheckbox" style="outline-offset:5px;">
+                                                    FCHS Events
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button id="prev_7af5ca7c91b743eeb91873344711a4e4"
+                                        class="cal-btn-prev btn btn-default" aria-label="previous"><i
+                                            class="fa fa-chevron-left"></i></button>
+                                    <button id="next_7af5ca7c91b743eeb91873344711a4e4"
+                                        class="cal-btn-next btn btn-default" aria-label="next"><i
+                                            class="fa fa-chevron-right"></i></button>
+                                </div>
+                                <div id="CalendarHeaderRight_7af5ca7c91b743eeb91873344711a4e4"
+                                    class="cs-cal-header-right">
+                                    <button id="iCalExport_7af5ca7c91b743eeb91873344711a4e4"
+                                        class="cal-btn-ical btn btn-default dropdown-toggle" type="button"
+                                        aria-label="export"
+                                        onclick="$.dialog('/sys/calendar/ical?widgetId=7af5ca7c91b743eeb91873344711a4e4&amp;type=Calendar')"
+                                        title="iCal Export" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="true">
+                                        <i class="fa fa-calendar-plus-o"></i> Export
+                                    </button>
+                                    <button id="calPrint_7af5ca7c91b743eeb91873344711a4e4"
+                                        class="cal-btn-print btn btn-default dropdown-toggle" type="button"
+                                        title="Print" aria-label="print">
+                                        <i class="fa fa-print"></i>
+                                    </button>
+                                    <div id="ViewSelector_7af5ca7c91b743eeb91873344711a4e4"
+                                        class="cs-calButton dropdown viewSelector">
+                                        <button id="calViewsBtn" class="btn btn-default dropdown-toggle" type="button"
+                                            aria-label="calendar views" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="true">
+                                            <span id="viewButtonTxt_7af5ca7c91b743eeb91873344711a4e4"
+                                                class="viewButtonTxt">List</span>
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu allow-focus dropdown-menu-right" role="menu"
+                                            aria-labelledby="calViewsBtn">
+                                            <li>
+                                                <a href="#" class="calChangeMonthView" data-view="dayGridMonth"
+                                                    role="menuitem">Month</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" id="calChangeWeekView" data-view="timeGridWeek"
+                                                    role="menuitem">Week</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" id="calChangeDayView" data-view="timeGridDay"
+                                                    role="menuitem">Day</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" id="calChangeListViewThirty" data-view="listThirty"
+                                                    role="menuitem">List</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="cs-cal-header-center">
+                                    <h2 id="CalendarTitle_7af5ca7c91b743eeb91873344711a4e4"
+                                        class="cal-header-title text-center">May 15 – Jun 13, 2025</h2>
+                                </div>
+                                <div style="clear: both;"></div>
+                            </div>
+                            <div id="calendar_7af5ca7c91b743eeb91873344711a4e4"
+                                class="fc fc-media-screen fc-direction-ltr fc-theme-standard">
+                                <div class="fc-view-harness fc-view-harness-active" style="height: 533.636px;">
+                                    <div class="fc-listThirty-view fc-view fc-list fc-list-sticky">
+                                        <div class="fc-scroller fc-scroller-liquid" style="overflow: hidden auto;">
+                                            <table class="fc-list-table ">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" id="fc-dom-2">Time</th>
+                                                        <th scope="col" aria-hidden="true"></th>
+                                                        <th scope="col" id="fc-dom-3">Event</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr data-date="2025-05-23"
+                                                        class="fc-list-day fc-day fc-day-fri fc-day-future">
+                                                        <th scope="colgroup" colspan="3" id="fc-dom-4-2025-05-23"
+                                                            aria-labelledby="fc-dom-5">
+                                                            <div class="fc-list-day-cushion fc-cell-shaded"><a
+                                                                    id="fc-dom-5" class="fc-list-day-text"
+                                                                    aria-label="May 23, 2025">Friday</a><a
+                                                                    aria-hidden="true" class="fc-list-day-side-text"
+                                                                    aria-label="May 23, 2025">May 23, 2025</a></div>
+                                                        </th>
+                                                    </tr>
+                                                    <tr class="fc-event fc-event-start fc-event-end fc-event-future fc-list-event fc-event-forced-url"
+                                                        style="border-color: rgb(58, 135, 173);" data-original-title=""
+                                                        title="">
+                                                        <td headers="fc-dom-2 fc-dom-4-2025-05-23"
+                                                            class="fc-list-event-time">all-day</td>
+                                                        <td aria-hidden="true" class="fc-list-event-graphic"><span
+                                                                class="fc-list-event-dot" style="display: none;"></span>
+                                                        </td>
+                                                        <td headers="fc-dom-3 fc-dom-4-2025-05-23"
+                                                            class="fc-list-event-title"><a href="#">Last Student Day</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr data-date="2025-05-26"
+                                                        class="fc-list-day fc-day fc-day-mon fc-day-future">
+                                                        <th scope="colgroup" colspan="3" id="fc-dom-4-2025-05-26"
+                                                            aria-labelledby="fc-dom-6">
+                                                            <div class="fc-list-day-cushion fc-cell-shaded"><a
+                                                                    id="fc-dom-6" class="fc-list-day-text"
+                                                                    aria-label="May 26, 2025">Monday</a><a
+                                                                    aria-hidden="true" class="fc-list-day-side-text"
+                                                                    aria-label="May 26, 2025">May 26, 2025</a></div>
+                                                        </th>
+                                                    </tr>
+                                                    <tr class="fc-event fc-event-start fc-event-end fc-event-future fc-list-event fc-event-forced-url"
+                                                        style="border-color: rgb(58, 135, 173);" data-original-title=""
+                                                        title="">
+                                                        <td headers="fc-dom-2 fc-dom-4-2025-05-26"
+                                                            class="fc-list-event-time">all-day</td>
+                                                        <td aria-hidden="true" class="fc-list-event-graphic"><span
+                                                                class="fc-list-event-dot" style="display: none;"></span>
+                                                        </td>
+                                                        <td headers="fc-dom-3 fc-dom-4-2025-05-26"
+                                                            class="fc-list-event-title"><a href="#">Memorial Day - No
+                                                                School</a></td>
+                                                    </tr>
+                                                    <tr data-date="2025-05-27"
+                                                        class="fc-list-day fc-day fc-day-tue fc-day-future">
+                                                        <th scope="colgroup" colspan="3" id="fc-dom-4-2025-05-27"
+                                                            aria-labelledby="fc-dom-7">
+                                                            <div class="fc-list-day-cushion fc-cell-shaded"><a
+                                                                    id="fc-dom-7" class="fc-list-day-text"
+                                                                    aria-label="May 27, 2025">Tuesday</a><a
+                                                                    aria-hidden="true" class="fc-list-day-side-text"
+                                                                    aria-label="May 27, 2025">May 27, 2025</a></div>
+                                                        </th>
+                                                    </tr>
+                                                    <tr class="fc-event fc-event-start fc-event-end fc-event-future fc-list-event fc-event-forced-url"
+                                                        style="border-color: rgb(58, 135, 173);" data-original-title=""
+                                                        title="">
+                                                        <td headers="fc-dom-2 fc-dom-4-2025-05-27"
+                                                            class="fc-list-event-time">all-day</td>
+                                                        <td aria-hidden="true" class="fc-list-event-graphic"><span
+                                                                class="fc-list-event-dot" style="display: none;"></span>
+                                                        </td>
+                                                        <td headers="fc-dom-3 fc-dom-4-2025-05-27"
+                                                            class="fc-list-event-title"><a href="#">Last Teacher Day</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr data-date="2025-06-01"
+                                                        class="fc-list-day fc-day fc-day-sun fc-day-future">
+                                                        <th scope="colgroup" colspan="3" id="fc-dom-4-2025-06-01"
+                                                            aria-labelledby="fc-dom-8">
+                                                            <div class="fc-list-day-cushion fc-cell-shaded"><a
+                                                                    id="fc-dom-8" class="fc-list-day-text"
+                                                                    aria-label="June 1, 2025">Sunday</a><a
+                                                                    aria-hidden="true" class="fc-list-day-side-text"
+                                                                    aria-label="June 1, 2025">June 1, 2025</a></div>
+                                                        </th>
+                                                    </tr>
+                                                    <tr class="fc-event fc-event-start fc-event-end fc-event-future fc-list-event fc-event-forced-url"
+                                                        style="border-color: rgb(58, 135, 173);" data-original-title=""
+                                                        title="">
+                                                        <td headers="fc-dom-2 fc-dom-4-2025-06-01"
+                                                            class="fc-list-event-time">all-day</td>
+                                                        <td aria-hidden="true" class="fc-list-event-graphic"><span
+                                                                class="fc-list-event-dot" style="display: none;"></span>
+                                                        </td>
+                                                        <td headers="fc-dom-3 fc-dom-4-2025-06-01"
+                                                            class="fc-list-event-title"><a href="#">Franklin County High
+                                                                School Commencement Ceremony</a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <script>
+
+                            (function ($) {
+
+                                var authenticatedUser = false;
+                                var showWeekends = true;
+                                var views = 'dayGridMonth,timeGridWeek,timeGridDay,listThirty';
+                                var widgetId = '7af5ca7c91b743eeb91873344711a4e4';
+                                var defaultView = 'listThirty';
+                                var printView = false;
+                                var today = new Date();
+                                var dd = today.getDate();
+                                var mm = today.getMonth() + 1; //January is 0!
+                                var yyyy = today.getFullYear();
+                                var widgetTimeFormat = 'H(:mm)'; //24hrs vs 12hrs format
+                                var type = '1';
+
+                                if (dd < 10) {
+                                    dd = '0' + dd;
+                                }
+
+                                if (mm < 10) {
+                                    mm = '0' + mm;
+                                }
+
+                                today = yyyy + '-' + mm + '-' + dd;
+
+                                window.reloadCalendarEvents = function () {
+                                    $(".fc").each(function () {
+                                        $(this).fullCalendar('refetchEvents');
+                                    })
+                                }
+
+
+                                $(document).ready(function () {
+
+                                    if (printView)
+                                        $("#calendar_" + widgetId).css("width", "775");
+
+                                    var calendar_7af5ca7c91b743eeb91873344711a4e4 = new FullCalendar.Calendar(document.getElementById('calendar_7af5ca7c91b743eeb91873344711a4e4'), {
+                                        themeSystem: 'bootstrap',
+                                        headerToolbar: false,
+                                        views: {
+                                            listThirty: {
+                                                type: 'listWeek',
+                                                duration: { days: 30 }
+                                            }
+                                        },
+                                        aspectRatio: 1.1, dayMaxEvents: true, initialDate: today,
+                                        initialView: defaultView,
+                                        editable: false,
+                                        weekNumbers: false,
+                                        weekends: showWeekends,
+                                        firstDay: Number(0),
+                                        eventBorderColor: "#00000000",
+
+                                        moreLinkClick: function (info) {
+                                            $("#viewButtonTxt_" + widgetId).text("Day");
+                                            return "day";
+                                        },
+                                        events: {
+                                            url: '/sys/widgets/calendar/events',
+                                            startParam: "from",
+                                            endParam: "to",
+                                            extraParams: {
+                                                widgetId: widgetId,
+                                                type: type
+                                            },
+                                            borderColor: "#00000000"
+                                        },
+                                        eventDataTransform: function (eventData) {
+                                            if (typeof eventData.url == 'undefined' || eventData.url == null)
+                                                eventData.url = "#";
+
+                                            // Note: End date is 'exclusive'. If all day event (no time), increment end date by one day.
+                                            if (eventData.allDay) {
+                                                var endDateMoment = FullCalendar.Moment.toMoment(eventData.end, calendar_7af5ca7c91b743eeb91873344711a4e4);
+                                                var newDate = endDateMoment.add(1, 'days').format("YYYY[-]MM[-]DD");
+                                                eventData.end = newDate;
+                                            }
+                                        },
+                                        eventDidMount: function (info) {
+                                            filterEvent(info.event, info.view);
+                                            setEventColor(info);
+                                            initEventDetailsTooltip(info.event, info.el, calendar_7af5ca7c91b743eeb91873344711a4e4);
+
+                                            var $dot = $(info.el).find(".fc-list-event-dot");
+                                            if ($dot)
+                                                $dot.hide();
+                                        },
+                                        eventClick: function (info) {
+                                            info.jsEvent.preventDefault();
+                                            showEventModal(info.event, calendar_7af5ca7c91b743eeb91873344711a4e4);
+                                        },
+                                        eventMouseEnter: function (info) {
+
+                                        },
+                                        viewDidMount: function (info) {
+                                            setCustomViewRendering();
+
+                                            $(".fc-list-event-dot").each(function (item) {
+                                                $(this).hide();
+                                            });
+                                        },
+                                        loading: function (isLoading) {
+                                            if (!isLoading) {
+                                                $(".fc-list-event-dot").each(function (item) {
+                                                    $(this).hide();
+                                                });
+                                            }
+                                        }
+                                    });
+
+                                    calendar_7af5ca7c91b743eeb91873344711a4e4.render();
+
+                                    // handle size issue when calendar is hidden in panel app
+                                    $("#calendar_" + widgetId).closest("[id^=panel]").onClassChange(function (el, newClass) {
+                                        calendar_7af5ca7c91b743eeb91873344711a4e4.updateSize();
+                                    });
+
+                                    $.get("/sys/calendar/security/canaddevents",
+                                        function (result) {
+                                            authenticatedUser = result.isAuthenticated;
+
+                                            if (printView) {
+                                                printViewSetup();
+                                            } else {
+                                                if (result.isAuthorized) {
+                                                    showAddEventsButton();
+                                                }
+                                            }
+                                        });
+
+
+                                    //custom header setup
+                                    updateCalendarTitle(calendar_7af5ca7c91b743eeb91873344711a4e4.view.title);
+
+                                    $('#prev_' + widgetId).on('click', function () {
+                                        calendar_7af5ca7c91b743eeb91873344711a4e4.prev();
+                                        updateCalendarTitle(calendar_7af5ca7c91b743eeb91873344711a4e4.view.title);
+                                    });
+
+                                    $('#next_' + widgetId).on('click', function () {
+                                        calendar_7af5ca7c91b743eeb91873344711a4e4.next();
+                                        updateCalendarTitle(calendar_7af5ca7c91b743eeb91873344711a4e4.view.title);
+                                    });
+
+                                    $('#calPrint_' + widgetId).on('click', function () {
+                                        if (printView) {
+                                            window.print();
+                                        } else {
+                                            window.open('/sys/content/calendar/print/' + type + '/7af5ca7c91b743eeb91873344711a4e4', '_blank')
+                                        }
+                                    });
+
+                                    $("#ViewSelector_" + widgetId + " ul li a").on('click', function () {
+                                        var view = $(this).data("view");
+                                        calendar_7af5ca7c91b743eeb91873344711a4e4.changeView(view);
+
+                                        $("#viewButtonTxt_" + widgetId).text($(this).text());
+                                        updateCalendarTitle(calendar_7af5ca7c91b743eeb91873344711a4e4.view.title);
+                                        return false;
+                                    });
+
+                                    $('#GroupSelector_' + widgetId).on('change', function () {
+                                        var events = calendar_7af5ca7c91b743eeb91873344711a4e4.getEvents();
+
+                                        for (var i = 0; i < events.length; i++) {
+                                            filterEvent(events[i], null);
+                                        }
+                                        calendar_7af5ca7c91b743eeb91873344711a4e4.render();
+                                    });
+
+                                    if (defaultView == "listCustom")
+                                        defaultView = "List";
+
+                                    $('#viewButtonTxt_' + widgetId).html("List");
+                                });
+
+
+                                function setEventColor(thisObj) {
+                                    var $thisEvent = $(thisObj.el);
+                                    var classes = $thisEvent.attr("class").split(" ");
+                                    var colorClass = "";
+
+                                    for (var i = 0; i < classes.length; i++) {
+                                        if (classes[i].slice(0, 3) != "fc-") {
+                                            colorClass = classes[i];
+                                            break;
+                                        }
+                                    }
+
+                                    if (colorClass.length > 0) {
+                                        $thisEvent.find(".fc-event-main-frame").each(function () {
+                                            $(this).addClass(colorClass);
+                                        });
+                                    }
+                                    else {
+                                        $thisEvent.css("border-color", "#3a87ad");
+                                    }
+
+                                    if (printView) {
+                                        $thisEvent.css("border-color", "#000000");
+                                        $thisEvent.css("background-color", "#ffffff");
+                                        $thisEvent.css("color", "#000000");
+                                        $thisEvent.find(".fc-event-main-frame").css("background-color", "#ffffff");
+                                        $thisEvent.find(".fc-event-main-frame").css("color", "#000000");
+                                    }
+                                }
+
+                                function filterEvent(event, view) {
+                                    var showEvent = false;
+                                    var groupIds = event.extendedProps.EventGroups;
+                                    $("input[name=selectedEventGroup_" + widgetId + "]:checked").each(function () {
+                                        var result = false;
+                                        var index = 0
+                                        while (index < groupIds.length) {
+                                            result = this.value == groupIds[index].EventGroupId;
+                                            if (result == true)
+                                                break;
+                                            index++;
+                                        }
+                                        showEvent = showEvent || result;
+                                    });
+
+                                    if (showEvent) {
+                                        if (view) {
+                                            if (view.type == "listThirty")
+                                                event.setProp("display", "auto");
+                                            else
+                                                event.setProp("display", "block");
+                                        }
+                                        else
+                                            event.setProp("display", "block");
+                                    }
+                                    else
+                                        event.setProp("display", "none");
+                                }
+
+                                function setCustomViewRendering() {
+                                    var $gridAxis = $(".fc-timegrid-axis-frame").first();
+
+                                    //<th> requires text for ADA compliance
+                                    $gridAxis.css("visibility", "hidden");
+                                    $gridAxis.text("Time");
+                                }
+
+                                function updateCalendarTitle(title) {
+                                    $("#CalendarTitle_" + widgetId).html(title);
+                                }
+
+                                function initEventDetailsTooltip(event, thisObj, calendar) {
+
+                                    var allDayHeader = "";
+                                    var startDate = "";
+                                    var endDate = "";
+                                    var startMoment = "";
+                                    var endMoment = "";
+                                    if (event.start != null) {
+                                        startMoment = FullCalendar.Moment.toMoment(event.start, calendar);
+                                        startDate = event.allDay ? startMoment.format("MMM D") : startMoment.format("MMM D h:mm a");
+                                    }
+                                    if (event.end != null) {
+                                        endMoment = FullCalendar.Moment.toMoment(event.end, calendar);
+                                        if (event.allDay && event.start < event.end) {
+                                            event.end = endMoment.add(-1, 'days');
+                                        }
+                                        endDate = event.allDay ? endMoment.format("MMM D") : endMoment.format("MMM D h:mm a");
+                                    }
+                                    if (event.allDay) {
+                                        allDayHeader = "<div style='text-align: center;'><b>All Day</b></div>";
+                                    }
+
+                                    var location = "";
+                                    if (event.location) {
+                                        location = "<p>" + event.location + "</p>";
+                                    }
+
+                                    var phone = "";
+                                    if (event.phone && event.showPhoneNumber) {
+                                        phone = "<p>" + event.phone + "</p>";
+                                    }
+
+                                    var organizerName = "";
+                                    if (event.organizer && event.showOrganizerName) {
+                                        organizerName = "<p>" + event.organizer + "</p>";
+                                    }
+
+                                    var desc = "";
+                                    if (event.description) {
+                                        desc = event.summary;
+                                    }
+
+                                    var endText = "";
+                                    if (endDate != "") {
+                                        endText = " - " + endDate;
+                                    }
+
+                                    var display = allDayHeader +
+                                        "<div style='text-align: left;'><p><b>" +
+                                        event.title +
+                                        "</b></p><p>" +
+                                        startDate +
+                                        endText
+                                    "</p><p>" +
+                                        decodeURI(desc) +
+                                        "</p>" +
+                                        location +
+                                        organizerName +
+                                        phone +
+                                        "</div>";
+
+                                    $(thisObj).tooltip({
+                                        title: display,
+                                        html: true,
+                                        container: 'body'
+                                    });
+                                }
+
+                                function showAddEventsButton() {
+                                    //hide if in b/n/a
+                                    if ($('#CalendarHeaderRight_' + widgetId).parents('.csc-console-host').length == 0) {
+                                        $('#CalendarHeaderRight_' + widgetId).prepend('<button type="button" id="CalendarAddButton_' + widgetId + '" class="cs-cal-add-btn btn btn-default ">Add</button>');
+
+                                        $('#CalendarAddButton_' + widgetId).on('click', function () {
+                                            showAddEventModal();
+                                        });
+                                    }
+                                }
+
+
+                                var showEventModal = function (event, calendar) {
+                                    var id = event.id;
+                                    var start = event.start;
+                                    var end = event.end;
+
+                                    if (end == null) {
+                                        end = start;
+                                    }
+                                    startMoment = FullCalendar.Moment.toMoment(start, calendar);
+                                    endMoment = FullCalendar.Moment.toMoment(end, calendar);
+
+                                    // Undo day increment for all day events
+                                    if (event.allDay) {
+                                        endMoment.add(-1, "days");
+                                    }
+
+                                    $.dialog("/sys/calendar/event/modal", { id: id, start: startMoment.format("L LT"), end: endMoment.format("L LT") });
+                                }
+
+                                var showAddEventModal = function () {
+                                    $.console("calendar", "/sys/console/calendar/event/create");
+                                }
+
+                                var printViewSetup = function () {
+                                    $(".cal-btn-print").css("background-color", "#5cb85c");
+                                    $(".fc-add-button, .cal-btn-ical").css("display", "none");
+                                    $(".cs-cal-header").css("width", "775");
+                                    $(".cs-calendar-widget").css("max-width", "fit-content");
+                                    $(".cs-calendar-widget").css("margin-left", "auto");
+                                    $(".cs-calendar-widget").css("margin-right", "auto");
+                                }
+
+                                $(".checkbox-menu").on("change", "input[type='checkbox']", function () {
+                                    $(this).closest("li").toggleClass("active", this.checked);
+                                });
+
+                            })(jQuery);
+                        </script>
+
+                        <style>
+                            .eventError {
+                                border-color: red;
+                                border-width: 1px;
+                                border-style: solid;
+                            }
+
+                            .cs-cal-header {
+                                padding-bottom: 15px;
+                                text-align: center;
+                            }
+
+                            .cs-cal-header-left {
+                                float: left;
+                            }
+
+                            .cs-cal-header-center {
+                                display: inline-block;
+                            }
+
+                            .cs-cal-header-center h2 {
+                                margin: 0;
+                            }
+
+                            .cs-cal-header-right {
+                                float: right;
+                            }
+
+                            .groupSelector {
+                                float: left;
+                            }
+
+                            .viewSelector {
+                                display: inline-block;
+                            }
+
+                            .groupSelector button,
+                            .cal-btn-prev {
+                                margin-right: 10px;
+                            }
+
+                            .viewSelector button,
+                            .cal-btn-print,
+                            .cal-btn-ical {
+                                margin-left: 10px;
+                            }
+
+                            .cs-calButton>ul {
+                                top: 33px;
+                            }
+
+                            .cs-calButton>ul>li>a>i {
+                                padding: 8px;
+                            }
+
+                            #calendar_7af5ca7c91b743eeb91873344711a4e4 {
+                                max-width: 900px;
+                                margin: 0 auto;
+                            }
+
+                            .checkbox-menu li label {
+                                display: block;
+                                padding: 3px 10px;
+                                clear: both;
+                                font-weight: normal;
+                                white-space: nowrap;
+                                margin: 0;
+                            }
+
+                            .checkbox-menu li input {
+                                margin: 0px 5px;
+                                top: 2px;
+                                position: relative;
+                            }
+
+                            .checkbox-menu li label:hover,
+                            .checkbox-menu li label:focus {
+                                color: #262626;
+                                background-color: #f5f5f5;
+                            }
+
+                            .checkbox-menu li.active label:hover,
+                            .checkbox-menu li.active label:focus {
+                                background-color: #b8b8ff;
+                            }
+
+                            .fc-event {
+                                border-color: transparent;
+                            }
+
+                            .fc-h-event .fc-time {
+                                overflow: unset;
+                            }
+
+                            @media print {
+
+                                .cal-btn-print,
+                                .fc-add-button,
+                                .cal-btn-ical,
+                                .cs-cal-header-left,
+                                .cs-calButton,
+                                .cs-calendar-search-link {
+                                    display: none !important;
+                                }
+                            }
+                        </style>
+
+
+                    </div>
                 </div>
+
+
+
+
+                <div class="content-node csc-content-node" style="">
+                    <div class="content-widget csc-content-widget cs-content-node-sm" style="">
+                        <div class="cs-html-widget">
+
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
-            <div class="cs-cal-header-center">
-                <h2 id="CalendarTitle_7af5ca7c91b743eeb91873344711a4e4" class="cal-header-title text-center">May 15 – Jun 13, 2025</h2>
-            </div>
-            <div style="clear: both;"></div>
         </div>
-        <div id="calendar_7af5ca7c91b743eeb91873344711a4e4" class="fc fc-media-screen fc-direction-ltr fc-theme-standard"><div class="fc-view-harness fc-view-harness-active" style="height: 533.636px;"><div class="fc-listThirty-view fc-view fc-list fc-list-sticky"><div class="fc-scroller fc-scroller-liquid" style="overflow: hidden auto;"><table class="fc-list-table "><thead><tr><th scope="col" id="fc-dom-2">Time</th><th scope="col" aria-hidden="true"></th><th scope="col" id="fc-dom-3">Event</th></tr></thead><tbody><tr data-date="2025-05-23" class="fc-list-day fc-day fc-day-fri fc-day-future"><th scope="colgroup" colspan="3" id="fc-dom-4-2025-05-23" aria-labelledby="fc-dom-5"><div class="fc-list-day-cushion fc-cell-shaded"><a id="fc-dom-5" class="fc-list-day-text" aria-label="May 23, 2025">Friday</a><a aria-hidden="true" class="fc-list-day-side-text" aria-label="May 23, 2025">May 23, 2025</a></div></th></tr><tr class="fc-event fc-event-start fc-event-end fc-event-future fc-list-event fc-event-forced-url" style="border-color: rgb(58, 135, 173);" data-original-title="" title=""><td headers="fc-dom-2 fc-dom-4-2025-05-23" class="fc-list-event-time">all-day</td><td aria-hidden="true" class="fc-list-event-graphic"><span class="fc-list-event-dot" style="display: none;"></span></td><td headers="fc-dom-3 fc-dom-4-2025-05-23" class="fc-list-event-title"><a href="#">Last Student Day</a></td></tr><tr data-date="2025-05-26" class="fc-list-day fc-day fc-day-mon fc-day-future"><th scope="colgroup" colspan="3" id="fc-dom-4-2025-05-26" aria-labelledby="fc-dom-6"><div class="fc-list-day-cushion fc-cell-shaded"><a id="fc-dom-6" class="fc-list-day-text" aria-label="May 26, 2025">Monday</a><a aria-hidden="true" class="fc-list-day-side-text" aria-label="May 26, 2025">May 26, 2025</a></div></th></tr><tr class="fc-event fc-event-start fc-event-end fc-event-future fc-list-event fc-event-forced-url" style="border-color: rgb(58, 135, 173);" data-original-title="" title=""><td headers="fc-dom-2 fc-dom-4-2025-05-26" class="fc-list-event-time">all-day</td><td aria-hidden="true" class="fc-list-event-graphic"><span class="fc-list-event-dot" style="display: none;"></span></td><td headers="fc-dom-3 fc-dom-4-2025-05-26" class="fc-list-event-title"><a href="#">Memorial Day - No School</a></td></tr><tr data-date="2025-05-27" class="fc-list-day fc-day fc-day-tue fc-day-future"><th scope="colgroup" colspan="3" id="fc-dom-4-2025-05-27" aria-labelledby="fc-dom-7"><div class="fc-list-day-cushion fc-cell-shaded"><a id="fc-dom-7" class="fc-list-day-text" aria-label="May 27, 2025">Tuesday</a><a aria-hidden="true" class="fc-list-day-side-text" aria-label="May 27, 2025">May 27, 2025</a></div></th></tr><tr class="fc-event fc-event-start fc-event-end fc-event-future fc-list-event fc-event-forced-url" style="border-color: rgb(58, 135, 173);" data-original-title="" title=""><td headers="fc-dom-2 fc-dom-4-2025-05-27" class="fc-list-event-time">all-day</td><td aria-hidden="true" class="fc-list-event-graphic"><span class="fc-list-event-dot" style="display: none;"></span></td><td headers="fc-dom-3 fc-dom-4-2025-05-27" class="fc-list-event-title"><a href="#">Last Teacher Day</a></td></tr><tr data-date="2025-06-01" class="fc-list-day fc-day fc-day-sun fc-day-future"><th scope="colgroup" colspan="3" id="fc-dom-4-2025-06-01" aria-labelledby="fc-dom-8"><div class="fc-list-day-cushion fc-cell-shaded"><a id="fc-dom-8" class="fc-list-day-text" aria-label="June 1, 2025">Sunday</a><a aria-hidden="true" class="fc-list-day-side-text" aria-label="June 1, 2025">June 1, 2025</a></div></th></tr><tr class="fc-event fc-event-start fc-event-end fc-event-future fc-list-event fc-event-forced-url" style="border-color: rgb(58, 135, 173);" data-original-title="" title=""><td headers="fc-dom-2 fc-dom-4-2025-06-01" class="fc-list-event-time">all-day</td><td aria-hidden="true" class="fc-list-event-graphic"><span class="fc-list-event-dot" style="display: none;"></span></td><td headers="fc-dom-3 fc-dom-4-2025-06-01" class="fc-list-event-title"><a href="#">Franklin County High School Commencement Ceremony</a></td></tr></tbody></table></div></div></div></div>
-    </div>
-    
+        <!-- CONTENT GOES HERE -->
+        <h1>Mounds State Park Events - May 2025</h1>
+
+        <div class="button-group">
+            <button onclick="goToToday()">Today's Events</button>
+            <button onclick="viewAllEvents()">View All Events</button>
+        </div>
+
+        <div id="calendar"></div>
+    </main>
+
+    <!-- FullCalendar JS (CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
 
     <script>
+        let calendar;
 
-    (function($) {
-
-        var authenticatedUser = false;
-        var showWeekends = true;
-        var views = 'dayGridMonth,timeGridWeek,timeGridDay,listThirty';
-        var widgetId = '7af5ca7c91b743eeb91873344711a4e4';
-        var defaultView = 'listThirty';
-        var printView = false;
-        var today = new Date();
-        var dd = today.getDate();
-        var mm = today.getMonth() + 1; //January is 0!
-        var yyyy = today.getFullYear();
-        var widgetTimeFormat = 'H(:mm)'; //24hrs vs 12hrs format
-        var type = '1';
-
-        if (dd < 10) {
-            dd = '0' + dd;
-        }
-
-        if (mm < 10) {
-            mm = '0' + mm;
-        }
-
-        today = yyyy + '-' + mm + '-' + dd;
-
-        window.reloadCalendarEvents = function () {
-            $(".fc").each(function () {
-                $(this).fullCalendar('refetchEvents');
-            })
-        }
-        
-
-        $(document).ready(function() {
-
-            if(printView)
-                $("#calendar_" + widgetId).css("width", "775");
-
-            var calendar_7af5ca7c91b743eeb91873344711a4e4 = new FullCalendar.Calendar(document.getElementById('calendar_7af5ca7c91b743eeb91873344711a4e4'), {
-                themeSystem: 'bootstrap',
-                headerToolbar: false,
-                views: {
-                    listThirty: {
-                        type: 'listWeek',
-                        duration: { days: 30 }
-                    }
-                },
-aspectRatio: 1.1,dayMaxEvents: true,                initialDate: today,
-                initialView: defaultView,
-                editable: false,
-                weekNumbers: false,
-                weekends: showWeekends,
-                firstDay: Number(0),
-                eventBorderColor: "#00000000",
-                
-                moreLinkClick: function (info) {
-                    $("#viewButtonTxt_" + widgetId).text("Day");
-                    return "day";
-                },
-                events: {
-                    url: '/sys/widgets/calendar/events',
-                    startParam: "from",
-                    endParam: "to",
-                    extraParams: {
-                        widgetId: widgetId,
-                        type: type
+        // Fetch the event data from events.json
+        fetch('events.json')
+            .then(response => response.json())
+            .then(events => {
+                calendar = new FullCalendar.Calendar(document.getElementById('calendar'), {
+                    initialView: 'dayGridMonth',
+                    events: events,
+                    headerToolbar: {
+                        left: 'prev,next today',
+                        center: 'title',
+                        right: ''
                     },
-                    borderColor: "#00000000"
-                },
-                eventDataTransform: function (eventData) {
-                    if (typeof eventData.url == 'undefined' || eventData.url == null)
-                        eventData.url = "#";
-
-                    // Note: End date is 'exclusive'. If all day event (no time), increment end date by one day.
-                    if (eventData.allDay) {
-                        var endDateMoment = FullCalendar.Moment.toMoment(eventData.end, calendar_7af5ca7c91b743eeb91873344711a4e4);
-                        var newDate = endDateMoment.add(1, 'days').format("YYYY[-]MM[-]DD");
-                        eventData.end = newDate;
-                    }
-                },
-                eventDidMount: function (info) {
-                    filterEvent(info.event, info.view);
-                    setEventColor(info);
-                    initEventDetailsTooltip(info.event, info.el, calendar_7af5ca7c91b743eeb91873344711a4e4);
-
-                    var $dot = $(info.el).find(".fc-list-event-dot");
-                    if($dot)
-                        $dot.hide();
-                },
-                eventClick: function(info) {
-                    info.jsEvent.preventDefault();
-                    showEventModal(info.event, calendar_7af5ca7c91b743eeb91873344711a4e4);
-                },
-                eventMouseEnter: function(info){
-
-                },
-                viewDidMount: function(info){
-                    setCustomViewRendering();
-
-                    $(".fc-list-event-dot").each(function(item) {
-                        $(this).hide();
-                    });
-                },
-                loading: function(isLoading){
-                    if(!isLoading){
-                        $(".fc-list-event-dot").each(function(item) {
-                            $(this).hide();
-                        });
-                    }
-                }
-            });
-
-            calendar_7af5ca7c91b743eeb91873344711a4e4.render();
-
-            // handle size issue when calendar is hidden in panel app
-            $("#calendar_" + widgetId).closest("[id^=panel]").onClassChange(function (el, newClass) {
-                calendar_7af5ca7c91b743eeb91873344711a4e4.updateSize();
-            });
-
-            $.get("/sys/calendar/security/canaddevents",
-                function (result) {
-                    authenticatedUser = result.isAuthenticated;
-
-                    if (printView) {
-                        printViewSetup();
-                    } else {
-                        if (result.isAuthorized) {
-                            showAddEventsButton();
+                    dateClick: function (info) {
+                        const dateStr = info.dateStr;
+                        const dayEvents = events.filter(e => e.start.startsWith(dateStr));
+                        if (dayEvents.length === 0) {
+                            alert("No events on this day.");
+                            return;
                         }
+                        const details = dayEvents.map(e => `${e.title} @ ${e.location} (${new Date(e.start).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })})`).join('\n');
+                        alert("Events on " + dateStr + ":\n" + details);
                     }
                 });
-
-
-            //custom header setup
-            updateCalendarTitle(calendar_7af5ca7c91b743eeb91873344711a4e4.view.title);
-
-            $('#prev_' + widgetId).on('click', function () {
-                calendar_7af5ca7c91b743eeb91873344711a4e4.prev();
-                updateCalendarTitle(calendar_7af5ca7c91b743eeb91873344711a4e4.view.title);
+                calendar.render();
             });
 
-            $('#next_' + widgetId).on('click', function () {
-                calendar_7af5ca7c91b743eeb91873344711a4e4.next();
-                updateCalendarTitle(calendar_7af5ca7c91b743eeb91873344711a4e4.view.title);
-            });
-
-            $('#calPrint_' + widgetId).on('click', function () {
-                if (printView) {
-                    window.print();
-                } else {
-                    window.open('/sys/content/calendar/print/' + type + '/7af5ca7c91b743eeb91873344711a4e4', '_blank')
-                }
-            });
-
-            $("#ViewSelector_" + widgetId + " ul li a").on('click', function () {
-                var view = $(this).data("view");
-                calendar_7af5ca7c91b743eeb91873344711a4e4.changeView(view);
-
-                $("#viewButtonTxt_" + widgetId).text($(this).text());
-                updateCalendarTitle(calendar_7af5ca7c91b743eeb91873344711a4e4.view.title);
-                return false;
-            });
-
-            $('#GroupSelector_' + widgetId).on('change', function () {
-                var events = calendar_7af5ca7c91b743eeb91873344711a4e4.getEvents();
-
-                for (var i = 0; i < events.length; i++) {
-                    filterEvent(events[i], null);
-                }
-                calendar_7af5ca7c91b743eeb91873344711a4e4.render();
-            });
-
-            if (defaultView == "listCustom")
-                defaultView = "List";
-
-            $('#viewButtonTxt_' + widgetId).html("List");
-        });
-
-
-        function setEventColor(thisObj) {
-            var $thisEvent = $(thisObj.el);
-            var classes = $thisEvent.attr("class").split(" ");
-            var colorClass = "";
-
-            for (var i = 0; i < classes.length; i++) {
-                if (classes[i].slice(0, 3) != "fc-") {
-                    colorClass = classes[i];
-                    break;
-                }
-            }
-
-            if (colorClass.length > 0) {
-                $thisEvent.find(".fc-event-main-frame").each(function () {
-                    $(this).addClass(colorClass);
-                });
-            }
-            else {
-                $thisEvent.css("border-color", "#3a87ad");
-            }
-
-            if(printView){
-                $thisEvent.css("border-color", "#000000");
-                $thisEvent.css("background-color", "#ffffff");
-                $thisEvent.css("color", "#000000");
-                $thisEvent.find(".fc-event-main-frame").css("background-color", "#ffffff");
-                $thisEvent.find(".fc-event-main-frame").css("color", "#000000");
-            }
+        // Button handlers
+        function goToToday() {
+            calendar.today();
         }
 
-        function filterEvent(event, view) {
-            var showEvent = false;
-            var groupIds = event.extendedProps.EventGroups;
-            $("input[name=selectedEventGroup_" + widgetId + "]:checked").each(function () {
-                var result = false;
-                var index = 0
-                while (index < groupIds.length) {
-                    result = this.value == groupIds[index].EventGroupId;
-                    if (result == true)
-                        break;
-                    index++;
-                }
-                showEvent = showEvent || result;
-            });
-
-            if(showEvent){
-                if(view){
-                    if(view.type == "listThirty")
-                        event.setProp("display", "auto");
-                    else
-                        event.setProp("display", "block");
-                }
-                else
-                    event.setProp("display", "block");
-            }
-            else
-                event.setProp("display", "none");
+        function viewAllEvents() {
+            window.open('events.json', '_blank');
         }
-
-        function setCustomViewRendering() {
-            var $gridAxis = $(".fc-timegrid-axis-frame").first();
-
-            //<th> requires text for ADA compliance
-            $gridAxis.css("visibility", "hidden");
-            $gridAxis.text("Time");
-        }
-
-        function updateCalendarTitle(title) {
-            $("#CalendarTitle_" + widgetId).html(title);
-        }
-
-        function initEventDetailsTooltip(event, thisObj, calendar) {
-
-            var allDayHeader = "";
-            var startDate = "";
-            var endDate = "";
-            var startMoment = "";
-            var endMoment = "";
-            if (event.start != null) {
-                startMoment = FullCalendar.Moment.toMoment(event.start, calendar);
-                startDate = event.allDay ? startMoment.format("MMM D") : startMoment.format("MMM D h:mm a");
-            }
-            if (event.end != null) {
-                endMoment = FullCalendar.Moment.toMoment(event.end, calendar);
-                if (event.allDay && event.start < event.end) {
-                    event.end = endMoment.add(-1, 'days');
-                }
-                endDate =  event.allDay ? endMoment.format("MMM D") : endMoment.format("MMM D h:mm a");
-            }
-            if (event.allDay) {
-                allDayHeader = "<div style='text-align: center;'><b>All Day</b></div>";
-            }
-
-            var location = "";
-            if (event.location) {
-                location = "<p>" + event.location + "</p>";
-            }
-
-            var phone = "";
-            if (event.phone && event.showPhoneNumber) {
-                phone = "<p>" + event.phone + "</p>";
-            }
-
-            var organizerName = "";
-            if (event.organizer && event.showOrganizerName) {
-                organizerName = "<p>" + event.organizer + "</p>";
-            }
-
-            var desc = "";
-            if (event.description) {
-                desc = event.summary;
-            }
-
-            var endText = "";
-            if (endDate != "") {
-                endText = " - " + endDate;
-            }
-
-            var display = allDayHeader +
-                "<div style='text-align: left;'><p><b>" +
-                event.title +
-                "</b></p><p>" +
-                startDate +
-                endText
-                "</p><p>" +
-                decodeURI(desc) +
-                "</p>" +
-                location +
-                organizerName +
-                phone +
-                "</div>";
-
-            $(thisObj).tooltip({
-                title: display,
-                html: true,
-                container: 'body'
-            });
-        }
-
-        function showAddEventsButton() {
-            //hide if in b/n/a
-            if ($('#CalendarHeaderRight_' + widgetId).parents('.csc-console-host').length == 0) {
-                $('#CalendarHeaderRight_' + widgetId).prepend('<button type="button" id="CalendarAddButton_' + widgetId + '" class="cs-cal-add-btn btn btn-default ">Add</button>');
-
-                $('#CalendarAddButton_' + widgetId).on('click', function () {
-                    showAddEventModal();
-                });
-            }
-        }
-
-
-        var showEventModal = function (event, calendar) {
-            var id = event.id;
-            var start = event.start;
-            var end = event.end;
-
-            if (end == null) {
-                end = start;
-            }
-            startMoment = FullCalendar.Moment.toMoment(start, calendar);
-            endMoment = FullCalendar.Moment.toMoment(end, calendar);
-
-            // Undo day increment for all day events
-            if (event.allDay) {
-                endMoment.add(-1, "days");
-            }
-
-            $.dialog("/sys/calendar/event/modal", { id: id, start: startMoment.format("L LT"), end: endMoment.format("L LT")});
-        }
-
-        var showAddEventModal = function () {
-            $.console("calendar", "/sys/console/calendar/event/create");
-        }
-
-        var printViewSetup = function () {
-            $(".cal-btn-print").css("background-color", "#5cb85c");
-            $(".fc-add-button, .cal-btn-ical").css("display", "none");
-            $(".cs-cal-header").css("width", "775");
-            $(".cs-calendar-widget").css("max-width", "fit-content");
-            $(".cs-calendar-widget").css("margin-left", "auto");
-            $(".cs-calendar-widget").css("margin-right", "auto");
-        }
-
-        $(".checkbox-menu").on("change", "input[type='checkbox']", function () {
-            $(this).closest("li").toggleClass("active", this.checked);
-        });
-
-   })(jQuery);
     </script>
 
-<style>
-    .eventError{
-        border-color: red;
-        border-width: 1px;
-        border-style: solid;
-    }
 
-    .cs-cal-header{
-        padding-bottom: 15px;
-        text-align: center;
-    }
-
-    .cs-cal-header-left{
-        float: left;
-    }
-
-    .cs-cal-header-center {
-        display: inline-block;
-    }
-
-    .cs-cal-header-center h2{
-        margin: 0;
-    }
-
-    .cs-cal-header-right {
-        float: right;
-    }
-
-    .groupSelector {
-        float: left;
-    }
-
-    .viewSelector {
-        display: inline-block;
-    }
-
-    .groupSelector button, .cal-btn-prev {
-        margin-right: 10px;
-    }
-
-    .viewSelector button, .cal-btn-print, .cal-btn-ical {
-        margin-left: 10px;
-    }
-
-    .cs-calButton > ul {
-        top: 33px;
-    }
-
-    .cs-calButton > ul > li > a > i {
-        padding: 8px;
-    }
-
-    #calendar_7af5ca7c91b743eeb91873344711a4e4 {
-        max-width: 900px;
-        margin: 0 auto;
-    }
-
-    .checkbox-menu li label {
-        display: block;
-        padding: 3px 10px;
-        clear: both;
-        font-weight: normal;
-        white-space: nowrap;
-        margin: 0;
-    }
-
-    .checkbox-menu li input {
-        margin: 0px 5px;
-        top: 2px;
-        position: relative;
-    }
-
-    .checkbox-menu li label:hover,
-    .checkbox-menu li label:focus {
-        color: #262626;
-        background-color: #f5f5f5;
-    }
-
-    .checkbox-menu li.active label:hover,
-    .checkbox-menu li.active label:focus {
-        background-color: #b8b8ff;
-    }
-
-    .fc-event { 
-        border-color: transparent; 
-    }
-
-    .fc-h-event .fc-time {
-        overflow: unset;
-    }
-
-    @media print {
-        .cal-btn-print, .fc-add-button, .cal-btn-ical, .cs-cal-header-left, .cs-calButton, .cs-calendar-search-link {
-            display: none !important;
-        }
-    }
-</style>
-
- 
-        </div>
-    </div>
-
-    
-
-
-    <div class="content-node csc-content-node" style="">
-        <div class="content-widget csc-content-widget cs-content-node-sm" style="">
-            <div class="cs-html-widget">
-    
-</div>
-        </div>
-    </div>
-
-
-</div>
-        </div>
-    <!-- CONTENT GOES HERE -->
-    <h1>Mounds State Park Events - May 2025</h1>
-
-    <div class="button-group">
-      <button onclick="goToToday()">Today's Events</button>
-      <button onclick="viewAllEvents()">View All Events</button>
-    </div>
-
-    <div id="calendar"></div>
-  </main>
-
-  <!-- FullCalendar JS (CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
-
-  <script>
-    let calendar;
-
-    // Fetch the event data from events.json
-    fetch('events.json')
-      .then(response => response.json())
-      .then(events => {
-        calendar = new FullCalendar.Calendar(document.getElementById('calendar'), {
-          initialView: 'dayGridMonth',
-          events: events,
-          headerToolbar: {
-            left: 'prev,next today',
-            center: 'title',
-            right: ''
-          },
-          dateClick: function (info) {
-            const dateStr = info.dateStr;
-            const dayEvents = events.filter(e => e.start.startsWith(dateStr));
-            if (dayEvents.length === 0) {
-              alert("No events on this day.");
-              return;
-            }
-            const details = dayEvents.map(e => `${e.title} @ ${e.location} (${new Date(e.start).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })})`).join('\n');
-            alert("Events on " + dateStr + ":\n" + details);
-          }
-        });
-        calendar.render();
-      });
-
-    // Button handlers
-    function goToToday() {
-      calendar.today();
-    }
-
-    function viewAllEvents() {
-      window.open('events.json', '_blank');
-    }
-  </script>
-
-
-  <div class="break"></div>
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__top">
-        <a href="./index.html" class="footer__top-logo">
-          <img src="./images/logo.svg" alt="FC-Park-logo" class="footer__logo-img">
-        </a>
-      </div>
-      <div class="footer__middle">
-        <div class="footer__middle-menu">
-          <p class="heading __label menutitle">menu</p>
-          <div class="menu__list">
-            <div class="menu__list-left">
-              <a href="./index.html">home</a>
-              <a href="./events.html">events</a>
-              <a href="./history.html">history</a>
-              <a href="./boardmembers.html">board members</a>
-
+    <div class="break"></div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <a href="./index.html" class="footer__top-logo">
+                    <img src="./images/logo.svg" alt="FC-Park-logo" class="footer__logo-img">
+                </a>
             </div>
-            <div class="menu__list-right">
-              <a href="./attractions.html">area attractions</a>
-              <a href="./reservations.html">reservations</a>
-              <a href="./reviews.html">reviews</a>
-              <a href="./contact.html">contact</a>
+            <div class="footer__middle">
+                <div class="footer__middle-menu">
+                    <p class="heading __label menutitle">menu</p>
+                    <div class="menu__list">
+                        <div class="menu__list-left">
+                            <a href="./index.html">home</a>
+                            <a href="./events.html">events</a>
+                            <a href="./history.html">history</a>
+                            <a href="./boardmembers.html">board members</a>
+
+                        </div>
+                        <div class="menu__list-right">
+                            <a href="./attractions.html">area attractions</a>
+                            <a href="./reservations.html">reservations</a>
+                            <a href="./reviews.html">reviews</a>
+                            <a href="./contact.html">contact</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
+            <div class="footer__bottom">
+                <p class="textbody __bd2">© 2025 Franklin County Park Association</p>
+                <div class="footer__bottom-btnup" id="btnup">
+                    <img src="./images/arrow-up.svg" alt="Up">
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="footer__bottom">
-        <p class="textbody __bd2">© 2025 Franklin County Park Association</p>
-        <div class="footer__bottom-btnup" id="btnup">
-          <img src="./images/arrow-up.svg" alt="Up">
-        </div>
-      </div>
-    </div>
-  </footer>
+    </footer>
 </body>
 
 <!-- Javascript -->
