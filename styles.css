@@ -1382,8 +1382,8 @@ p {
 }
 .historypage h1.history__title {
   padding-top: 70px;
-  display: grid;
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 .historypage h1.history__title .historyp {
   font-size: 23px;
