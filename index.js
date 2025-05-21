@@ -1,3 +1,19 @@
+function initialLoading() {
+  const container = document.querySelector(".homepage");
+  const loading = document.querySelector(".loading");
+  const images = container?.querySelectorAll("img") || [];
+  const imgLoad = imagesLoaded(container);
+  let loadedCount = 0;
+}
+
+function updateLoadingBar(percent) {
+  const progress = document.querySelector(".loading-bar");
+  const percentText = document.querySelector(".loading__inner-per");
+  if (progress && percentText) {
+    progress.style.width = `${percent}%`;
+    percentText.innerHTML = `${percent}%`;
+  }
+}
 
 // === Scroll To Top Button ===
 function setupScrollToTop() {
