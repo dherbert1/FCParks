@@ -1124,6 +1124,7 @@ p {
     text-align: center;
     font-size: 60px;
     line-height: 70px;
+    padding-top: var(--height-header);
   }
   .homepage .background .layer .open__content p {
     max-width: 100%;
