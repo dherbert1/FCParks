@@ -1111,7 +1111,7 @@ p {
     color: var(--white-cl);
     text-align: left;
   }
-  .homepage .background .layer .open .open__content .container p:last-child {
+  .homepage .background .layer .open .open__content .container p .second {
     margin: 10px 0 42px;
   }
 }
@@ -1132,7 +1132,7 @@ p {
     z-index: 1;
     color: var(--white-cl);
   }
-  .homepage .background .layer .open__content p:last-child {
+  .homepage .background .layer .open__content p .second {
     margin: 10px 0 42px;
   }
   .homepage .background .layer .open__photos {

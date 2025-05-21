@@ -55,7 +55,7 @@
                 color: var(--white-cl);
                 text-align: left;
 
-                &:last-child {
+                .second {
                   margin: 10px 0 42px;
                 }
               }
@@ -82,7 +82,7 @@
               z-index: 1;
               color: var(--white-cl);
 
-              &:last-child {
+              .second {
                 margin: 10px 0 42px;
               }
             }
