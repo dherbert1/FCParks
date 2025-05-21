@@ -54,9 +54,11 @@
                 color: var(--white-cl);
                 text-align: left;
 
-                .second {
-                  margin: 10px 0 42px;
-                }
+
+              }
+
+              .second {
+                margin: 10px 0 42px;
               }
             }
           }
@@ -80,10 +82,10 @@
               position: relative;
               z-index: 1;
               color: var(--white-cl);
+            }
 
-              .second {
-                margin: 10px 0 42px;
-              }
+            .second {
+              margin: 10px 0 42px;
             }
           }
 
