@@ -1131,7 +1131,6 @@ p {
     position: relative;
     z-index: 1;
     color: var(--white-cl);
-    text-align: left;
   }
   .homepage .background .layer .open__content p:last-child {
     margin: 10px 0 42px;
