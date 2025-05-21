@@ -1,7 +1,7 @@
 @use "../core/mixins";
 
 .contactpage {
-    overflow-x: hidden;
-    min-width: var(--min-width);
-    padding-top: var(--height-header);
-  }
+  overflow-x: hidden;
+  min-width: var(--min-width);
+  padding-top: var(--height-header);
+}
