@@ -3,7 +3,6 @@
 .homepage {
   overflow-x: hidden;
   min-width: var(--min-width);
-  padding-top: var(--height-header);
 
   .background {
     background: url('../images/bg.JPG');
@@ -16,7 +15,7 @@
         @include mixins.minW(992px) {
           position: relative;
           max-height: 980px;
-          min-height: 650px;
+          min-height: 100vh;
           display: grid;
           grid-template-columns: 3fr 2fr;
           align-items: center;
