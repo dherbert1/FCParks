@@ -1099,6 +1099,9 @@ p {
     position: relative;
     display: flex;
   }
+  .homepage .background .layer .open .open__content .container {
+    text-shadow: 0px 0px 5px var(--main-cl);
+  }
   .homepage .background .layer .open .open__content .container h1 {
     position: relative;
     z-index: 1;
