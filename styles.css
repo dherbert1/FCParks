@@ -1109,6 +1109,7 @@ p {
     position: relative;
     z-index: 1;
     color: var(--white-cl);
+    text-align: left;
   }
   .homepage .background .layer .open .open__content .container p:last-child {
     margin: 10px 0 42px;
@@ -1125,12 +1126,15 @@ p {
     line-height: 70px;
   }
   .homepage .background .layer .open__content p {
-    margin: 16px 0 33px 0;
     max-width: 100%;
-    margin: 10px 0 42px 0;
+    margin-top: 10px;
     position: relative;
     z-index: 1;
     color: var(--white-cl);
+    text-align: left;
+  }
+  .homepage .background .layer .open__content p:last-child {
+    margin: 10px 0 42px;
   }
   .homepage .background .layer .open__photos {
     display: flex;
