@@ -551,7 +551,7 @@ p {
 
 .break {
   height: 9px;
-  width: 100vw;
+  width: auto;
   background-color: var(--white-cl);
   margin: 45px 0p;
 }
