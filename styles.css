@@ -1550,3 +1550,8 @@ p {
 }
 
 /*# sourceMappingURL=styles.css.map */
+.address{
+  width: 300px;
+  background-color:  var(--white-cl);
+  text-align: center;
+}
