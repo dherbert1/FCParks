@@ -551,7 +551,7 @@ p {
 
 .break {
   height: 9px;
-  width: auto;
+  width: 100vw;
   background-color: var(--white-cl);
   margin: 45px 0p;
 }
@@ -1550,11 +1550,3 @@ p {
 }
 
 /*# sourceMappingURL=styles.css.map */
-.address{
-  width: 400px;
-  background-color:  var(--white-cl);
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 30px;
-}
