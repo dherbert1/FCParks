@@ -1365,6 +1365,12 @@ p {
   padding-top: var(--height-header);
 }
 
+.address {
+  background-color: var(--white-cl);
+  margin-top: 50px;
+  border-radius: 20px;
+}
+
 .historypage {
   overflow-x: hidden;
   min-width: var(--min-width);
