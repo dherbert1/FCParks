@@ -1375,6 +1375,11 @@ p {
   margin-right: 50px;
 }
 
+.address__title {
+  text-align: center;
+  justify-content: center;
+}
+
 .historypage {
   overflow-x: hidden;
   min-width: var(--min-width);
