@@ -19,14 +19,6 @@
   justify-content: center;
   font-weight: bold;
 
-  @include mixins.lg {
-    margin: 50px 150px 50px 150px;
-    text-align: center;
-    justify-content: center;
-    font-weight: bold;
-    height: 300px;
-  }
-
   @include mixins.md {
     margin: 50px 100px 50px 100px;
     text-align: center;

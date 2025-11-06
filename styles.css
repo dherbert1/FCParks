@@ -1378,15 +1378,6 @@ p {
   justify-content: center;
   font-weight: bold;
 }
-@media (max-width: 1440px) {
-  .address__title {
-    margin: 50px 150px 50px 150px;
-    text-align: center;
-    justify-content: center;
-    font-weight: bold;
-    height: 300px;
-  }
-}
 @media (max-width: 1199.98px) {
   .address__title {
     margin: 50px 100px 50px 100px;
