@@ -11,46 +11,46 @@
   border-radius: 20px;
   padding-left: 50px;
   padding-right: 50px;
-  margin: 50px 200px 50px 200px
+  margin: 50px auto;
 }
 
-.address__title {
-  text-align: center;
-  justify-content: center;
-  font-weight: bold;
+// .address__title {
+//   text-align: center;
+//   justify-content: center;
+//   font-weight: bold;
 
-  @include mixins.md {
-    margin: 50px 100px 50px 100px;
-    text-align: center;
-    justify-content: center;
-    font-weight: bold;
-  }
+//   @include mixins.md {
+//     margin: 50px 100px 50px 100px;
+//     text-align: center;
+//     justify-content: center;
+//     font-weight: bold;
+//   }
 
-  @include mixins.sm {
-    margin: 50px 200px 50px 200px;
-    text-align: center;
-    justify-content: center;
-    font-weight: bold;
-  }
+//   @include mixins.sm {
+//     margin: 50px 200px 50px 200px;
+//     text-align: center;
+//     justify-content: center;
+//     font-weight: bold;
+//   }
 
-  @include mixins.xs {
-    margin: 50px 50px 50px 50px;
-    text-align: center;
-    justify-content: center;
-    font-weight: bold;
-  }
+//   @include mixins.xs {
+//     margin: 50px 50px 50px 50px;
+//     text-align: center;
+//     justify-content: center;
+//     font-weight: bold;
+//   }
 
-  @include mixins.xxs {
-    margin: 50px 20px 50px 20px;
-    text-align: center;
-    justify-content: center;
-    font-weight: bold;
-  }
+//   @include mixins.xxs {
+//     margin: 50px 20px 50px 20px;
+//     text-align: center;
+//     justify-content: center;
+//     font-weight: bold;
+//   }
 
-  @include mixins.xxxs {
-    margin: 50px 10px 50px 10px;
-    text-align: center;
-    justify-content: center;
-    font-weight: bold;
-  }
-}
+//   @include mixins.xxxs {
+//     margin: 50px 10px 50px 10px;
+//     text-align: center;
+//     justify-content: center;
+//     font-weight: bold;
+//   }
+// }
