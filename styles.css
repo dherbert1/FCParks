@@ -1378,6 +1378,22 @@ p {
   justify-content: center;
   font-weight: bold;
 }
+@media (max-width: 1440px) {
+  .address__title {
+    margin: 50px 150px 50px 150px;
+    text-align: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+}
+@media (max-width: 1199.98px) {
+  .address__title {
+    margin: 50px 100px 50px 100px;
+    text-align: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+}
 @media (max-width: 991.98px) {
   .address__title {
     margin: 50px 200px 50px 200px;
@@ -1397,6 +1413,14 @@ p {
 @media (max-width: 575.98px) {
   .address__title {
     margin: 50px 20px 50px 20px;
+    text-align: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+}
+@media (max-width: 375.98px) {
+  .address__title {
+    margin: 50px 10px 50px 10px;
     text-align: center;
     justify-content: center;
     font-weight: bold;
