@@ -38,10 +38,4 @@
     justify-content: center;
     font-weight: bold;
   }
-  @include mixins.m {
-    margin: 50px 10px 50px 10px;
-    text-align: center;
-    justify-content: center;
-    font-weight: bold;
-  }
 }
