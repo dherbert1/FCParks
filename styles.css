@@ -1384,6 +1384,7 @@ p {
     text-align: center;
     justify-content: center;
     font-weight: bold;
+    height: 300px;
   }
 }
 @media (max-width: 1199.98px) {

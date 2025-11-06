@@ -18,18 +18,22 @@
   text-align: center;
   justify-content: center;
   font-weight: bold;
-@include mixins.lg {
+
+  @include mixins.lg {
     margin: 50px 150px 50px 150px;
     text-align: center;
     justify-content: center;
     font-weight: bold;
+    height: 300px;
   }
+
   @include mixins.md {
     margin: 50px 100px 50px 100px;
     text-align: center;
     justify-content: center;
     font-weight: bold;
   }
+
   @include mixins.sm {
     margin: 50px 200px 50px 200px;
     text-align: center;
@@ -43,12 +47,14 @@
     justify-content: center;
     font-weight: bold;
   }
+
   @include mixins.xxs {
     margin: 50px 20px 50px 20px;
     text-align: center;
     justify-content: center;
     font-weight: bold;
   }
+
   @include mixins.xxxs {
     margin: 50px 10px 50px 10px;
     text-align: center;
