@@ -1381,6 +1381,9 @@ p {
 @media (max-width: 991.98px) {
   .address__title {
     margin: 50px 200px 50px 200px;
+    text-align: center;
+    justify-content: center;
+    font-weight: bold;
   }
 }
 

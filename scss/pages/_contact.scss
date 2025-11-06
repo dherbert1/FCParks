@@ -18,5 +18,8 @@
   font-weight: bold;
   @include mixins.sm{
      margin: 50px 200px 50px 200px;
+     text-align: center;
+    justify-content: center;
+    font-weight: bold;
   }
 }
