@@ -1367,12 +1367,10 @@ p {
 
 .address {
   background-color: var(--white-cl);
-  margin-top: 50px;
   border-radius: 20px;
   padding-left: 50px;
   padding-right: 50px;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin: 50px 50px 50px 0px;
 }
 
 .address__title {
