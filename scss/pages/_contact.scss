@@ -20,35 +20,35 @@
   font-weight: bold;
 
   @include mixins.md {
-    margin: 50px 100px 50px 100px;
+    margin: 50px 50px auto;
     text-align: center;
     justify-content: center;
     font-weight: bold;
   }
 
   @include mixins.sm {
-    margin: 50px 200px 50px 200px;
+    margin: 50px 50px auto;
     text-align: center;
     justify-content: center;
     font-weight: bold;
   }
 
   @include mixins.xs {
-    margin: 50px 50px 50px 50px;
+    margin: 50px 50px auto;
     text-align: center;
     justify-content: center;
     font-weight: bold;
   }
 
   @include mixins.xxs {
-    margin: 50px 20px 50px 20px;
+    margin: 50px 50px auto;
     text-align: center;
     justify-content: center;
     font-weight: bold;
   }
 
   @include mixins.xxxs {
-    margin: 50px 10px 50px 10px;
+    margin: 50px 50px auto;
     text-align: center;
     justify-content: center;
     font-weight: bold;
