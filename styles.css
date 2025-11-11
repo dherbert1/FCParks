@@ -1606,6 +1606,8 @@ p {
 .news{
   font-size: 18px;
   color: var(--white-cl);
+  list-style-type: disc;
+  line-height: 1em;
 }
 
 /*# sourceMappingURL=styles.css.map */
