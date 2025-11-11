@@ -1610,4 +1610,9 @@ p {
   line-height: 2em;
 }
 
+.gcal{
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /*# sourceMappingURL=styles.css.map */
