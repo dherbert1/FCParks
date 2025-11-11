@@ -1603,4 +1603,9 @@ p {
   border-radius: 13%;
 }
 
+.news{
+  font-size: 18px;
+  color: var(--white-cl);
+}
+
 /*# sourceMappingURL=styles.css.map */
