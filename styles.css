@@ -419,7 +419,7 @@ p {
   display: block;
   letter-spacing: var(--ls-body1);
   text-align: center;
-  margin-bottom: -30px;
+  margin-bottom: -20px;
 }
 
 .textbox.__align-left p {
